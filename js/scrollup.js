@@ -3,14 +3,14 @@ jQuery(document).ready(function() {
         var duration = 500;
         jQuery(window).scroll(function() {
             if (jQuery(this).scrollTop() > offset) {
-                jQuery('.scrollup').fadeIn(duration);
+                jQuery('.scrollup').fadeIn(500);
             } else {
-                jQuery('.scrollup').fadeOut(duration);
+                jQuery('.scrollup').fadeOut(500);
             }
         });
         jQuery('.scrollup').click(function(event) {
             event.preventDefault();
-            jQuery('html, body').animate({scrollTop: 0}, duration);
+            jQuery('html, body').animate({scrollTop: 0}, 500);
             return false;
         })
     });

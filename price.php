@@ -25,11 +25,14 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" href="css/main.css" type="text/css">
 <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abel|Archivo+Narrow:500|Saira+Semi+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/timer.js"></script>
+<script src="js/price.js"></script>
 
   
 <!--[if lt IE 9]>
@@ -37,4 +40,8 @@
   <![endif]-->
 </head>
 
+<body>
+<div id="prices"></div>
 
+</body>
+</html>

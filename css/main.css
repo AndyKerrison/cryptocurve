@@ -1,15 +1,15 @@
     @font-face {
   font-family: 'bebas';
-  src: url('http://localhost/test/fonts/bebas.eot');
-  src: url('http://localhost/test/fonts/bebas.eot') format('embedded-opentype'),
-       url('http://localhost/test/fonts/bebas.woff') format('woff'),
-       url('http://localhost/test/fonts/bebas.ttf') format('truetype'),
-	   url('http://localhost/test/fonts/bebas.svg') format('svg');}
+  src: url('http://dev.cryptocurve.io/fonts/bebas.eot');
+  src: url('http://dev.cryptocurve.io/fonts/bebas.eot?#iefix') format('embedded-opentype'),
+       url('http://dev.cryptocurve.io/fonts/bebas.woff') format('woff'),
+       url('http://dev.cryptocurve.io/fonts/bebas.ttf') format('truetype'),
+	   url('http://dev.cryptocurve.io/fonts/bebas.svg') format('svg');}
 	   
 	   
 	   
     
-	:selection {background: #000; color:white;}
+	::selection {background: #000; color:white;}
 	
 	
 	html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, em, ul, li, footer, header, menu, nav, section {
@@ -22,7 +22,7 @@
 	}
 
     body {
-	    background: #333;
+	    background: #fff;
 		line-height: 1;
 		
 	}
@@ -70,8 +70,12 @@
 /* Nav */
 
 header#main {
-    display: block !important;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+	box-shadow: 4px 1px 5px 1px rgba(0,0,0,0.75);
 }
+
 
 .container {
   width: 95%;
@@ -80,7 +84,6 @@ header#main {
 
 header {
   background: #FFFFFF;
-  color: #EBEBD3;
   padding: 1em 0 !important;
   position: relative;
 }
@@ -98,15 +101,11 @@ header::after {
 
 .site-nav {
   position: absolute;
-  top: 100%;
-  right: 0%;
-  background:black;
-  clip-path: circle(0px at top right);
-  transition: clip-path ease-in-out 700ms;
+  top: 2.3em;
+  right: 0;
 }
 
 .site-nav--open {
-  clip-path: circle(150% at top right);
 }
 
 .site-nav ul {
@@ -117,6 +116,8 @@ header::after {
 
 .site-nav li {
   border-bottom: none;
+  display:inline-block;
+  margin-left:3em;
 }
 
 .site-nav li:last-child {
@@ -124,9 +125,8 @@ header::after {
 }
 
 .site-nav a {
-  font-family:bebas;
+  font-family:abel;
   color: #333;
-  display: block;
   letter-spacing:2px;
   padding:1.3em;
   text-transform: uppercase;
@@ -134,9 +134,29 @@ header::after {
   text-align:center;
 }
 
+a.login-nav {
+    color: white;
+    background: #ef7899;
+	font-size:0.8em;
+    padding-top: 3.1em !important;
+    padding-bottom: 2.87em !important;
+    padding-left: 2em !important;
+    padding-right: 2em!important ;
+	transition:background 0.5s ease-in-out;
+}
+
+a.login-nav:hover {
+	background:#000 !important;
+	color:white !important;
+}
+
+i.fa.fa-sign-in {
+    padding-right: 0.3em;
+}
+
 .site-nav a:hover,
 .site-nav a:focus {
-  color: #2ad4dc;
+  color: #333;
 }
 
 .site-nav--icon {
@@ -154,7 +174,8 @@ header::after {
   top: 1.8em;
   right: .7em;
   cursor: pointer;
-  z-index:3;
+  z-index:101;
+  display:none;
 }
 
 .hamburger,
@@ -179,7 +200,7 @@ header::after {
 
 .open .hamburger {
   transform: rotate(45deg);
-  background:white;
+  background:black;
 }
 
 .open .hamburger::before {
@@ -188,44 +209,81 @@ header::after {
 
 .open .hamburger::after {
   transform: translateY(-3px) rotate(-90deg);
-  background:white;
+  background:black;
 }
 
 
-@media (min-width: 700px) {
-  
-  .menu-toggle {
-    display: none;
-  }
-  
-  .site-nav {
-    height: auto;
-    position: relative;
-    background: transparent;
-    float: right;
-	margin-top: 1.4em;
-    clip-path: initial;
-  }
-  
-  .site-nav li {
-    display: inline-block;
-    border: none;
-  }
-  
-  .site-nav a {
-    padding: 0;
-    margin-left: 3em;
-  }
-  
-  .site-nav a:hover,
-  .site-nav a:focus {
-    background: transparent;
-  }
-  
-  .site-nav--icon {
-    display: none;
-  }
-  
+
+
+/* hover effects */
+a.vert:before,a.vert:after{
+  content: "";
+  transition:0.5s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+}
+a.vert:before{
+  top:-0.25em;
+}
+a.vert:after{
+  bottom:-0.25em;
+}
+a.vert:before,a.vert:after{
+  height:1px;
+  width:0;
+  background:#333;
+}
+
+.liner{
+  box-sizing:border-box;
+  margin-left:-0.4em;
+  position:relative;
+  font-size:1.2em;
+  overflow:hidden;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+.liner a{
+  position:static;
+  font-size:100%;
+  padding:0.2em 0.4em;
+}
+.liner:before,.liner:after{
+  content: "";
+  box-sizing:border-box;
+  transition:0.25s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+  width:1px;
+  height:0;
+  background:#333;
+}
+.liner:before{
+  left:0;
+  bottom:-0.2em;
+}
+
+.liner:after{
+  right:0;
+  top:-0.2em;
+}
+
+.liner a:before{
+  left:0;
+  transition:0.25s all ease;
+}
+.liner a:after{
+  right:0;
+  transition:0.25s all ease;
+}
+
+.liner:hover:before,.liner:hover:after{
+  height:calc(100% + 0.4em);
+}
+.liner:hover a:before,.liner:hover a:after{
+  width:100%;
 }
 
 .appear{
@@ -254,23 +312,24 @@ header::after {
 	header.tom h2, header.tom h3, header.tom {
 		font-size:1.5em;
 		font-weight:bold;
-		display: inline-block;
+		display: block;
 		position: relative;
 		}
 
 	header.tom p {
-		color: #fff;
+		color: #000;
 		top: 0;
 		}
 		
 	.border {
 		display: block;
 		height: 3px;
-		width: 25px;
+		width: 100px;
 		margin: 15px auto 0;
-		margin-top: 10px;
-		margin-bottom:10px;
-		background-color: rgba(138, 147, 150, 0.66);
+		margin-top: 2em;
+		margin-bottom:2em;
+		background-color: #99ccea;
+		opacity: 0.7;
 }	
 
 
@@ -279,10 +338,235 @@ header::after {
     section#one { 
 		background:#fff;
 		}
+		
+	section#one .border{
+			margin-bottom:1em;
+	}
+	
+	section#one .merge {
+    width: 70%;
+}
+		
+	p#timer {
+    color: black;
+    font-family: abel;
+    letter-spacing: 2px;
+	font-weight: normal;
+    font-size: 1.5em;
+	margin-bottom:1em;
+}
+    p.ICO {
+		font-family:bebas;
+		margin-bottom: 0.5em;
+		margin-top: 1em;
+		letter-spacing: 2px;
+		font-size: 2em;
+	}
+	
+	span.Sec {
+    font-weight: normal;
+    margin-left: 0.2em;
+	}
+	
+	button.invest {
+		color: black;
+		font-family: abel;
+		font-size:0.7em;
+		letter-spacing: 3px;
+		padding: 12px 30px;
+		background:white !important;
+		border:1px solid #333 !important;
+		box-shadow: inset 0 0 0 0 #333;
+		-webkit-transition: all ease 1s !important;
+		-moz-transition: all ease 1s !important;
+		-ms-transition: all ease 1s !important;
+		-o-transition: all ease 1s !important;
+		transition: all ease 1s !important;
+}
+
+	button.invest:hover{
+		cursor:pointer;
+		box-shadow: inset 200px 0 0 0 rgba(1,1,1,1) !important;
+		color:white;
+	}
+	
+	.slide-container{
+		width:100%;
+	}
+	
+	.slide{
+		display:inline-block;
+	}
+	
+	.left-button , .right-button{
+		display:inline-block;
+		margin-top: 8em;
+		color: black;
+		background: white;
+		border: 1px solid black;
+		font-size: 0.7em;
+		padding: 0.7em;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	
+	.left-button:hover , .right-button:hover {
+		cursor:pointer;
+	}
+	
+	.left-button{
+		float:left;
+	}
+	
+	.right-button{
+		float:right;
+	}
+	
+	
+	section#two { 
+		background:#272727;
+		background:white;
+		background-image: -moz-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("http://dev.cryptocurve.io/img/newsletter.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("http://dev.cryptocurve.io/img/newsletter.jpg");
+		background-image: -ms-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("http://dev.cryptocurve.io/img/newsletter.jpg");
+		background-image: linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("http://dev.cryptocurve.io/img/newsletter.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover
+		}
+		
+	section#two .merge{
+		width:80%;
+	}
+		
+	section#two	header.tom {
+		background:transparent;
+		width:100%;
+	}
+	
+	section#two h2{
+		color:white;
+	}
+	
+	
+	input.input-section {
+		width: 40%;
+		height: 2.5em;
+		font-family: abel;
+		text-transform: uppercase;
+		text-indent: 5px;
+		border: none;
+}
+
+.local p {
+    color: white !important;
+    font-family: abel;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+
+	button.submit-section {
+    width: 10%;
+    background-color: white;
+    padding: 0.54em;
+    border: none;
+    font-family: abel;
+    font-size: 0.6em;
+}
+
+   
+   section#why{
+	  background:white;
+   }
+   
+   section#why .merge{
+	   width:100%;
+   }
+
+   .why-box {
+    display: inline-block;
+	vertical-align: top;
+	width:20%;
+	margin:1em;
+}
+
+	.why-box-content{
+		display:block;
+		text-align:center;
+	}
+	
+	i.fa.fa-life-ring {
+    width: 100%;
+	font-size:1em;
+}
+
+	i.fa.fa-usd {
+    width: 100%;
+	font-size:1em;
+}
+
+	i.fa.fa-rocket {
+    width: 100%;
+	font-size:1em;
+}
+
+	i.fa.fa-universal-access {
+    width: 100%;
+	font-size:1em;
+}
+
+	.why-box-content h2{
+		font-size:1em !important;
+		width:100%;
+		margin-top:1em;
+		margin-bottom:1em;
+	}
+	
+	.why-box-content p{
+		width:100%;
+	}
+
+	.why-box p {
+    font-family: abel;
+    font-weight: normal;
+    font-size: 0.7em;
+	line-height: 1.2em;
+    letter-spacing: 1px;
+}
+
 
     section#three {
-		background: purple;
-		}
+		background:white;
+		background-image: -moz-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("http://dev.cryptocurve.io/img/faq.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("http://dev.cryptocurve.io/img/faq.jpg");
+		background-image: -ms-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("http://dev.cryptocurve.io/img/faq.jpg");
+		background-image: linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("http://dev.cryptocurve.io/img/faq.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+		
+	section#three h2 {
+		margin-bottom:1.5em;
+		color:white;
+	}
+		
+	section#three p {
+        color:white;
+		font-weight:normal;
+	}
+
+	section#three .merge{
+		width:80%;
+		background:transparent;
+	}		
+	
+	section#three header.tom {
+    background: transparent;
+}
 
     section#four {
 		background: #ddd;
@@ -316,6 +600,17 @@ header::after {
 		order: 2;
 		width: 30%;
 		}
+		
+		
+	.statement {
+    width: 80%;
+    display: inline-block;
+    font-family: abel;
+    font-weight: normal;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    letter-spacing: 0.03em;
+}
 
 
 /* Wrapper */
@@ -330,11 +625,192 @@ header::after {
 		margin: 0 auto;
 		}
 
+/* Page */
+	 body.page {
+		width: 100%;
+		background-color:white;
+}
+
+     .page-content{
+		 width:80%;
+		 margin:auto;
+		 text-align:center;
+		 background-color:white;
+	 }
 	 
+	 .page h1 {
+		font-size:2em;
+		font-weight: bold;
+		margin-bottom: 5em;
+		margin-top: 3em;
+}
+
+/* Metamask Page */
+	table.meta {
+		margin:auto;
+		border: 1px solid black;
+}
+
+	table.meta thead {
+		border: 1px solid black;
+}
+
+	table.meta td {
+		font-family: abel;
+		font-size:0.9em;
+		letter-spacing: 1px;
+		padding: 1em;
+		border-bottom: 1px solid black;
+}
+
+	table.meta th {
+		font-family: abel;
+		font-size:1.2em;
+		font-weight:normal;
+		letter-spacing: 2px;
+		background: #000;
+		color: white;
+	}
+	
+	input.js-txtDeposit {
+    border: 1px solid #ddd;
+    font-family: abel;
+    text-indent: 5px;
+}
+
+	button.js-btnWithdraw {
+    font-family: abel;
+    color: white;
+    background: #000;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 0.5em;
+}
+
+	button.js-btnDeposit {
+	font-family: abel;
+    color: white;
+    background: #000;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 0.5em;
+}
+		
+
+	td.js-etherDeposited {
+    width: 20%;
+}
+
+/* Second Header */
+    #main2{
+		margin-top:1em;
+	}
+
+	#main2 a.login-nav{
+		display:none;
+	}
+		
+	
+	 
+/* Accordeon styles */	 
+	 .half {
+		display:inline-block;
+		width: 80%;
+		padding: 0 1em;
+}
+
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  font-weight: normal;
+  font-size: 0.8em;
+  overflow: hidden;
+}
+input.accordion {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label.accord {
+  position: relative;
+  display: block;
+  background: #fff;
+  color: #333;
+  font-family: abel;
+  letter-spacing:2px;
+  line-height: 3;
+  cursor: pointer;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: transparent;
+  -webkit-transition: max-height .5s;
+  -o-transition: max-height .5s;
+  transition: max-height .5s;
+  margin-bottom:0.2em;
+}
+
+.tab-content p {
+  margin: 1em;
+  font-family:abel;
+  color:white;
+  text-align:left;
+  line-height:1.2em;
+  font-size:0.9em;
+}
+
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 12em;
+}
+
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
+
+		
 
 /* Banner */
 
 	#banner {
+		background-image: -moz-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+		background-image: -ms-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+		background-image: linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 0;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -348,7 +824,7 @@ header::after {
 		-ms-justify-content: center;
 		justify-content: center;
 		cursor: default;
-		height: 100vh;
+		height: 60vh;
 		min-height: 35em;
 		overflow: hidden;
 		position: relative;
@@ -359,7 +835,7 @@ header::after {
 	    display: inline-block;
 		font-family:bebas;
 		color:white;
-		font-size: 1.75em;
+		font-size: 3em;
 		opacity: 1;
 		padding: 0.35em 1em;
 		padding-top: 0.8em;
@@ -392,6 +868,7 @@ header::after {
 		font-family:abel;
 		color:white;
 		letter-spacing: 0.23em;
+		font-size:1.2em;
 		line-height:1.3em;
 		margin-bottom:3em;
 		}
@@ -406,7 +883,7 @@ header::after {
 		letter-spacing: 3px;
 		padding: 12px 30px;
 		background:rgba(1,1,1,0.7) !important;
-		border:1px solid rgba(250,250,250,0.5) !important;
+		border:none !important;
 		box-shadow: inset 0 0 0 0 #333;
 		-webkit-transition: all ease 1s !important;
 		-moz-transition: all ease 1s !important;
@@ -423,7 +900,7 @@ header::after {
 
    /* Footer */
     .footer{background:white;width:100%;height:400px;display:flex;justify-content:center;text-align:center;}
-	.footercolumns{width:80%;display:inline-block;float:none;margin:auto;align-self:center;}
+	.footercolumns{width:80%;display:inline-block;float:none;align-self:center;}
 	.footercolumn{width:40%;display:inline-block;}
 	div#col1 {float: left;}
 	div#col2 {float: right;}
@@ -590,100 +1067,430 @@ a#mail:before {
 		text-decoration: none;
 		position: fixed;
 		z-index: 1500;
-		transition: opacity .5s ease-in 0s;
-		-webkit-transition: opacity .5s ease-in 0s;
 		bottom: 10px;
 		right: 10px;
-		border-radius:50%;
 }
 
 	.scrollup:hover{ 
-		background-color:#33d9ff;
-		transition:background .5s ease-in 0s;
+		background-color:#333;
+		transition:background .5s ease-in .3s;
 		}
 
 
    /* Landing */
 
 	body.landing #wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("http://localhost/test/img/blockchain.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("http://localhost/test/img/blockchain.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("http://localhost/test/img/blockchain.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("http://localhost/test/img/blockchain.jpg");
-		background-attachment: fixed;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
 		padding-top: 0;
+		}
+	
+	
+	/*Login Page*/
+	.page header#main {
+    position: relative;
+}
+
+    .page h2{
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    font-family: abel;
+}
+
+
+	.form-container {
+    display: flex;
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 60vh;
+}
+
+	form.login {
+    display: inline-block;
+	width:90%;
+}
+
+	.Login {
+	align-self:center;
+    width: 40%;
+    display: inline-block;
+	border-right:1px solid #333;
+}
+
+
+	input.user {
+    display: block;
+	width: 75%;
+    margin: auto;
+    margin-bottom: 0.5em;
+	font-family: abel;
+	text-indent:5px;
+	height:2em;
 	}
 	
+	input.pass {
+    display: block;
+	width: 75%;
+    margin: auto;
+    margin-bottom: 1em;
+	font-family: abel;
+	text-indent:5px;
+	height:2em;
+}
+
+	
+	button.join {
+    display: block;
+    margin: auto;
+    color: white;
+    background: black;
+    border: none;
+    font-family: abel;
+    font-size: 1em;
+    letter-spacing: 2px;
+    padding: 1em;
+	transition:background 0.6s ease-in-out;
+}
+
+    button.join:hover{
+	cursor:pointer;
+	color:black;
+	background:#2ad4dc;
+	}
+		
+
+    button.sign {
+    display: block;
+    margin: auto;
+	width:75%;
+    color: white;
+    background: black;
+    border: none;
+    font-family: abel;
+    font-size: 1em;
+    letter-spacing: 2px;
+    padding: 0.3em;
+	transition: background 0.6s ease-in-out;
+	margin-bottom:0.5em;
+}
+
+
+	button.sign:hover{
+	cursor:pointer;
+	color:black;
+	background:#2ad4dc;
+	}
+
+
+	.signup {
+	align-self:center;
+    width: 40%;
+    display: inline-block;
+}
+
+
+	.page .footer{
+		height:300px;
+	}
+	
+	
+	a.forgot {
+    font-family: abel;
+    letter-spacing: 1px;
+    color: #040404;
+	float: left;
+    margin-left: 4.3em;
+	}
+	
+	a.forgot:hover{
+		color:#2ad4dc;
+	}
 	
 	
 	/* ALL MEDIA QUERIES */
-	
-@media (min-width: 700px) {
-  
-  .menu-toggle {
-    display: none;
-  }
-  
-  .site-nav {
-    height: auto;
-    position: relative;
-    background: transparent;
-    float: right;
-	margin-top: 1.4em;
-    clip-path: initial;
-  }
-  
-  .site-nav li {
-    display: inline-block;
-    border: none;
-  }
-  
-  .site-nav a {
-    padding: 0;
-    margin-left: 3em;
-  }
-  
-  .site-nav a:hover,
-  .site-nav a:focus {
-    background: transparent;
-  }
-  
-  .site-nav--icon {
-    display: none;
-  }
-  
-}	
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1400px) {
+	.liner a {
+    font-size: 0.8em;
+    padding: 1.3em;
+}
+}
+
+@media screen and (max-width: 1150px) {
 	
-.site-nav {
-		top:0;
-		width:100%;
-		z-index:2;
-		position:fixed;
-		height:100%;
-		display:flex;
-		justify-content:center;
+	.logo-container img {
+    width: 180px;
+}
+	
+	
+	.site-nav {
+		top:1.95em;
+		right:1em;
 	}
 	
-.site-nav--open {
-  clip-path: circle(150% at top right);
-  width:100%;
-  z-index:2;
+	a.login-nav {
+		padding:1em !important;
+	}
+	
+	.site-nav li{
+		margin-left:1em;
+	}
+	
+	.why-box {
+	width:40%;
+	}
+	
+	.footercolumns {
+    width: 95%;
+	}
+	
+	.footercolumn {
+    width: 45%;
 }
 
-.site-nav a {
-	color:#fff;
+	a.social {
+		font-size:1em;
+}
+	
+	
 }
 
-ul.navi{
+
+
+@media screen and (max-width: 1000px) {
+	
+	header#main{
+		position:relative;
+	}
+	
+.logo-container img {
+    width: 200px;
+}
+	
+.menu-toggle {
+		display:block;
+	}
+	
+	.menu-toggle.open {
+    position: fixed;
+}
+
+body.landing.landing-open{
+	overflow:hidden;
+}
+	
+	.site-nav {
+	 display:flex;
+     position: fixed;
+     top: 0%;
+     right: 0%;
+	 background: white;
+	 height: calc(100% + 60px);
+     width: 100%;
+     z-index: 100;
+	 transform: translateX(100%);
+	 transition:transform 0.9s ease-in-out;
+}
+
+.site-nav a{
+	display:inline-block;
+	color:#000;
+}
+
+.site-nav ul{
 	align-self:center;
 }
 
+.site-nav li{
+	display:block;
 }
+
+.site-nav--open {
+	
+    transform: translateX(60%);  
+}
+
+.site-nav--open ul{
+	align-self:center;
+}
+
+.site-nav--open a {
+	font-family:abel;
+  color: #000;
+  display: inline-block;
+  letter-spacing:2px;
+  padding:1.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align:center;
+}
+
+form.subscribe-section{
+	text-align:center;
+}
+
+input.input-section{
+	width:50%;
+	display:inline-block;
+	margin-bottom:1em;
+	text-align:center;
+	text-indent:none;
+}
+
+button.submit-section{
+	width:50%;
+	display:inline-block;
+}
+
+
+section#three .merge{
+		width:100%;
+		background:transparent;
+	}	
+
+.half{
+width:100%;
+}	
+
+
+.up-button{
+	display:none;
+}
+
+}
+
+
+@media screen and (max-width: 850px) {
+	
+	#banner{
+	background-image:-webkit-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+	}
+	
+	input.input-section {
+	width:100%;
+}
+
+button.submit-section {
+	width:100%;
+}
+
+.footercolumn {
+    width: 80%; 
+    display: block;
+    margin-top: 4em;
+	margin:auto
+}
+
+div#col1 {
+	float:none;
+}
+
+div#col2 {
+    float: none; 
+    margin-top: 4em; 
+}
+
+}
+
+
+@media screen and (max-width: 750px) {
+	
+	.site-nav--open {
+	
+    transform: translateX(50%);  
+}
+	
+	section#three{
+		padding:0.5em;
+	}
+	
+	.half{
+		padding:0;
+	}
+	
+	
+	
+	
+	
+	
+}
+
+
+@media screen and (max-width: 500px) {
+	
+	
+	#banner{
+	background-image:-webkit-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+	background-image:-moz-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+	background-image:-ms-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+	background-image:linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+	}
+	
+	#banner h2{
+		font-size:2em;
+	}
+	
+	#banner p {
+		font-size:1em;
+	}
+	
+	img.company{
+		width:80%;
+	}
+	
+	section#two .merge {
+    width: 100%;
+}
+	
+	.local p{
+		font-size:0.6em;
+	}
+	
+	.tab{
+		font-size:0.6em;
+	}
+	
+	label.accord {
+		letter-spacing:0px;
+	}
+	
+	.why-box {
+	width:80%;
+	}
+	
+	.why-box-content h2{
+		text-align:center;
+	}
+	
+.footercolumns {
+    width: 100%;
+	}
+	
+.footercolumn {
+    width: 90%;
+}
+
+a#face {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+a.social{
+	padding:9px;
+	font-size: 1em;
+}
+	
+.powered {
+		padding-top:2em;
+}
+	
+}
+
+
+
+
+
+
 
 
 

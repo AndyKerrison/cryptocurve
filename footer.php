@@ -14,7 +14,7 @@
 							</div>
 					<div class="footercolumn" id="col2"><h3 class="footertitle">Newsletter</h3>
 						<form action="index.html" method="post" class="subscribe-form">
-							<input type="email" name="email" class="subscribe-input" placeholder="Email address" autofocus>
+							<input type="email" name="email" class="subscribe-input" placeholder="Email address">
 								<button type="submit" class="subscribe-submit">Subscribe</button>
 									</form>
 								</div>
@@ -23,5 +23,5 @@
 					
 				<!-- After Footer -->
                 <section class="powered">
-                   <div class="thing1">powered by <img src="http://localhost/test/img/eth.png" alt="ethereum"></div>
+                   <div class="thing1">powered by <img src="img/eth.png" alt="ethereum"></div>
                 </section>

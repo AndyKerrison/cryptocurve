@@ -8,12 +8,10 @@
 					<!-- Banner -->
 					<section id="banner">
 						<div class="merge">
-							<h2>Smart contracts</h2>
-							<p>Never miss out on<br />
-							another ICO again.
-								</p>
+							<h2>Cryptocurve</h2>
+							<p>ICO Investment Made Easy.</p>
 							<ul class="actions">
-								<li><a href="#" class="button special">Join Now</a></li>
+								<li><a href="dev.cryptocurve.io" class="button special">Try Now</a></li>
 							</ul>
 						</div>
 					</section>
@@ -22,10 +20,21 @@
 					<section id="one" class="wrapper style1 layout">
 						<div class="merge">
 							<header class="tom">
-								<h2>How It Works</h2>
+								<h2>Upcoming ICO</h2>
 									<div class="border"></div>
-								<div class="how">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/1ycJfp6-6Is?rel=0" frameborder="0" allowfullscreen></iframe>
+									<div class="slide-container">
+								<div class="slide">	
+								<img class="company" src="http://dev.cryptocurve.io/img/kyber.png">
+								<p id="timer"></p>
+								<button class="invest">Invest</button>
+								</div>
+								<div class="slide">	
+								<img class="company" src="http://dev.cryptocurve.io/img/kyber.png">
+								<p id="timer2"></p>
+								<button class="invest">Test</button>
+								</div>
+								<button class="left-button" onclick="plusDivs(-1)">&#10094;</button>
+								<button class="right-button" onclick="plusDivs(1)">&#10095;</button>
 								</div>
 							</header>
 						</div>
@@ -36,38 +45,95 @@
 				   <section id="two" class="wrapper style1 layout">
 						<div class="merge">
 							<header class="tom">
-								<h2>The Smart Contract For The Small Investor</h2>
+								<h2>Subscribe</h2>
 									<div class="border"></div>
+									<div class="local">
+									<p>Subscribe And Keep Up With The Latest News And Upcoming ICO's.</p>
+									<form action="index.html" method="post" class="subscribe-section">
+							<input type="email" name="email" class="input-section" placeholder="Email address">
+								<button type="submit" class="submit-section">Subscribe</button>
+									</form>
+									</div>
 							</header>
 						</div>
 					</section>
+					
+					<!-- WHY -->
+					<section id="why" class="wrapper style1 layout">
+						<div class="merge">
+							<header class="tom">
+								<h2>Why Us</h2>
+									<div class="border"></div>
+								<div class="why-container">
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-universal-access" aria-hidden="true"></i><h2>Guaranteed Entry</h2><p>With CryptoCurve's smart contracts, your entry into ICOs is as close to guaranteed as possible. If we don't get access, we return your currency and you pay nothing.</p></div></div>
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-usd" aria-hidden="true"></i><h2>Low Fees</h2><p>CryptoCurve takes a small 1% fee from the tokens you are buying.</p></div></div>
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-rocket" aria-hidden="true"></i><h2>Fast And Simple</h2><p>Efficient smart contracts allow for the trustless exchange between investor and investee, and you will receive your tokens as soon as they are available.</p></div></div>
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-life-ring" aria-hidden="true"></i><h2>24/7 Support</h2><p>Contact us through social media or email whenever you need to, and we will resolve any issue.</p></div></div>
+								</div>
+
+							</header>
+						</div>
+					</section>
+
 					
 
 				<!-- Three -->
 					<section id="three" class="wrapper style3 layout">
 						<div class="merge">
 							<header class="tom">
-								<h2>Cool story bro</h2>
-								<p>Now that's what I call<br />
-								a cool story.</p>
+								<h2>FAQ</h2>
+								<div class="half">
+ 
+    <div class="tab">
+      <input class="accordion" id="tab-one" type="checkbox" name="tabs">
+      <label class="accord" for="tab-one">How Does CryptoCurve Work?</label>
+      <div class="tab-content">
+        <p>Depending on the ICO, CryptoCurve provides a means of participation into pre-selected ICOs utilizing smart contracts to create “Pools” of investors, to try and ensure successful contributions.</p>
+      </div>
+    </div>
+    <div class="tab">
+      <input class="accordion" id="tab-two" type="checkbox" name="tabs">
+      <label class="accord" for="tab-two">What About Hard Capped ICOs?</label>
+      <div class="tab-content">
+        <p>CryptoCurve analyzes upcoming ICOs to ensure regulatory and systemic compliance with our platform. For ICOs that have individual hard caps with time limit bonus, CryptoCurve will bring smart contract enabled contributions for the investor who might not have time to sit at a computer and wait for a specific time.</p>
+      </div>
+    </div>
+    <div class="tab">
+      <input class="accordion" id="tab-three" type="checkbox" name="tabs">
+      <label class="accord" for="tab-three">Why Use CryptoCurve?</label>
+      <div class="tab-content">
+        <p>CryptoCurve aims to be the go-to source of prefunding ICOs. CryptoCurve provides benefits to investors and investees by ensuring participation into ICOs that sell out quickly, and providing decentralized mass distribution of tokens, helping to provide a widespread ecosystem to creators of new blockchain technology.</p>
+      </div>
+    </div>
+	<div class="tab">
+      <input class="accordion" id="tab-four" type="checkbox" name="tabs">
+      <label class="accord" for="tab-four">How Can I Participate?</label>
+      <div class="tab-content">
+        <p>Simply click the "Signup" button on the top of the page and create a CryptoCurve account, select the ICOs you want to participate in, and send your Eth. Then when the time comes our smart contract technology will buy your tokens, and redistribute them to you after the token sale. </p>
+      </div>
+    </div>
+  </div>
 							</header>
 							
 						</div>
 					</section>
-
-				<!-- Four -->
-					<section id="four" class="wrapper style4">
+					
+				<!--Mission-->
+				<section id="why" class="wrapper style1 layout">
 						<div class="merge">
-							<header>
-								<h2>Testing</h2>
-								<p>this is a cool website</p>
+							<header class="tom">
+								<h2>Mission Statement</h2>
+									<div class="border"></div>
+								<div class="statement">
+								<p>At CryptoCurve, our mission is to provide the everyday investor with a means to participate in early investment opportunities with promising cryptocurrency companies, and to provide those companies assurance that their goals of decentralization are met. We match like-minded investors looking to participate in Initial Coin Offerings (ICOs) together, and our Smart Contract coding allows for more efficient blockchain transactions to ensure everyone can participate without having to provide large “gas” fees. This benefits the investor that the ICO is not monopolized by those wanting to manipulate the market. We are decentralized and the company offering the investment because trust and security have been burdens resulting in past scams. We aim to be the trustless distributor between investor and investee, where the investor can be assured that they will get their fair shot at participation, and the investee is assuralizing the opportunity of early investments in technology that is changing our world, and we’d like you to join us.</p>	
+								</div>
+
 							</header>
-							<ul class="actions vertical">
-								<li><a href="#" class="button fit special">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
 						</div>
 					</section>
+					
+
+				
 				<!-- Footer -->
 				<?php include('footer.php'); ?>
 				<!-- Scroll Button -->
@@ -75,5 +141,29 @@
 								<a href="#" class="scrollup" display="inline"><i class="fa fa-chevron-up"></i></a>
 						</div>
 				</div>
+				<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "inline-block";  
+}
+</script>
+				
+				<script src="js/menu.js"></script>
+				<script src="js/smooth.js"></script>
+				<script src="js/scrollup.js"></script>
+				
 				</body>
 				</html>

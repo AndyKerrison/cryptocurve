@@ -1,4 +1,4 @@
-<header id="main">
+<header id="main2">
                        <div class="container">
 							<div class="logo-container">
 								<a href="http://dev.cryptocurve.io"><img src="img/cryptocurve-logo.png" width="220" alt="crypto-curve"></a>
@@ -6,10 +6,10 @@
   
 			<nav class="site-nav">
 				<ul class="navi">
-					<li><span class="liner"><a class="vert" href="#one">Invest</a></span></li>
-					<li><span class="liner"><a class="vert" href="#two">Subscribe</a></span></li>
-					<li><span class="liner"><a class="vert" href="#why">Why Us</a></span></li>
-					<li><span class="liner"><a class="vert" href="#three">Faq</a></span></li>
+					<li><span class="liner"><a class="vert" href="http://www.google.com">Home</a></span></li>
+					<li><span class="liner"><a class="vert" href="http://www.google.com">Contact</a></span></li>
+					<li><span class="liner"><a class="vert" href="http://www.google.com">Subscribe</a></span></li>
+					<li><span class="liner"><a class="vert" href="http://www.google.com">Blog</a></span></li>
 					<li class="log"><a class="login-nav" href="http://dev.cryptocurve.io/login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Try Now</a></li>
 				</ul>
 			</nav>
