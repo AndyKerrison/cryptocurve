@@ -29,7 +29,7 @@
 								<button class="invest">Invest</button>
 								</div>
 								<div class="slide">	
-								<img class="company" src="http://dev.cryptocurve.io/img/kyber.png">
+								<img class="company" src="http://dev.cryptocurve.io/img/icon.png">
 								<p id="timer2"></p>
 								<button class="invest">Test</button>
 								</div>
@@ -125,7 +125,7 @@
 								<h2>Mission Statement</h2>
 									<div class="border"></div>
 								<div class="statement">
-								<p>At CryptoCurve, our mission is to provide the everyday investor with a means to participate in early investment opportunities with promising cryptocurrency companies, and to provide those companies assurance that their goals of decentralization are met. We match like-minded investors looking to participate in Initial Coin Offerings (ICOs) together, and our Smart Contract coding allows for more efficient blockchain transactions to ensure everyone can participate without having to provide large “gas” fees. This benefits the investor that the ICO is not monopolized by those wanting to manipulate the market. We are decentralized and the company offering the investment because trust and security have been burdens resulting in past scams. We aim to be the trustless distributor between investor and investee, where the investor can be assured that they will get their fair shot at participation, and the investee is assuralizing the opportunity of early investments in technology that is changing our world, and we’d like you to join us.</p>	
+								<p>At CryptoCurve, our mission is to provide the everyday investor with a means to participate in early investment opportunities with promising cryptocurrency companies, and to provide those companies assurance that their goals of decentralization are met. We match like-minded investors looking to participate in Initial Coin Offerings (ICOs) together, and our smart contract coding allows for more efficient blockchain transactions to ensure everyone can participate without having to provide large “gas” fees. This benefits the investor and the company offering the investment because trust and security have been burdens in the past. We aim to be the trustless distributor between investor and investee, where the investor can be assured that they will get their fair shot at participation, and the investee is assured that the ICO is not monopolized by those wanting to manipulate the market. We are decentralizing the opportunity of early investments in technology that is changing our world, and we’d like you to join us.</p>	
 								</div>
 
 							</header>
@@ -159,6 +159,8 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "inline-block";  
 }
+
+var el = document.getElementsByClassName("slide");
 </script>
 				
 				<script src="js/menu.js"></script>
