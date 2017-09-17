@@ -2,25 +2,33 @@ var ContractManager = function(contracts)
 {
 	this.contracts = contracts;
 	
-	this.withdraw = function(contractID, ethAddress, callback)
+	function findContract(contractID)
 	{
 		for(var i=0; i<contracts.length; i++)
 		{
 			if (contracts[i].getID() == contractID)
 			{
-				contracts[i].withdraw(ethAddress, callback);
-			}
-		}		
+				return contracts[i];				
+			}			
+		}
+		return null;
+	}
+	
+	this.getName = function(contractID)
+	{
+		var contract = findContract(contractID);
+		return contract.getName();
+	}
+	
+	this.withdraw = function(contractID, ethAddress, callback)
+	{
+		var contract = findContract(contractID);
+		contract.withdraw(ethAddress, callback);		
 	}
 	
 	this.deposit = function(contractID, value, ethAddress, callback)
 	{
-		for(var i=0; i<contracts.length; i++)
-		{
-			if (contracts[i].getID() == contractID)
-			{
-				contracts[i].sendTransactionFrom(ethAddress, value, callback);
-			}
-		}
+		var contract = findContract(contractID);
+		contract.sendTransactionFrom(ethAddress, value, callback);
 	}
 }

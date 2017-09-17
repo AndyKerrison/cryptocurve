@@ -1,5 +1,6 @@
-var SmartContract = function(contractID, contractAddress, contractAbi, allowDeposits) {
+var SmartContract = function(contractID, contractName, contractAddress, contractAbi, allowDeposits) {
 	var id = contractID;
+	var name = contractName;
 	var address = contractAddress;
 	var abi = contractAbi;	
 	var allowDeposits = allowDeposits;
@@ -15,7 +16,11 @@ var SmartContract = function(contractID, contractAddress, contractAbi, allowDepo
 		return id;
 	}
 	
-	this.getDepositValue = function(ethAddress, callback) {
+	this.getName = function() {
+		return name;
+	}
+	
+	this.getDepositBalance = function(ethAddress, callback) {
 		if (address == null || address.length == 0 || typeof web3 == 'undefined')
 		{
 			callback(0, id);
@@ -31,7 +36,30 @@ var SmartContract = function(contractID, contractAddress, contractAbi, allowDepo
 			if (!error) {
 				console.log(result);
 				//alert("got some value " + result);
-				result = +(result/1000000000000000000).toFixed(4)
+				result = +(result/1000000000000000000).toFixed(4);
+				callback(result, id);
+			} else {
+				console.error(error);
+			}
+		});
+	}
+	
+	this.getTokenBalance = function(ethAddress, callback) {
+		if (address == null || address.length == 0 || typeof web3 == 'undefined')
+		{
+			callback(0, id);
+			return;
+		}
+		
+		console.log("ABI "+this.abi);
+		console.log("address "+ address);
+		console.log("ethaddress " + ethAddress);
+		var contractInstance = web3.eth.contract(JSON.parse(abi)).at(address);
+		contractInstance.getUserTokenBalance(ethAddress, function(error, result)
+		{
+			if (!error) {
+				console.log(result);
+				result = +(result).toFixed(4);
 				callback(result, id);
 			} else {
 				console.error(error);
@@ -55,6 +83,10 @@ var SmartContract = function(contractID, contractAddress, contractAbi, allowDepo
 	}
 	
 	this.sendTransactionFrom = function(ethAddress, value, callback) 	{
+		alert("(debug) returning fake transaction ID for testing");
+		callback("0x123456789", id, value);
+		return;
+		
 		alert("(debug) from: " + ethAddress);
 		alert("(debug) to: " + address);
 		alert("(debug) value: " + value);
@@ -66,7 +98,7 @@ var SmartContract = function(contractID, contractAddress, contractAbi, allowDepo
 		}, function(error, result){
 			if (!error) {
 				console.log(result);
-				callback(result, id);				
+				callback(result, id, value);				
 			} else {
 				console.error(error);
 			}		

@@ -66,10 +66,11 @@ function loadContracts()
 	foreach ($contracts as $contract)
 	{
 		$id = $contract->getID();
+		$name = $contract->getName();
 		$address = $contract->getSmartContractAddress();
 		$abi = $contract->getAbi();
-		$allowDeposits = $contract->getAllowDeposits();
-		echo "contracts.push(new SmartContract('".$id."', '".$address."', '".$abi."', '".$allowDeposits."'));";
+		$allowDeposits = (bool)$contract->getAllowDeposits();
+		echo "contracts.push(new SmartContract('".$id."', '".$name."', '".$address."', '".$abi."', '".$allowDeposits."'));";
 		echo "\r\n";
 	}
 	?>
@@ -84,9 +85,12 @@ function loadContracts()
 		{
 			setContractDisabled(contracts[i].getID());		
 		}
-		
-		//for each contract, load the amount currently deposited by this user.	
-		contracts[i].getDepositValue(web3Manager.getEthAddress(), setDepositDisplayValue);
+		else
+		{
+			//for each contract, load the amount currently deposited by this user.	
+			contracts[i].getDepositBalance(web3Manager.getEthAddress(), setDepositDisplayValue);
+			contracts[i].getTokenBalance(web3Manager.getEthAddress(), setTokenDisplayValue);
+		}		
 	}
 }
 
@@ -100,15 +104,15 @@ function setContractDisabled(contractID)
 	tr.find('.js-btnWithdraw').prop("disabled", true);	
 }
 
+//todo - disable withdraw button if BOTH these are zero balance
 function setDepositDisplayValue(result, contractID) {
-	//if the deposit value was 0, disable the withdraw button
 	var tr = $("tr[data-contractID='" + contractID + "']");
-	tr.find('.js-etherDeposited').html(result);
-			
-	if (result ==0)
-	{				
-		tr.find('.js-btnWithdraw').prop("disabled", true);			
-	}
+	tr.find('.js-etherBalance').html(result);
+}
+
+function setTokenDisplayValue(result, contractID) {
+	var tr = $("tr[data-contractID='" + contractID + "']");
+	tr.find('.js-tokenBalance').html(result);
 }
 
 function bindButtons() {
@@ -129,7 +133,7 @@ function bindButtons() {
 		else
 		{
 			var contractID = $(this).closest("tr").data("contractid");
-			contractManager.submit(contractID, value, web3Manager.getEthAddress(), depositSuccess);
+			contractManager.deposit(contractID, value, web3Manager.getEthAddress(), depositSuccess);
 		}
 	});
 	
@@ -144,9 +148,25 @@ function withdrawSuccess(transactionID, contractID)
 	alert("Transaction hash: " + transactionID);	
 }
 
-function depositSuccess(transactionID, contractID)
+function depositSuccess(transactionID, contractID, value)
 {
 	alert("Transaction hash: " + transactionID);	
+	
+	//add it to the table
+	var row = $('#pendingTransactions tr:first');
+	row.after("<tr><td>"+transactionID+"</td>"+
+		"<td>"+new Date().toISOString()+"</td>"+
+		"<td>"+contractManager.getName(contractID)+"</td>"+
+		"<td>Deposit</td>"+
+		"<td>"+value+"</td>"+
+		+"</tr>");
+
+	//Transaction, Time created, ICO, Type,Value
+	//cell1.html(transactionsID);
+	//cell2.html(Now());
+	//cell3.html("SomeICOIPressed");
+	//cell4.html("Deposit");
+	//cell5.html("???");
 }
 
 </script>
@@ -163,7 +183,8 @@ function depositSuccess(transactionID, contractID)
 		<th>ICO</th>
 		<th>Date</th>
 		<th>Smart Contract Address</th>
-		<th>Deposited</th>
+		<th>Ether</th>
+		<th>Tokens</th>
 		<th>Deposit</th>
 		<th>Withdraw</th>
 	</tr>
@@ -179,7 +200,8 @@ foreach ($contracts as $contract)
 		<td><?php echo $contract->getName() ?></td>
 		<td><?php echo $contract->getStartDate() ?></td>
 		<td><?php echo $contract->getSmartContractAddress() ?></td>
-		<td class="js-etherDeposited"></td>
+		<td class="js-etherBalance"></td>
+		<td class="js-tokenBalance"></td>
 		<td>
 			<input type="text" class="js-txtDeposit" value="0.0">
 			<button class="js-btnDeposit">Deposit</button>
@@ -192,6 +214,25 @@ foreach ($contracts as $contract)
 }
 ?>  
 </tbody>
+</table>
+<!-- todo - put some proper spacing here, or let alex do it -->
+<p>&nbsp;</p>
+<h1>Pending Transactions</h1>
+<table class="meta" id="pendingTransactions">
+	<tr>
+		<th>Transaction</th>
+		<th>Time created</th>
+		<th>ICO</th>
+		<th>Type</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>0xabcdef1234567890</td>
+		<td>yyyy-mm-dd hh:mm:ss</td>
+		<td>test value</td>
+		<td>Deposit</td>
+		<td>1.0</td>
+	</tr>
 </table>
 <p>&nbsp;</p>
 <p>Stuff done</p>
