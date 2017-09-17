@@ -1,6 +1,12 @@
 <html>
 <head>
-<?php  
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+</head>
+<body class="page">
+<?php
+include('page-header.php'); 
 
 include 'models/smartContract.php';
 include 'models/database.php';
@@ -10,153 +16,51 @@ $db = new CCDatabase();
 $contracts = $db->getAllSmartContracts();
 
 ?>
-
-<link rel="stylesheet" href="css/main.css" type="text/css">
-<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-</head>
-<body class="page">
-<?php include('page-header.php'); ?>
 <div class="page-content">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="web3.min.js"></script>
+<!--<script src="web3.min.js"></script>-->
+<script src="js/SmartContract.js"></script>
+<script src="js/Web3Manager.js"></script>
+<script src="js/ContractManager.js"></script>
 <script runat="server" type"text/javascript">
 
-var SmartContract = function(contractID, contractAddress, contractAbi, allowDeposits) {
-	var id = contractID;
-	var address = contractAddress;
-	var abi = contractAbi;	
-	var allowDeposits = allowDeposits;
-	
-	this.canTakeDeposits = function() {
-		if (!allowDeposits) return false;
-		if (address == null || address.length == 0) return false;
-		if (abi == null || abi.length == 0) return false;
-		return true;
-	}
-		
-	this.getID = function() {
-		return id;
-	}
-	
-	this.getDepositValue = function(ethAddress, callback) {
-		if (address == null || address.length == 0)
-		{
-			callback(0, id);
-			return;
-		}
-		
-		console.log("ABI "+this.abi);
-		console.log("address "+ address);
-		console.log("ethaddress " + ethAddress);
-		var contractInstance = web3.eth.contract(JSON.parse(abi)).at(address);
-		contractInstance._etherDeposits(ethAddress, function(error, result)
-		{
-			if (!error) {
-				console.log(result);
-				//alert("got some value " + result);
-				result = +(result/1000000000000000000).toFixed(4)
-				callback(result, id);
-			} else {
-				console.error(error);
-			}
-		});
-	}
-	
-	this.withdraw = function(ethAddress) {
-		web3.eth.sendTransaction({
-			from: ethAddress,
-			to: address,
-			value: 0
-		}, function(error, result){
-			if (!error) {
-				console.log(result);
-				alert("Transaction hash: " + result);			
-			} else {
-				console.error(error);
-			}
-		});	
-	}
-	
-	this.sendTransactionFrom = function(ethAddress, value) 	{
-		alert("(debug) from: " + ethAddress);
-		alert("(debug) to: " + address);
-		alert("(debug) value: " + value);
-		
-		web3.eth.sendTransaction({
-			from: ethAddress,
-			to: address,
-			value: value*1000000000000000000 //must be a unit for this somewhere
-		}, function(error, result){
-			if (!error) {
-				console.log(result);
-				alert("Transaction hash: " + result);			
-			} else {
-				console.error(error);
-			}		
-		});
-	}
+var web3Manager;
+var contractManager;
 
-}
-
-
-
-var contracts= [];
-var ethBalance = 0;
-var metaMaskAddress;
-var contractAddress;
-
-window.addEventListener('load', function() {
-	checkWeb3();
+$( document ).ready(function() {
+	bindButtons();    
 });
 
-function checkWeb3()
-{
-	// Checking if Web3 has been injected by the browser (Mist/MetaMask)
-	if (typeof web3 !== 'undefined') {
-		// Use Mist/MetaMask's provider
-		window.web3 = new Web3(web3.currentProvider);
-		checkNetworkVersion();
-		//window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-		//alert("found metamask");
-	} else {
-		alert("This page requires MetaMask");
-		//alert("loading default");    
-		// fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-		//window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-	}
-}
+//must run after window load, won't be ready when document.ready fires.
+$(window).on('load', function() {
+	web3Manager = new Web3Manager(web3fail, web3success);	
+	web3Manager.init();
+});
 
-function checkNetworkVersion()
+//got web3, set the user's address and balance
+function web3success()
 {
-	web3.version.getNetwork((err, netId) => {
-		switch (netId) {
-			case "1":
-				console.log('This is mainnet')
-				loadStuff();
-				break
-			case "2":
-				console.log('This is the deprecated Morden test network.')
-				break
-			case "3":
-				console.log('This is the ropsten test network.')
-				break
-			default:
-				console.log('This is an unknown network.')
-		}
+	$('#ethAddress').html(web3Manager.getEthAddress());
+	
+	web3Manager.getBalance(function(ether) {
+		$('#ethBalance').html(ether);
 	});
+	
+	loadContracts();
 }
 
-function loadStuff()
+function web3fail(error)
 {
-	if (web3.eth.accounts.length == 0)
-	{
-		alert("Please unlock metamask and refresh page to continue");
-		return;
-	}
-	metaMaskAddress = web3.eth.accounts[0];
-	$('#ethAddress').html(metaMaskAddress);
-		
+	alert(error);
+	loadContracts(); //just to disable them really
+}
+
+//load the contracts, update page state accordingly
+//note - most disabled/enabled stuff could be done server side, except for that which requires loading existing deposits
+function loadContracts()
+{
+	var contracts = [];
+	
 	//here we dynamically create javascript objects for each of the contracts retrieved from the database.	
 	<?php  
 	foreach ($contracts as $contract)
@@ -170,78 +74,42 @@ function loadStuff()
 	}
 	?>
 	
+	contractManager = new ContractManager(contracts);
+	
 	for(var i=0; i<contracts.length; i++)
 	{
 		//if we don't have a contract address or abi, disable the deposit button and textbox
-		if (!contracts[i].canTakeDeposits())
+		//same if metamask/web3 wasn't loaded
+		if (!contracts[i].canTakeDeposits() || !web3Manager.web3Valid())
 		{
-			var tr = $("tr[data-contractID='" + contracts[i].getID() + "']");
-			tr.find('.js-txtDeposit').prop("disabled", true);			
-			tr.find('.js-btnDeposit').prop("disabled", true);			
-			tr.find('.js-btnWithdraw').prop("disabled", true);			
+			setContractDisabled(contracts[i].getID());		
 		}
 		
 		//for each contract, load the amount currently deposited by this user.	
-		contracts[i].getDepositValue(metaMaskAddress, function(result, id) { 		
-			//if the deposit value was 0, disable the withdraw button
-			var tr = $("tr[data-contractID='" + id + "']");
-			tr.find('.js-etherDeposited').html(result);
-			
-			if (result ==0)
-			{				
-				tr.find('.js-btnWithdraw').prop("disabled", true);			
-			}
-		});
+		contracts[i].getDepositValue(web3Manager.getEthAddress(), setDepositDisplayValue);
 	}
-	
-	/*alert(contractAbi);
-	alert(contractAddress);
-	alert(metaMaskAddress);
-	var contractInstance = web3.eth.contract(contractAbi).at(contractAddress);
-		contractInstance._etherDeposits(metaMaskAddress, function(error, result)
-		{
-			if (!error) {
-				console.log(result);
-				//alert("got some value " + result);
-				result = +(result/1000000000000000000).toFixed(4)
-				alert("GOT Deposit value " + result);
-			} else {
-				console.error(error);
-			}
-		});
-	*/
-			
-	/*
-	alert("now setting value");
-	
-	contractInstance = web3.eth.contract(abi).at(address);
-	contractInstance.setSomeValue(100, {value: 0, gas: 30000}, function(error, result){ 
-		if (!error) {
-			console.log(result);
-		} else {
-			console.error(error);
-		}
-	});
-	*/
- 
-	// Now you can start your app & access web3 freely:
-	web3.eth.getBalance(metaMaskAddress, function (error, result) {
-		if (!error) {
-			console.log(result);
-			var ether = web3.fromWei(result, 'ether');
-			console.log(ether);
-			ether = +ether.toFixed(4);
-			ethBalance = ether;
-			$('#ethBalance').html(ether);			
-		} else {
-			console.error(error);
-		}
-	});
 }
 
-$( document ).ready(function() {
-	bindButtons();    
-});
+
+//display-related functions. Designer may tweak these as needed
+function setContractDisabled(contractID)
+{
+	var tr = $("tr[data-contractID='" + contractID + "']");
+	tr.find('.js-txtDeposit').prop("disabled", true);			
+	tr.find('.js-btnDeposit').prop("disabled", true);			
+	tr.find('.js-btnWithdraw').prop("disabled", true);	
+}
+
+function setDepositDisplayValue(result, contractID) {
+	//if the deposit value was 0, disable the withdraw button
+	var tr = $("tr[data-contractID='" + contractID + "']");
+	tr.find('.js-etherDeposited').html(result);
+			
+	if (result ==0)
+	{				
+		tr.find('.js-btnWithdraw').prop("disabled", true);			
+	}
+}
 
 function bindButtons() {
 	$('.js-btnDeposit').click(function() {
@@ -261,38 +129,24 @@ function bindButtons() {
 		else
 		{
 			var contractID = $(this).closest("tr").data("contractid");
-			submitDeposit(contractID, value);
+			contractManager.submit(contractID, value, web3Manager.getEthAddress(), depositSuccess);
 		}
 	});
 	
 	$('.js-btnWithdraw').click(function() {
 		var contractID = $(this).closest("tr").data("contractid");
-		withdraw(contractID);		
+		contractManager.withdraw(contractID, web3Manager.getEthAddress(), withdrawSuccess);
 	});
 }
 
-//DISABLE WHEN CONTRACT ACTIVE!
-//Disable when no deposits!
-function withdraw(contractID)
+function withdrawSuccess(transactionID, contractID)
 {
-	for(var i=0; i<contracts.length; i++)
-	{
-		if (contracts[i].getID() == contractID)
-		{
-			contracts[i].withdraw(metaMaskAddress);
-		}
-	}		
+	alert("Transaction hash: " + transactionID);	
 }
 
-function submitDeposit(contractID, value)
+function depositSuccess(transactionID, contractID)
 {
-	for(var i=0; i<contracts.length; i++)
-	{
-		if (contracts[i].getID() == contractID)
-		{
-			contracts[i].sendTransactionFrom(metaMaskAddress, value);
-		}
-	}
+	alert("Transaction hash: " + transactionID);	
 }
 
 </script>
@@ -303,7 +157,6 @@ function submitDeposit(contractID, value)
 <div id="ethBalance">[somevalue]</div>
 
 <h1>Metamask Blockchain interaction demo</h1>
-<p>ICO list (database drivenn)</p>
 <table class="meta">
 <thead>
 	<tr>
@@ -349,11 +202,12 @@ foreach ($contracts as $contract)
 	<li>Allow withdraw from smart contract</li>
 	<li>get ICO list from database</li>
 	<li>Restrict the withdraw/deposit functions based on if ICO is enabled, active, etc</li>
+	<li>clean up javascript code, split into useful modules</li>
 </ul>
 
 <p>Still todo:</p>
-<ul>
-	<li>clean up javascript code, split into useful modules</li>
+<ul>	
+	<li>Update ICOs in database, retest withdraw/deposit functions</li>
 	<li>Add user's pending transactions to database and display on this page</li>
 	<li>Auto-update at intervals (30s? 1m?)</li>
 	<li>Admin page for adding/updatingdeleting ICO's in the database</li>
