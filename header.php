@@ -1,7 +1,7 @@
 <header id="main">
                        <div class="container">
 							<div class="logo-container">
-								<a href="http://dev.cryptocurve.io"><img src="img/cryptocurve-logo.png" width="220" alt="crypto-curve"></a>
+								<a href="/"><img src="img/cryptocurve-logo.png" width="220" alt="crypto-curve"></a>
 							</div>
   
 			<nav class="site-nav">
@@ -10,7 +10,7 @@
 					<li><span class="liner"><a class="vert" href="#two">Subscribe</a></span></li>
 					<li><span class="liner"><a class="vert" href="#why">Why Us</a></span></li>
 					<li><span class="liner"><a class="vert" href="#three">Faq</a></span></li>
-					<li class="log"><a class="login-nav" href="http://dev.cryptocurve.io/login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Try Now</a></li>
+					<li class="log"><a class="login-nav" href="/metamasktest.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Try Now</a></li>
 				</ul>
 			</nav>
   

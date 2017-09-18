@@ -474,7 +474,14 @@ a.vert:before,a.vert:after{
     border: none;
     font-family: abel;
     font-size: 0.6em;
+	transition: background 0.4s ease-in-out;
 }
+
+	button.submit-section:hover{
+		cursor:pointer;
+		color:white;
+		background:#1f1e1e;
+	}
 
    
    section#why{
@@ -641,11 +648,61 @@ a.vert:before,a.vert:after{
 	 .page h1 {
 		font-size:2em;
 		font-weight: bold;
-		margin-bottom: 5em;
+		margin-bottom: 2em;
 		margin-top: 3em;
 }
 
+      .page h2{
+		  margin-top:1em;
+		  margin-bottom:0.3em;
+	  }
+
 /* Metamask Page */
+	
+	body.invest {
+		width: 100%;
+		background-color:white;
+	}
+	
+	.invest h1 {
+		font-size:2em;
+		font-weight: bold;
+		margin-bottom: 1em;
+		margin-top: 3em;
+}
+
+     .invest h2{
+		  margin-top:3em;
+		  margin-bottom:1em;
+		  font-family:abel;
+		  font-size:1.1em;
+	  }
+	  
+	  .table-container{
+		  width:100%;
+		  padding-top:5em;
+		  padding-bottom:3em;
+	  }
+	  
+	  .table1{
+		  width:40%;
+		  display:inline-block;
+	  }
+	  
+	  .table2{
+		  width:49%;
+		  display:inline-block;
+	  }
+	
+	#ethBalance{
+		font-family:Abel;
+	}
+	
+	#ethAddress{
+		font-family:abel;
+	}
+
+
 	table.meta {
 		margin:auto;
 		border: 1px solid black;
@@ -657,7 +714,7 @@ a.vert:before,a.vert:after{
 
 	table.meta td {
 		font-family: abel;
-		font-size:0.9em;
+		font-size:0.8em;
 		letter-spacing: 1px;
 		padding: 1em;
 		border-bottom: 1px solid black;
@@ -665,11 +722,15 @@ a.vert:before,a.vert:after{
 
 	table.meta th {
 		font-family: abel;
-		font-size:1.2em;
+		font-size:1em;
 		font-weight:normal;
 		letter-spacing: 2px;
 		background: #000;
 		color: white;
+	}
+	
+	th.space {
+		padding-right:0.5em;
 	}
 	
 	input.js-txtDeposit {

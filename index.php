@@ -11,7 +11,7 @@
 							<h2>Cryptocurve</h2>
 							<p>ICO Investment Made Easy.</p>
 							<ul class="actions">
-								<li><a href="dev.cryptocurve.io" class="button special">Try Now</a></li>
+								<li><a href="/metamasktest.php" class="button special">Try Now</a></li>
 							</ul>
 						</div>
 					</section>
@@ -49,10 +49,12 @@
 									<div class="border"></div>
 									<div class="local">
 									<p>Subscribe And Keep Up With The Latest News And Upcoming ICO's.</p>
-									<form action="index.html" method="post" class="subscribe-section">
+									<form action="//cryptocurve.us16.list-manage.com/subscribe/post?u=951c2df0cc4771475abbade47&amp;id=12cce91bf2" method="post" class="subscribe-section" target="_blank" novalidate>
 							<input type="email" name="email" class="input-section" placeholder="Email address">
 								<button type="submit" class="submit-section">Subscribe</button>
 									</form>
+									
+<!--End mc_embed_signup-->
 									</div>
 							</header>
 						</div>

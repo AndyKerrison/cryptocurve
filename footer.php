@@ -9,11 +9,11 @@
 										<li class="soc"><a class="social" id="you" href="http://www.google.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
 										<li class="soc"><a class="social" id="sla" href="http://www.google.com"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
 										<li class="soc"><a class="social" id="med" href="http://www.google.com"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
-										<li class="soc"><a class="social" id="mail" href="http://www.google.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+										<li class="soc"><a class="social" id="mail" href="mailto:support@cryptocurve.io" target="_top"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
 									</ul>
 							</div>
 					<div class="footercolumn" id="col2"><h3 class="footertitle">Newsletter</h3>
-						<form action="index.html" method="post" class="subscribe-form">
+						<form action="//cryptocurve.us16.list-manage.com/subscribe/post?u=951c2df0cc4771475abbade47&amp;id=12cce91bf2" method="post" class="subscribe-form" target="_blank" novalidate>
 							<input type="email" name="email" class="subscribe-input" placeholder="Email address">
 								<button type="submit" class="subscribe-submit">Subscribe</button>
 									</form>

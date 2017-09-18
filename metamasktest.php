@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 </head>
-<body class="page">
+<body class="invest">
 <?php
 include('page-header.php'); 
 
@@ -170,13 +170,53 @@ function depositSuccess(transactionID, contractID, value)
 }
 
 </script>
+<div class="table-container">
+<div class="table1">
+<h2>Metamask</h2>
+<table class="meta">
+<thead>
+	<tr>
+<th>Ethereum Address</th>
+<th class="space">Balance</th>
+    </tr>
+	</thead>
+	<tbody>
+	<tr>
+<td id="ethAddress">[someaddress]</td>
+<td id="ethBalance">[somevalue]</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-<div>Ethereum address:</div>
-<div id="ethAddress">[someaddress]</div>
-<div>Ether balance:</div>
-<div id="ethBalance">[somevalue]</div>
 
-<h1>Metamask Blockchain interaction demo</h1>
+<div class="table2">
+<h2>Pending Transactions</h2>
+<table class="meta" id="pendingTransactions">
+<thead>
+	<tr>
+		<th>Transaction</th>
+		<th>Time created</th>
+		<th>ICO</th>
+		<th>Type</th>
+		<th class="space">Value</th>
+	</tr>
+	</thead>
+	<tr>
+		<td>0xabcdef1234567890</td>
+		<td>yyyy-mm-dd hh:mm:ss</td>
+		<td>test value</td>
+		<td>Deposit</td>
+		<td>1.0</td>
+	</tr>
+</table>
+</div>
+
+
+
+</div>
+
+<h2>Invest</h2>
 <table class="meta">
 <thead>
 	<tr>
@@ -217,23 +257,7 @@ foreach ($contracts as $contract)
 </table>
 <!-- todo - put some proper spacing here, or let alex do it -->
 <p>&nbsp;</p>
-<h1>Pending Transactions</h1>
-<table class="meta" id="pendingTransactions">
-	<tr>
-		<th>Transaction</th>
-		<th>Time created</th>
-		<th>ICO</th>
-		<th>Type</th>
-		<th>Value</th>
-	</tr>
-	<tr>
-		<td>0xabcdef1234567890</td>
-		<td>yyyy-mm-dd hh:mm:ss</td>
-		<td>test value</td>
-		<td>Deposit</td>
-		<td>1.0</td>
-	</tr>
-</table>
+
 <p>&nbsp;</p>
 <p>Stuff done</p>
 <ul>
