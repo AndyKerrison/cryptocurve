@@ -32,6 +32,13 @@
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script src="js/timer.js"></script>
 
+<?php
+if ($_SERVER['SERVER_PORT']!=443)
+{
+$url = "https://". $_SERVER['SERVER_NAME'] . ":443".$_SERVER['REQUEST_URI'];
+header("Location: $url");
+}
+?>
   
 <!--[if lt IE 9]>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>

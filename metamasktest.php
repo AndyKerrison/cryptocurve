@@ -256,7 +256,7 @@ foreach ($contracts as $contract)
 </tbody>
 </table>
 <!-- todo - put some proper spacing here, or let alex do it -->
-<p>&nbsp;</p>
+<!--<p>&nbsp;</p>
 
 <p>&nbsp;</p>
 <p>Stuff done</p>
@@ -276,7 +276,7 @@ foreach ($contracts as $contract)
 	<li>Add user's pending transactions to database and display on this page</li>
 	<li>Auto-update at intervals (30s? 1m?)</li>
 	<li>Admin page for adding/updatingdeleting ICO's in the database</li>
-</ul>
+</ul>-->
 </div>
 </body>
 </html>
