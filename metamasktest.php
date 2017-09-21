@@ -11,6 +11,9 @@ include('page-header.php');
 include 'models/smartContract.php';
 include 'models/database.php';
 
+$file = "phplog.txt";
+file_put_contents($file, "test", FILE_APPEND | LOCK_EX);
+
 $db = new CCDatabase();
 
 $contracts = $db->getAllSmartContracts();
@@ -23,6 +26,68 @@ $contracts = $db->getAllSmartContracts();
 <script src="js/Web3Manager.js"></script>
 <script src="js/ContractManager.js"></script>
 <script runat="server" type"text/javascript">
+
+var AjaxHelper = (function()
+{
+	function ajaxPost(methodName, data, success, error)
+	{
+		$.ajax({
+			type: "POST",
+				url: "https://cryptocurve.io/api.php?method="+methodName,
+				data: JSON.stringify(data),
+				contentType: "application/json; charset=utf-8",
+				crossDomain: true,
+				dataType: "json",
+				success: success,
+				error: error
+			});
+	}
+	
+	function defaultError(jqXHR, status) {
+		// error handler
+		console.log(jqXHR);
+		alert('fail' + status.code);
+	}
+	
+	return {
+		setTransactionComplete : function(transactionID) {
+			var data = {};
+			data["transactionID"] = transactionID;
+			
+			function success(data, status, jqXHR) {
+				console.log(data);
+			}
+				
+			ajaxPost("setTransactionComplete", data, success, defaultError);
+		},
+		
+		addTransaction : function(data) {
+			
+			function success(data, status, jqXHR) {
+				console.log(data);
+			}
+				
+			ajaxPost("addTransaction", data, success, defaultError);
+		},
+		
+		getTransactions : function(owner, callback)
+		{
+			var data = {};
+			data["owner"] = owner;
+			
+			function success(data, status, jqXHR) {
+				//console.log("GET_TRANSACTIONS_RESULT");
+				//console.log(data);
+				callback(data);
+			}
+			
+			ajaxPost("getTransactions", data, success, defaultError);
+		}
+	}
+}
+)();
+
+	  
 
 var web3Manager;
 var contractManager;
@@ -40,13 +105,14 @@ $(window).on('load', function() {
 //got web3, set the user's address and balance
 function web3success()
 {
-	$('#ethAddress').html(web3Manager.getEthAddress());
+	$('#ethAddress').html('<a target="_blank" href="https://etherscan.io/address/'+web3Manager.getEthAddress()+'">'+web3Manager.getEthAddress()+'</a>');
 	
 	web3Manager.getBalance(function(ether) {
 		$('#ethBalance').html(ether);
 	});
 	
 	loadContracts();
+	loadPendingTransactions();
 }
 
 function web3fail(error)
@@ -104,10 +170,59 @@ function setContractDisabled(contractID)
 	tr.find('.js-btnWithdraw').prop("disabled", true);	
 }
 
+
+//if the transaction is complete, it will have a blockhash, so don't show it
+//and update the database.
+function receiveTransactionStatus(transactionID, transaction) {
+	return function(error, result) {			
+		if(!error)
+		{
+			console.log(result);
+		
+			if (result == null || result.blockHash == null) //not included yet, or pending
+			{
+				drawPendingTransaction(transaction.transactionID, transaction.timestamp, transaction.ico, transaction.type, transaction.value);
+			}
+			else if (result.blockHash.length > 0)
+			{
+				//transaction successful, flag in db so it won't show up any more
+				AjaxHelper.setTransactionComplete(transactionID);
+				return;
+			}
+		}
+		else
+		{
+			console.log(transactionID);
+			console.log(error);
+		}
+	}
+}
+
+
+function loadPendingTransactions(){
+	//load pending transactions via service. 
+	AjaxHelper.getTransactions(web3Manager.getEthAddress(), function(data) {
+		transactionData = data;
+		console.log(data);
+		for (var i=0; i<data.length;i++)
+		{
+			var transactionID = data[i].transactionID.trim();
+			console.log("checking status for :" + transactionID);
+
+			web3.eth.getTransaction(transactionID, receiveTransactionStatus(transactionID, data[i]));		
+		}
+	});
+}
+
 //todo - disable withdraw button if BOTH these are zero balance
 function setDepositDisplayValue(result, contractID) {
 	var tr = $("tr[data-contractID='" + contractID + "']");
 	tr.find('.js-etherBalance').html(result);
+}
+
+function getDepositDisplayValue(contractID) {
+	var tr = $("tr[data-contractID='" + contractID + "']");
+	return tr.find('.js-etherBalance').html();
 }
 
 function setTokenDisplayValue(result, contractID) {
@@ -145,28 +260,61 @@ function bindButtons() {
 
 function withdrawSuccess(transactionID, contractID)
 {
-	alert("Transaction hash: " + transactionID);	
+	var type = "Withdraw";
+	var value = getDepositDisplayValue(contractID);
+		
+	//add it to the table
+	drawPendingTransaction(transactionID, new Date(), contractManager.getName(contractID), type, value);	
+	
+	//add it to the database
+	var data = {};
+	data["transactionID"] = transactionID;
+	data["owner"] = web3Manager.getEthAddress();
+	data["timestamp"] = new Date();
+	data["ico"] = contractManager.getName(contractID);
+	data["type"] = type;
+	data["value"] = value;
+	
+	AjaxHelper.addTransaction(data);
 }
 
 function depositSuccess(transactionID, contractID, value)
 {
-	alert("Transaction hash: " + transactionID);	
+	var type = "Deposit";
 	
 	//add it to the table
-	var row = $('#pendingTransactions tr:first');
-	row.after("<tr><td>"+transactionID+"</td>"+
-		"<td>"+new Date().toISOString()+"</td>"+
-		"<td>"+contractManager.getName(contractID)+"</td>"+
-		"<td>Deposit</td>"+
-		"<td>"+value+"</td>"+
-		+"</tr>");
+	drawPendingTransaction(transactionID, new Date(), contractManager.getName(contractID), type, value);
+	
+	//add it to the database
+	var data = {};
+	data["transactionID"] = transactionID;
+	data["owner"] = web3Manager.getEthAddress();
+	data["timestamp"] = new Date();
+	data["ico"] = contractManager.getName(contractID);
+	data["type"] = type;
+	data["value"] = value;
+	
+	AjaxHelper.addTransaction(data);
+}
 
-	//Transaction, Time created, ICO, Type,Value
-	//cell1.html(transactionsID);
-	//cell2.html(Now());
-	//cell3.html("SomeICOIPressed");
-	//cell4.html("Deposit");
-	//cell5.html("???");
+function drawPendingTransaction(transactionID, timestamp, contractName, type, value)
+{
+	if (timestamp.date != null) //object from db
+	{
+		timestamp = timestamp.date;
+	}
+	else //js date object
+	{
+		timestamp = timestamp.toISOString().replace('T', ' ').substring(0, 19);
+	}
+		
+	var row = $('#pendingTransactions tr:first');
+		row.after("<tr><td><a target='_blank' href='https://etherscan.io/address/"+transactionID+"'>"+transactionID+"</a></td>"+
+			"<td>"+timestamp+"</td>"+
+			"<td>"+contractName+"</td>"+
+			"<td>"+type+"</td>"+
+			"<td>"+value+"</td>"+
+			+"</tr>");
 }
 
 </script>
@@ -201,14 +349,7 @@ function depositSuccess(transactionID, contractID, value)
 		<th>Type</th>
 		<th class="space">Value</th>
 	</tr>
-	</thead>
-	<tr>
-		<td>0xabcdef1234567890</td>
-		<td>yyyy-mm-dd hh:mm:ss</td>
-		<td>test value</td>
-		<td>Deposit</td>
-		<td>1.0</td>
-	</tr>
+</thead>
 </table>
 </div>
 
@@ -239,7 +380,7 @@ foreach ($contracts as $contract)
 	<tr data-contractID="<?php echo $contractID ?>">
 		<td><?php echo $contract->getName() ?></td>
 		<td><?php echo $contract->getStartDate() ?></td>
-		<td><?php echo $contract->getSmartContractAddress() ?></td>
+		<td><a target="_blank" href="https://etherscan.io/address/<?php echo $contract->getSmartContractAddress() ?>"><?php echo $contract->getSmartContractAddress() ?></a></td>
 		<td class="js-etherBalance"></td>
 		<td class="js-tokenBalance"></td>
 		<td>

@@ -20,18 +20,13 @@
 					<section id="one" class="wrapper style1 layout">
 						<div class="merge">
 							<header class="tom">
-								<h2>Upcoming ICO</h2>
+								<h2>Upcoming ICOs</h2>
 									<div class="border"></div>
 									<div class="slide-container">
-								<div class="slide">	
-								<img class="company" src="http://dev.cryptocurve.io/img/kyber.png">
-								<p id="timer"></p>
-								<button class="invest">Invest</button>
-								</div>
-								<div class="slide">	
-								<img class="company" src="http://dev.cryptocurve.io/img/icon.png">
+								<div class="slide" id="slide1">	
+								<img class="company" width="350" src="/img/dbet-black.png">
 								<p id="timer2"></p>
-								<button class="invest">Test</button>
+								<a class="invest" href="/metamasktest.php">Invest</a>
 								</div>
 								<button class="left-button" onclick="plusDivs(-1)">&#10094;</button>
 								<button class="right-button" onclick="plusDivs(1)">&#10095;</button>
@@ -48,7 +43,7 @@
 								<h2>Subscribe</h2>
 									<div class="border"></div>
 									<div class="local">
-									<p>Subscribe And Keep Up With The Latest News And Upcoming ICO's.</p>
+									<p>Subscribe And Keep Up With The Latest News And Upcoming ICOs.</p>
 									<form action="//cryptocurve.us16.list-manage.com/subscribe/post?u=951c2df0cc4771475abbade47&amp;id=12cce91bf2" method="post" class="subscribe-section" target="_blank" novalidate>
 							<input type="email" name="email" class="input-section" placeholder="Email address">
 								<button type="submit" class="submit-section">Subscribe</button>
@@ -67,10 +62,10 @@
 								<h2>Why Us</h2>
 									<div class="border"></div>
 								<div class="why-container">
-								<div class="why-box"><div class="why-box-content"><i class="fa fa-universal-access" aria-hidden="true"></i><h2>Guaranteed Entry</h2><p>With CryptoCurve's smart contracts, your entry into ICOs is as close to guaranteed as possible. If we don't get access, we return your currency and you pay nothing.</p></div></div>
-								<div class="why-box"><div class="why-box-content"><i class="fa fa-usd" aria-hidden="true"></i><h2>Low Fees</h2><p>CryptoCurve takes a small 1% fee from the tokens you are buying.</p></div></div>
-								<div class="why-box"><div class="why-box-content"><i class="fa fa-rocket" aria-hidden="true"></i><h2>Fast And Simple</h2><p>Efficient smart contracts allow for the trustless exchange between investor and investee, and you will receive your tokens as soon as they are available.</p></div></div>
-								<div class="why-box"><div class="why-box-content"><i class="fa fa-life-ring" aria-hidden="true"></i><h2>24/7 Support</h2><p>Contact us through social media or email whenever you need to, and we will resolve any issue.</p></div></div>
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-universal-access" aria-hidden="true"></i><h2>Guaranteed Entry</h2><p>With CryptoCurve's smart contracts, your entry into ICOs is as close to guaranteed as possible. If we don't get access, we return your currency and you pay nothing but the transaction fees.</p></div></div>
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-usd" aria-hidden="true"></i><h2>Low Fees</h2><p>CryptoCurve takes a small fee in the form of 1% of the tokens you are buying.</p></div></div>
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-rocket" aria-hidden="true"></i><h2>Fast And Simple</h2><p>Efficient smart contracts allow for the trustless exchange between investor and investee, guaranteeing that you will receive your tokens as soon as they are available.</p></div></div>
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-life-ring" aria-hidden="true"></i><h2>24/7 Support</h2><p>Contact us through social media or email whenever you need to. We will be available to resolve any issues or answer your questions.</p></div></div>
 								</div>
 
 							</header>
@@ -90,28 +85,28 @@
       <input class="accordion" id="tab-one" type="checkbox" name="tabs">
       <label class="accord" for="tab-one">How Does CryptoCurve Work?</label>
       <div class="tab-content">
-        <p>Depending on the ICO, CryptoCurve provides a means of participation into pre-selected ICOs utilizing smart contracts to create “Pools” of investors, to try and ensure successful contributions.</p>
+        <p>CryptoCurve provides a means of participation into pre-selected ICOs utilizing smart contracts to create "pools" of investors, to increase the chances of a successful contribution.</p>
       </div>
     </div>
     <div class="tab">
       <input class="accordion" id="tab-two" type="checkbox" name="tabs">
       <label class="accord" for="tab-two">What About Hard Capped ICOs?</label>
       <div class="tab-content">
-        <p>CryptoCurve analyzes upcoming ICOs to ensure regulatory and systemic compliance with our platform. For ICOs that have individual hard caps with time limit bonus, CryptoCurve will bring smart contract enabled contributions for the investor who might not have time to sit at a computer and wait for a specific time.</p>
+        <p>CryptoCurve analyzes upcoming ICOs to ensure regulatory and systemic compliance with our platform. For ICOs that have individual hard caps with time bonuses, CryptoCurve will set up smart contract enabled contributions for the investor who might not have the time to sit at a computer and wait for a specific time.</p>
       </div>
     </div>
     <div class="tab">
       <input class="accordion" id="tab-three" type="checkbox" name="tabs">
       <label class="accord" for="tab-three">Why Use CryptoCurve?</label>
       <div class="tab-content">
-        <p>CryptoCurve aims to be the go-to source of prefunding ICOs. CryptoCurve provides benefits to investors and investees by ensuring participation into ICOs that sell out quickly, and providing decentralized mass distribution of tokens, helping to provide a widespread ecosystem to creators of new blockchain technology.</p>
+        <p>CryptoCurve aims to be the go-to source of prefunding ICOs. CryptoCurve provides benefits to investors and investees by offering a way to participate in ICOs that have large minimum purchase limits or sell out quickly. In addition CryptoCurve also provides decentralized mass distribution of tokens. This helps to ensure that the creators of new blockchain technology are distributing to a broader, more diversified audience.</p>
       </div>
     </div>
 	<div class="tab">
       <input class="accordion" id="tab-four" type="checkbox" name="tabs">
-      <label class="accord" for="tab-four">How Can I Participate?</label>
+      <label class="accord" for="tab-four">How Do I Participate?</label>
       <div class="tab-content">
-        <p>Simply click the "Signup" button on the top of the page and create a CryptoCurve account, select the ICOs you want to participate in, and send your Eth. Then when the time comes our smart contract technology will buy your tokens, and redistribute them to you after the token sale. </p>
+        <p>Download and install MetaMask, click on the "Try Now" button on the top of the page which takes you to your CryptoCurve account page, select the ICO you want to participate in. CryptoCurve will sink to your MetaMask account and will allow you to deposit Eth to our Smart Contract. Then when the time comes we will buy your tokens and redistribute them to you after the token sale ends, at which point you will have the opportunity to withdraw your ICO tokens.</p>
       </div>
     </div>
   </div>
@@ -166,6 +161,7 @@ var el = document.getElementsByClassName("slide");
 </script>
 				
 				<script src="js/menu.js"></script>
+				<script src="js/timer.js"></script>
 				<script src="js/smooth.js"></script>
 				<script src="js/scrollup.js"></script>
 				

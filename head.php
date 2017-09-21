@@ -12,7 +12,7 @@
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-<meta name="theme-color" content="#121212" />
+<meta name="theme-color" content="#ffffff" />
 <!-- Windows Phone -->
 <meta name="msapplication-navbutton-color" content="#121212">
 <!-- iOS Safari -->
@@ -30,7 +30,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script src="js/timer.js"></script>
+<script src="js/active.js"></script>
 
 <?php
 if ($_SERVER['SERVER_PORT']!=443)

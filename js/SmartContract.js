@@ -83,13 +83,13 @@ var SmartContract = function(contractID, contractName, contractAddress, contract
 	}
 	
 	this.sendTransactionFrom = function(ethAddress, value, callback) 	{
-		alert("(debug) returning fake transaction ID for testing");
-		callback("0x123456789", id, value);
-		return;
+		//alert("(debug) returning fake transaction ID for testing");
+		//callback("0x123456789", id, value);
+		//return;
 		
-		alert("(debug) from: " + ethAddress);
-		alert("(debug) to: " + address);
-		alert("(debug) value: " + value);
+		//alert("(debug) from: " + ethAddress);
+		//alert("(debug) to: " + address);
+		//alert("(debug) value: " + value);
 		
 		web3.eth.sendTransaction({
 			from: ethAddress,

@@ -1,10 +1,10 @@
     @font-face {
   font-family: 'bebas';
-  src: url('https://cryptocurve.io/fonts/bebas.eot');
-  src: url('https://cryptocurve.io/fonts/bebas.eot?#iefix') format('embedded-opentype'),
-       url('https://cryptocurve.io/fonts/bebas.woff') format('woff'),
-       url('https://cryptocurve.io/fonts/bebas.ttf') format('truetype'),
-	   url('https://cryptocurve.io/fonts/bebas.svg') format('svg');}
+  src: url('/fonts/bebas.eot');
+  src: url('/fonts/bebas.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/bebas.woff') format('woff'),
+       url('/fonts/bebas.ttf') format('truetype'),
+	   url('/fonts/bebas.svg') format('svg');}
 	   
 	   
 	   
@@ -171,7 +171,7 @@ i.fa.fa-sign-in {
 .menu-toggle {
   padding: 1em;
   position: absolute;
-  top: 1.8em;
+  top: 1.6em;
   right: .7em;
   cursor: pointer;
   z-index:101;
@@ -183,7 +183,7 @@ i.fa.fa-sign-in {
 .hamburger::after {
   content: '';
   display: block;
-  background: #555;
+  background: #595959;
   height: 3px;
   width: 1.75em;
   border-radius: 3px;
@@ -254,7 +254,7 @@ a.vert:before,a.vert:after{
   box-sizing:border-box;
   transition:0.25s all ease;
   -webkit-backface-visibility:hidden;
-          backface-visibility:hidden;
+   backface-visibility:hidden;
   position:absolute;
   width:1px;
   height:0;
@@ -355,6 +355,16 @@ a.vert:before,a.vert:after{
     font-size: 1.5em;
 	margin-bottom:1em;
 }
+
+	p#timer2 {
+    color: black;
+    font-family: abel;
+    letter-spacing: 2px;
+	font-weight: normal;
+    font-size: 1.5em;
+	margin-bottom:1em;
+}
+
     p.ICO {
 		font-family:bebas;
 		margin-bottom: 0.5em;
@@ -368,10 +378,16 @@ a.vert:before,a.vert:after{
     margin-left: 0.2em;
 	}
 	
-	button.invest {
+	button.invest{
+		background:transparent;
+		border:none;
+	}
+	
+	a.invest {
 		color: black;
 		font-family: abel;
-		font-size:0.7em;
+		font-size:0.8em;
+		font-weight:normal;
 		letter-spacing: 3px;
 		padding: 12px 30px;
 		background:white !important;
@@ -384,15 +400,23 @@ a.vert:before,a.vert:after{
 		transition: all ease 1s !important;
 }
 
-	button.invest:hover{
+	a.invest:hover{
 		cursor:pointer;
 		box-shadow: inset 200px 0 0 0 rgba(1,1,1,1) !important;
 		color:white;
 	}
 	
+	
+	
 	.slide-container{
 		width:100%;
 	}
+	
+	
+	div#slide1 img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
 	
 	.slide{
 		display:inline-block;
@@ -400,7 +424,7 @@ a.vert:before,a.vert:after{
 	
 	.left-button , .right-button{
 		display:inline-block;
-		margin-top: 8em;
+		margin-top: 6em;
 		color: black;
 		background: white;
 		border: 1px solid black;
@@ -426,10 +450,10 @@ a.vert:before,a.vert:after{
 	section#two { 
 		background:#272727;
 		background:white;
-		background-image: -moz-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("http://dev.cryptocurve.io/img/newsletter.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("http://dev.cryptocurve.io/img/newsletter.jpg");
-		background-image: -ms-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("http://dev.cryptocurve.io/img/newsletter.jpg");
-		background-image: linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("http://dev.cryptocurve.io/img/newsletter.jpg");
+		background-image: -moz-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("/img/newsletter.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("/img/newsletter.jpg");
+		background-image: -ms-linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("/img/newsletter.jpg");
+		background-image: linear-gradient(top, rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url("/img/newsletter.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -546,10 +570,10 @@ a.vert:before,a.vert:after{
 
     section#three {
 		background:white;
-		background-image: -moz-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("http://dev.cryptocurve.io/img/faq.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("http://dev.cryptocurve.io/img/faq.jpg");
-		background-image: -ms-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("http://dev.cryptocurve.io/img/faq.jpg");
-		background-image: linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("http://dev.cryptocurve.io/img/faq.jpg");
+		background-image: -moz-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("/img/faq.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("/img/faq.jpg");
+		background-image: -ms-linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("/img/faq.jpg");
+		background-image: linear-gradient(top, rgba(10,10,10,0.5), rgba(10,10,10,0.5)), url("/img/faq.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -863,10 +887,10 @@ input[type=radio]:checked + label::after {
 /* Banner */
 
 	#banner {
-		background-image: -moz-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
-		background-image: -ms-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
-		background-image: linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+		background-image: -moz-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("/img/blockchain.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("/img/blockchain.jpg");
+		background-image: -ms-linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("/img/blockchain.jpg");
+		background-image: linear-gradient(top, rgba(1,1,1,0.5), rgba(200,0,0,0.5)), url("/img/blockchain.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -1358,12 +1382,24 @@ body.landing.landing-open{
 	color:#000;
 }
 
+a.vert.active{
+	text-indent:5px;
+	border-left: 5px solid #ef7899;
+	transition:text-indent 0.4s ease-in-out;
+}
+
+a.login-nav {
+    color: white !important;
+}
+
 .site-nav ul{
 	align-self:center;
 }
 
 .site-nav li{
 	display:block;
+	margin-bottom: 1em;
+	margin-left:0.5em;
 }
 
 .site-nav--open {
@@ -1384,6 +1420,15 @@ body.landing.landing-open{
   text-transform: uppercase;
   text-decoration: none;
   text-align:center;
+}
+
+a.vert:before,a.vert:after{
+  height:0px;
+}
+
+
+.liner:before,.liner:after{
+  width:0px;
 }
 
 form.subscribe-section{
@@ -1424,7 +1469,10 @@ width:100%;
 @media screen and (max-width: 850px) {
 	
 	#banner{
-	background-image:-webkit-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+	background-image:-webkit-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("/img/blockchain.jpg");
+	background-image:-moz-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("/img/blockchain.jpg");
+	background-image:-ms-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("/img/blockchain.jpg");
+	background-image:linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("/img/blockchain.jpg");
 	}
 	
 	input.input-section {
@@ -1481,10 +1529,10 @@ div#col2 {
 	
 	
 	#banner{
-	background-image:-webkit-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
-	background-image:-moz-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
-	background-image:-ms-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
-	background-image:linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("http://dev.cryptocurve.io/img/blockchain.jpg");
+	background-image:-webkit-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("/img/blockchain.jpg");
+	background-image:-moz-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("/img/blockchain.jpg");
+	background-image:-ms-linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("/img/blockchain.jpg");
+	background-image:linear-gradient(top, rgba(1,1,1,0.8), rgba(5,5,5,0.4)), url("/img/blockchain.jpg");
 	}
 	
 	#banner h2{
@@ -1496,7 +1544,11 @@ div#col2 {
 	}
 	
 	img.company{
-		width:80%;
+		width:100%;
+	}
+	
+	p#timer2{
+		font-size:1em;
 	}
 	
 	section#two .merge {
