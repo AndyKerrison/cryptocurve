@@ -63,7 +63,7 @@
 									<div class="border"></div>
 								<div class="why-container">
 								<div class="why-box"><div class="why-box-content"><i class="fa fa-universal-access" aria-hidden="true"></i><h2>Guaranteed Entry</h2><p>With CryptoCurve's smart contracts, your entry into ICOs is as close to guaranteed as possible. If we don't get access, we return your currency and you pay nothing but the transaction fees.</p></div></div>
-								<div class="why-box"><div class="why-box-content"><i class="fa fa-usd" aria-hidden="true"></i><h2>Low Fees</h2><p>CryptoCurve takes a small fee in the form of 1% of the tokens you are buying.</p></div></div>
+								<div class="why-box"><div class="why-box-content"><i class="fa fa-usd" aria-hidden="true"></i><h2>Low Fees</h2><p>CryptoCurve takes a small fee in the form of 1% of the coins you are buying.</p></div></div>
 								<div class="why-box"><div class="why-box-content"><i class="fa fa-rocket" aria-hidden="true"></i><h2>Fast And Simple</h2><p>Efficient smart contracts allow for the trustless exchange between investor and investee, guaranteeing that you will receive your tokens as soon as they are available.</p></div></div>
 								<div class="why-box"><div class="why-box-content"><i class="fa fa-life-ring" aria-hidden="true"></i><h2>24/7 Support</h2><p>Contact us through social media or email whenever you need to. We will be available to resolve any issues or answer your questions.</p></div></div>
 								</div>
@@ -106,7 +106,7 @@
       <input class="accordion" id="tab-four" type="checkbox" name="tabs">
       <label class="accord" for="tab-four">How Do I Participate?</label>
       <div class="tab-content">
-        <p>Download and install MetaMask, click on the "Try Now" button on the top of the page which takes you to your CryptoCurve account page, select the ICO you want to participate in. CryptoCurve will sink to your MetaMask account and will allow you to deposit Eth to our Smart Contract. Then when the time comes we will buy your tokens and redistribute them to you after the token sale ends, at which point you will have the opportunity to withdraw your ICO tokens.</p>
+        <p>Download and install MetaMask, click on the "Try Now" button on the top of the page which takes you to your CryptoCurve account page, select the ICO you want to participate in. CryptoCurve will sync to your MetaMask account and will allow you to deposit Eth to our Smart Contract. Then when the time comes we will buy your tokens and redistribute them to you after the token sale ends, at which point you will have the opportunity to withdraw your ICO tokens.</p>
       </div>
     </div>
   </div>
@@ -122,7 +122,7 @@
 								<h2>Mission Statement</h2>
 									<div class="border"></div>
 								<div class="statement">
-								<p>At CryptoCurve, our mission is to provide the everyday investor with a means to participate in early investment opportunities with promising cryptocurrency companies, and to provide those companies assurance that their goals of decentralization are met. We match like-minded investors looking to participate in Initial Coin Offerings (ICOs) together, and our smart contract coding allows for more efficient blockchain transactions to ensure everyone can participate without having to provide large “gas” fees. This benefits the investor and the company offering the investment because trust and security have been burdens in the past. We aim to be the trustless distributor between investor and investee, where the investor can be assured that they will get their fair shot at participation, and the investee is assured that the ICO is not monopolized by those wanting to manipulate the market. We are decentralizing the opportunity of early investments in technology that is changing our world, and we’d like you to join us.</p>	
+								<p>At CryptoCurve, our mission is to provide the everyday investor with the means to participate in early investment opportunities with promising cryptocurrency companies, and to provide those companies assurance that their goals of decentralization are met. We match like-minded investors looking to participate in Initial Coin Offerings (ICOs) together, and our smart contract coding allows for more efficient blockchain transactions to ensure everyone can participate without having to provide large “gas” fees. This benefits the investor and the company offering the investment because trust and security have been burdens in the past. We aim to be the trustless distributor between investor and investee, where the investor can be assured that they will get their fair shot at participation, and the investee is assured that the ICO is not monopolized by those wanting to manipulate the market. We are decentralizing the opportunity of early investments in technology that is changing our world, and we’d like you to join us.</p>	
 								</div>
 
 							</header>

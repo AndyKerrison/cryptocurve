@@ -1,4 +1,4 @@
-<!-- Footer -->
+
 					<footer class="footer">
 						<div class="footercolumns">
 							<div class="footercolumn" id="col1">

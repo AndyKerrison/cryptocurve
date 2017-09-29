@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 
 <title>Cryptocurve</title>
 <meta name="description" content="Securing your investment">
@@ -32,6 +33,11 @@
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script src="js/active.js"></script>
 
+<!--<script src="web3.min.js"></script>-->
+<script src="js/SmartContract.js"></script>
+<script src="js/Web3Manager.js"></script>
+<script src="js/ContractManager.js"></script>
+
 <?php
 if ($_SERVER['SERVER_PORT']!=443)
 {
@@ -39,10 +45,22 @@ $url = "https://". $_SERVER['SERVER_NAME'] . ":443".$_SERVER['REQUEST_URI'];
 header("Location: $url");
 }
 ?>
-  
-<!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+ 
+
+ <!--[if IE 9]>
+<link rel="stylesheet" href="css/IE9.css" type="text/css"><![endif]-->
+
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106832873-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106832873-1');
+</script>
+
 </head>
 
 

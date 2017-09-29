@@ -200,7 +200,7 @@ i.fa.fa-sign-in {
 
 .open .hamburger {
   transform: rotate(45deg);
-  background:black;
+  background:white;
 }
 
 .open .hamburger::before {
@@ -209,7 +209,7 @@ i.fa.fa-sign-in {
 
 .open .hamburger::after {
   transform: translateY(-3px) rotate(-90deg);
-  background:black;
+  background:white;
 }
 
 
@@ -246,8 +246,7 @@ a.vert:before,a.vert:after{
 }
 .liner a{
   position:static;
-  font-size:100%;
-  padding:0.2em 0.4em;
+  font-size:0.9em;
 }
 .liner:before,.liner:after{
   content: "";
@@ -504,7 +503,7 @@ a.vert:before,a.vert:after{
 	button.submit-section:hover{
 		cursor:pointer;
 		color:white;
-		background:#1f1e1e;
+		background:#00bfff;
 	}
 
    
@@ -688,6 +687,10 @@ a.vert:before,a.vert:after{
 		background-color:white;
 	}
 	
+	.invest .footer {
+    margin-top: 10em;
+}
+	
 	.invest h1 {
 		font-size:2em;
 		font-weight: bold;
@@ -699,22 +702,20 @@ a.vert:before,a.vert:after{
 		  margin-top:3em;
 		  margin-bottom:1em;
 		  font-family:abel;
+		  font-weight:bold;
 		  font-size:1.1em;
 	  }
 	  
-	  .table-container{
-		  width:100%;
-		  padding-top:5em;
-		  padding-bottom:3em;
-	  }
+	  
 	  
 	  .table1{
-		  width:40%;
+		  width:100%;
 		  display:inline-block;
+		  margin-top:5em;
 	  }
 	  
 	  .table2{
-		  width:49%;
+		  width:100%;
 		  display:inline-block;
 	  }
 	
@@ -731,6 +732,13 @@ a.vert:before,a.vert:after{
 		margin:auto;
 		border: 1px solid black;
 }
+	table.meta a{
+		color:#00bfff;
+	}
+	
+	table.meta a:hover{
+		color:black;
+	}
 
 	table.meta thead {
 		border: 1px solid black;
@@ -738,7 +746,8 @@ a.vert:before,a.vert:after{
 
 	table.meta td {
 		font-family: abel;
-		font-size:0.8em;
+		font-size:1em;
+		font-weight:normal;
 		letter-spacing: 1px;
 		padding: 1em;
 		border-bottom: 1px solid black;
@@ -753,6 +762,10 @@ a.vert:before,a.vert:after{
 		color: white;
 	}
 	
+	th#ether {
+    padding-right: 1.5em;
+}
+	
 	th.space {
 		padding-right:0.5em;
 	}
@@ -761,28 +774,57 @@ a.vert:before,a.vert:after{
     border: 1px solid #ddd;
     font-family: abel;
     text-indent: 5px;
+	background:white;
 }
 
 	button.js-btnWithdraw {
     font-family: abel;
     color: white;
-    background: #000;
+    background: #ff6939;
     border: none;
     font-size: 1em;
     letter-spacing: 1px;
     padding: 0.5em;
+	
+}
+
+	button.js-btnWithdraw:hover {
+    cursor:pointer;
+	background:#ff5620;
+	
 }
 
 	button.js-btnDeposit {
 	font-family: abel;
     color: white;
-    background: #000;
+    background: #3fb17c;
     border: none;
     font-size: 1em;
     letter-spacing: 1px;
     padding: 0.5em;
+	
+}
+
+	button.js-btnDeposit:hover {
+		cursor:pointer;
+		background:#2e9a68;
+	}
+	
+	i.fa.fa-arrow-circle-up {
+    margin-right: 5px;
+    font-size: 0.9em;
+    align-self: center;
 }
 		
+	i.fa.fa-arrow-circle-down {
+    margin-right: 5px;
+    font-size: 0.9em;
+    align-self: center;
+}	
+
+	td#meta-deposit {
+		
+	}
 
 	td.js-etherDeposited {
     width: 20%;
@@ -790,7 +832,17 @@ a.vert:before,a.vert:after{
 
 /* Second Header */
     #main2{
-		margin-top:1em;
+		margin-top:0em;
+		background:black;
+		
+	}
+	
+	#main2 .site-nav a{
+		color:white;
+	}
+	
+	#main2 .site-nav a:hover{
+		color:#00bfff;
 	}
 
 	#main2 a.login-nav{
@@ -966,7 +1018,7 @@ input[type=radio]:checked + label::after {
 		color: white;
 		font-family: bebas;
 		letter-spacing: 3px;
-		padding: 12px 30px;
+		padding: 12px 50px;
 		background:rgba(1,1,1,0.7) !important;
 		border:none !important;
 		box-shadow: inset 0 0 0 0 #333;
@@ -1369,7 +1421,7 @@ body.landing.landing-open{
      position: fixed;
      top: 0%;
      right: 0%;
-	 background: white;
+	 background: rgba(10,10,10,0.9);
 	 height: calc(100% + 60px);
      width: 100%;
      z-index: 100;
@@ -1379,17 +1431,18 @@ body.landing.landing-open{
 
 .site-nav a{
 	display:inline-block;
-	color:#000;
+	color:#fff;
 }
 
 a.vert.active{
 	text-indent:5px;
-	border-left: 5px solid #ef7899;
+	border-left: 5px solid #2ad4dc;
 	transition:text-indent 0.4s ease-in-out;
 }
 
 a.login-nav {
-    color: white !important;
+    color: black !important;
+	background:#2ad4dc;
 }
 
 .site-nav ul{
@@ -1413,13 +1466,17 @@ a.login-nav {
 
 .site-nav--open a {
 	font-family:abel;
-  color: #000;
+  color: #FFF;
   display: inline-block;
   letter-spacing:2px;
   padding:1.3em;
   text-transform: uppercase;
   text-decoration: none;
   text-align:center;
+}
+
+.site-nav--open a:hover{
+	color:white;
 }
 
 a.vert:before,a.vert:after{
@@ -1697,3 +1754,21 @@ a.social{
 		}
 
 	}
+	
+	
+	
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here */
+	a.vert:before,a.vert:after{
+		height:0px;
+}
+
+
+	.liner:before,.liner:after{
+		width:0px;
+}
+
+	.logo-container img{
+		border:none;
+	}
+}

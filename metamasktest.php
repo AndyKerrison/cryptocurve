@@ -1,9 +1,5 @@
-<html>
-<head>
-<link rel="stylesheet" href="css/main.css" type="text/css">
-<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-</head>
+<?php include('head.php'); ?>
+
 <body class="invest">
 <?php
 include('page-header.php'); 
@@ -20,11 +16,8 @@ $contracts = $db->getAllSmartContracts();
 
 ?>
 <div class="page-content">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--<script src="web3.min.js"></script>-->
-<script src="js/SmartContract.js"></script>
-<script src="js/Web3Manager.js"></script>
-<script src="js/ContractManager.js"></script>
+
+
 <script runat="server" type"text/javascript">
 
 var AjaxHelper = (function()
@@ -309,7 +302,7 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 	}
 		
 	var row = $('#pendingTransactions tr:first');
-		row.after("<tr><td><a target='_blank' href='https://etherscan.io/address/"+transactionID+"'>"+transactionID+"</a></td>"+
+		row.after("<tr><td><a target='_blank' href='https://etherscan.io/tx/"+transactionID+"'>"+transactionID+"</a></td>"+
 			"<td>"+timestamp+"</td>"+
 			"<td>"+contractName+"</td>"+
 			"<td>"+type+"</td>"+
@@ -318,7 +311,7 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 }
 
 </script>
-<div class="table-container">
+
 <div class="table1">
 <h2>Metamask</h2>
 <table class="meta">
@@ -338,24 +331,7 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 </div>
 
 
-<div class="table2">
-<h2>Pending Transactions</h2>
-<table class="meta" id="pendingTransactions">
-<thead>
-	<tr>
-		<th>Transaction</th>
-		<th>Time created</th>
-		<th>ICO</th>
-		<th>Type</th>
-		<th class="space">Value</th>
-	</tr>
-</thead>
-</table>
-</div>
 
-
-
-</div>
 
 <h2>Invest</h2>
 <table class="meta">
@@ -364,7 +340,7 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 		<th>ICO</th>
 		<th>Date</th>
 		<th>Smart Contract Address</th>
-		<th>Ether</th>
+		<th id="ether">Ether</th>
 		<th>Tokens</th>
 		<th>Deposit</th>
 		<th>Withdraw</th>
@@ -383,12 +359,12 @@ foreach ($contracts as $contract)
 		<td><a target="_blank" href="https://etherscan.io/address/<?php echo $contract->getSmartContractAddress() ?>"><?php echo $contract->getSmartContractAddress() ?></a></td>
 		<td class="js-etherBalance"></td>
 		<td class="js-tokenBalance"></td>
-		<td>
+		<td id="meta-deposit">
 			<input type="text" class="js-txtDeposit" value="0.0">
-			<button class="js-btnDeposit">Deposit</button>
+			<button class="js-btnDeposit"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>Deposit</button>
 		</td>
 		<td>
-			<button class="js-btnWithdraw">Withdraw all</button>
+			<button class="js-btnWithdraw"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Withdraw all</button>
 		</td>
 	</tr>
 <?php
@@ -396,6 +372,23 @@ foreach ($contracts as $contract)
 ?>  
 </tbody>
 </table>
+
+
+
+<div class="table2">
+<h2>Pending Transactions</h2>
+<table class="meta" id="pendingTransactions">
+<thead>
+	<tr>
+		<th>Transaction</th>
+		<th>Time created</th>
+		<th>ICO</th>
+		<th>Type</th>
+		<th class="space">Value</th>
+	</tr>
+</thead>
+</table>
+</div>
 <!-- todo - put some proper spacing here, or let alex do it -->
 <!--<p>&nbsp;</p>
 
@@ -419,5 +412,9 @@ foreach ($contracts as $contract)
 	<li>Admin page for adding/updatingdeleting ICO's in the database</li>
 </ul>-->
 </div>
+<!-- Footer -->
+				<?php include('footer.php'); ?>
+				
+				<script src="js/menu.js"></script>
 </body>
 </html>
