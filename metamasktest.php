@@ -20,6 +20,8 @@ $contracts = $db->getAllSmartContracts();
 
 <script runat="server" type"text/javascript">
 
+alert("dev site");
+
 var AjaxHelper = (function()
 {
 	function ajaxPost(methodName, data, success, error)
