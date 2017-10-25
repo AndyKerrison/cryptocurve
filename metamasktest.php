@@ -20,15 +20,13 @@ $contracts = $db->getAllSmartContracts();
 
 <script runat="server" type"text/javascript">
 
-alert("dev site");
-
 var AjaxHelper = (function()
 {
 	function ajaxPost(methodName, data, success, error)
 	{
 		$.ajax({
 			type: "POST",
-				url: "https://cryptocurve.io/api.php?method="+methodName,
+				url: "/api.php?method="+methodName,
 				data: JSON.stringify(data),
 				contentType: "application/json; charset=utf-8",
 				crossDomain: true,
@@ -71,8 +69,6 @@ var AjaxHelper = (function()
 			data["owner"] = owner;
 			
 			function success(data, status, jqXHR) {
-				//console.log("GET_TRANSACTIONS_RESULT");
-				//console.log(data);
 				callback(data);
 			}
 			
@@ -163,6 +159,7 @@ function setContractDisabled(contractID)
 	tr.find('.js-txtDeposit').prop("disabled", true);			
 	tr.find('.js-btnDeposit').prop("disabled", true);			
 	tr.find('.js-btnWithdraw').prop("disabled", true);	
+	tr.find('.js-btnRunContract').prop("disabled", true);
 }
 
 
@@ -251,6 +248,11 @@ function bindButtons() {
 		var contractID = $(this).closest("tr").data("contractid");
 		contractManager.withdraw(contractID, web3Manager.getEthAddress(), withdrawSuccess);
 	});
+	
+	$('.js-btnRunContract').click(function() {
+		var contractID = $(this).closest("tr").data("contractid");
+		contractManager.buyTokens(contractID, web3Manager.getEthAddress(), runSuccess);
+	});
 }
 
 function withdrawSuccess(transactionID, contractID)
@@ -260,6 +262,25 @@ function withdrawSuccess(transactionID, contractID)
 		
 	//add it to the table
 	drawPendingTransaction(transactionID, new Date(), contractManager.getName(contractID), type, value);	
+	
+	//add it to the database
+	var data = {};
+	data["transactionID"] = transactionID;
+	data["owner"] = web3Manager.getEthAddress();
+	data["timestamp"] = new Date();
+	data["ico"] = contractManager.getName(contractID);
+	data["type"] = type;
+	data["value"] = value;
+	
+	AjaxHelper.addTransaction(data);
+}
+
+function runSuccess(transactionID, contractID)
+{
+	var type = "RunContract";
+		
+	//add it to the table
+	drawPendingTransaction(transactionID, new Date(), contractManager.getName(contractID), type, 0);	
 	
 	//add it to the database
 	var data = {};
@@ -310,6 +331,8 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 			"<td>"+type+"</td>"+
 			"<td>"+value+"</td>"+
 			+"</tr>");
+	
+	$('#pendingTransactions').show();	
 }
 
 </script>
@@ -346,6 +369,7 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 		<th>Tokens</th>
 		<th>Deposit</th>
 		<th>Withdraw</th>
+		<th>RunContract</th>
 	</tr>
 </thead>
 <tbody>
@@ -368,6 +392,9 @@ foreach ($contracts as $contract)
 		<td>
 			<button class="js-btnWithdraw"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Withdraw all</button>
 		</td>
+		<td>
+			<button class="js-btnRunContract"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Run Contract</button>
+		</td>
 	</tr>
 <?php
 }
@@ -377,7 +404,7 @@ foreach ($contracts as $contract)
 
 
 
-<div class="table2">
+<div class="table2" id="pendingTransactions" style="display:none">
 <h2>Pending Transactions</h2>
 <table class="meta" id="pendingTransactions">
 <thead>

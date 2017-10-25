@@ -31,4 +31,10 @@ var ContractManager = function(contracts)
 		var contract = findContract(contractID);
 		contract.sendTransactionFrom(ethAddress, value, callback);
 	}
+	
+	this.buyTokens = function(contractID, ethAddress, callback)
+	{
+		var contract = findContract(contractID);
+		contract.buyTokens(ethAddress, callback);
+	}
 }
