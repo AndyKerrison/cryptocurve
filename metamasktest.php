@@ -15,7 +15,7 @@ $db = new CCDatabase();
 $contracts = $db->getAllSmartContracts();
 
 ?>
-<div class="page-content">
+<div class="page-content-meta">
 
 
 <script runat="server" type"text/javascript">
@@ -342,7 +342,7 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 <table class="meta">
 <thead>
 	<tr>
-<th>Ethereum Address</th>
+<th>Your Ethereum Address</th>
 <th class="space">Balance</th>
     </tr>
 	</thead>
@@ -381,16 +381,18 @@ foreach ($contracts as $contract)
 ?>
 	<tr data-contractID="<?php echo $contractID ?>">
 		<td><?php echo $contract->getName() ?></td>
-		<td><?php echo $contract->getStartDate() ?></td>
+		<td id="ICO-Date"><?php echo $contract->getStartDate() ?></td>
 		<td><a target="_blank" href="https://etherscan.io/address/<?php echo $contract->getSmartContractAddress() ?>"><?php echo $contract->getSmartContractAddress() ?></a></td>
 		<td class="js-etherBalance"></td>
 		<td class="js-tokenBalance"></td>
 		<td id="meta-deposit">
+		<div class="baseline">
 			<input type="text" class="js-txtDeposit" value="0.0">
-			<button class="js-btnDeposit"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>Deposit</button>
+			<button class="js-btnDeposit"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i><p class="action">Deposit</p></button>
+			</div>
 		</td>
-		<td>
-			<button class="js-btnWithdraw"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Withdraw all</button>
+		<td id="meta-withdraw">
+			<button class="js-btnWithdraw"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i><p class="action">Withdraw all</p></button>
 		</td>
 		<td>
 			<button class="js-btnRunContract"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Run Contract</button>
@@ -417,6 +419,7 @@ foreach ($contracts as $contract)
 	</tr>
 </thead>
 </table>
+
 </div>
 <!-- todo - put some proper spacing here, or let alex do it -->
 <!--<p>&nbsp;</p>
@@ -441,8 +444,7 @@ foreach ($contracts as $contract)
 	<li>Admin page for adding/updatingdeleting ICO's in the database</li>
 </ul>-->
 </div>
-<!-- Footer -->
-				<?php include('footer.php'); ?>
+				<?php include('footer-page.php'); ?>
 				
 				<script src="js/menu.js"></script>
 </body>

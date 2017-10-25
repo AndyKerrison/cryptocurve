@@ -1,5 +1,5 @@
-var countDownDate1 = new Date("Sep 15, 2017 12:25:25 GMT-5 (CDT)").getTime();
-var countDownDate2 = new Date("Sep 29, 2017 22:00:00 GMT-5 (CDT)").getTime();
+var countDownDate1 = new Date("Oct 10, 2017 11:00:25 GMT-5 (CDT)").getTime();
+var countDownDate2 = new Date("Oct 10, 2017 11:00:00 GMT-5 (CDT)").getTime();
 
 var timer1= document.getElementById("timer")
 var timer2= document.getElementById("timer2")
