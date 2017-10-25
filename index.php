@@ -8,8 +8,8 @@
 					<!-- Banner -->
 					<section id="banner">
 						<div class="merge">
-							<h2>Cryptocurve</h2>
-							<p>ICO Investment Made Easy.</p>
+							<h2 class="main-title">Cryptocurve</h2>
+							<p class="main-headline">ICO Investment Made Easy.</p>
 							<ul class="actions">
 								<li><a href="/metamasktest.php" class="button special">Try Now</a></li>
 							</ul>
@@ -24,7 +24,7 @@
 									<div class="border"></div>
 									<div class="slide-container">
 								<div class="slide" id="slide1">	
-								<img class="company" width="350" src="/img/dbet-black.png">
+								<img class="company" width="350" src="/img/qvolta.png">
 								<p id="timer2"></p>
 								<a class="invest" href="/metamasktest.php">Invest</a>
 								</div>
@@ -43,7 +43,7 @@
 								<h2>Subscribe</h2>
 									<div class="border"></div>
 									<div class="local">
-									<p>Subscribe And Keep Up With The Latest News And Upcoming ICOs.</p>
+									<p class="submit-text">Subscribe And Keep Up With The Latest News And Upcoming ICOs.</p>
 									<form action="//cryptocurve.us16.list-manage.com/subscribe/post?u=951c2df0cc4771475abbade47&amp;id=12cce91bf2" method="post" class="subscribe-section" target="_blank" novalidate>
 							<input type="email" name="email" class="input-section" placeholder="Email address">
 								<button type="submit" class="submit-section">Subscribe</button>
@@ -159,7 +159,8 @@ function showDivs(n) {
 
 var el = document.getElementsByClassName("slide");
 </script>
-				
+
+				<script src="js/reveal-home.js"></script>
 				<script src="js/menu.js"></script>
 				<script src="js/timer.js"></script>
 				<script src="js/smooth.js"></script>

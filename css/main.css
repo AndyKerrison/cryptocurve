@@ -656,6 +656,105 @@ a.vert:before,a.vert:after{
 		}
 
 /* Page */
+	#main-page{
+		background:transparent;
+		position:absolute;
+		width:100%;
+		height:100px;
+		top:0;
+		transition: background 600ms ease-in-out;
+	}
+	
+	#main-page .site-nav{
+		right:2em;
+		top:2.8em;
+	}
+	
+	#main-page .site-nav a{
+		color:white;
+	}
+	
+	#main-page a.login-nav{
+		background:#2ad4dc;
+		padding: 1em !important;
+		font-size:0.8em;
+		color:black;
+	}
+	
+	#main-page a.login-nav:hover{
+		background:#FFF !important;
+		color:black !important;
+	}
+	
+	#main-page a.vert:before,#main-page a.vert:after{
+		background:#fff;
+	}
+
+	
+	#main-page .liner:before,#main-page .liner:after{
+		background:#fff;
+	}
+	
+	
+	#main-page .logo-container{
+		background-image: url("/img/cryptocurve-logo-white2.png");
+		background-size:contain;
+		background-repeat:no-repeat;
+		width:300px;
+		height:65px;
+		transition:width 500ms ease-in-out;
+		position:absolute;
+		top:1em;
+	}
+	
+	.appear .logo-container{
+		background-image: url("/img/cryptocurve-logo.png") !important;
+		width:200px !important;
+		top:1.5em !important;
+	}
+	
+	a.got {
+    display: block;
+    height: 100%;
+	}
+		
+	
+	#logo2 {display:none;}
+	
+	
+	.appear{
+		position:fixed !important;
+		background:white !important;
+		top:0;
+		width:100%;
+		z-index:6;
+		box-shadow: 2px 1px 10px #333;
+}
+
+    .appear .site-nav{
+		top:2.4em !important;
+	}
+	
+    .appear .site-nav a{
+		color:#333 !important;
+	}
+	
+	.appear a.login-nav:hover{
+		color:white !important;
+		background:black !important;
+	}
+	
+	.appear a.vert:before,.appear a.vert:after{
+		background:#333 !important;
+	}
+	
+	.appear .liner:before,.appear .liner:after{
+		background:#333 !important;
+	}
+	
+	
+
+
 	 body.page {
 		width: 100%;
 		background-color:white;
@@ -664,8 +763,58 @@ a.vert:before,a.vert:after{
      .page-content{
 		 width:80%;
 		 margin:auto;
-		 text-align:center;
 		 background-color:white;
+		 margin-top:5em;
+		 margin-bottom:5em;
+	 }
+	 
+	 .page-content p{
+		 font-family:abel;
+		 letter-spacing:1px;
+	 }
+	 
+	 .page-top {
+		 background-image: -moz-linear-gradient(top, rgba(1,1,1,0.5), rgba(20,0,0,0.5)), url("/img/ico.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(1,1,1,0.5), rgba(20,0,0,0.5)), url("/img/ico.jpg");
+		background-image: -ms-linear-gradient(top, rgba(1,1,1,0.5), rgba(20,0,0,0.5)), url("/img/ico.jpg");
+		background-image: linear-gradient(top, rgba(1,1,1,0.5), rgba(20,0,0,0.5)), url("/img/ico.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 0;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		cursor: default;
+		height: 100vh;
+		min-height: 25em;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	 }
+	 
+	 .title-container h1{
+		 font-family:abel;
+		 color:white;
+		 font-weight:normal !important;
+		 font-size:2.3em !important;
+		 margin-top:0em !important;
+		 margin-bottom:0 !important;
+		 letter-spacing:0.5em !important;
+	 }
+	 
+	 .title-container h2{
+		 color:white;
 	 }
 	 
 	 .page h1 {
@@ -678,14 +827,117 @@ a.vert:before,a.vert:after{
       .page h2{
 		  margin-top:1em;
 		  margin-bottom:0.3em;
+		  text-align:Center;
 	  }
+	  
+	  
+	  .returns-container {
+		width: 100%;
+		padding-bottom: 3em;
+		margin: auto;
+		text-align: center;
+}
 
+	  .returns-container h2{
+		  margin-top:0.5em;
+		  margin-bottom:1em !important;
+	  }
+	  
+	  .returns-container img{
+		  margin-right: 0.2em;
+	  }
+	  
+	  .pricing-container{
+		  display:inline-block;
+		  font-family:abel;
+		  margin-right:1em;
+	  }
+	  
+	  .pricing-container2{
+		  display:inline-block;
+		  font-family:abel;
+	  }
+	  
+	  .pricing {
+		 letter-spacing: 2px;
+		 font-family:bebas;
+		 text-transform: uppercase;
+		 margin-bottom: 0.3em;
+	  }
+	  
+	  
+	  .pricing2 {
+		 letter-spacing: 2px;
+		 font-family:bebas;
+		 text-transform: uppercase;
+		 margin-bottom: 0.3em;
+	  }
+	  
+	  .ico-price {
+		 color: #7b7777;
+	 }
+	 
+	  .bat-price{
+		 color:#7b7777;
+	  }
+	  
+	  .returns {
+		 margin-top: 0.5em;
+		 font-family: bebas;
+		 background: black;
+		 color: white;
+		 padding-top:0.3em;
+		 padding-bottom:0.3em;
+		 border-radius:4px;
+		 letter-spacing:2px;
+	 }
+	  
+	  .erc{
+		  margin:1.5em;
+	  }
+	  
+	  
+	  #augur{
+		  width:20%;
+		  text-align: center;
+		  display:inline-block;
+	  }
+	  
+	  #go{
+		  width:20%;
+		  text-align: center;
+		  display:inline-block;
+	  }
+	  
+	  
+	  #stratis{
+		  width:20%;
+		  text-align: center;
+		  display:inline-block;
+	  }
+	  
+	  
+	  #bat{
+		  width:20%;
+		  text-align: center;
+		  display:inline-block;
+	  }
+	  
+	  
 /* Metamask Page */
 	
 	body.invest {
 		width: 100%;
 		background-color:white;
 	}
+	
+	.page-content-meta{
+		 width:90%;
+		 margin:auto;
+		 background-color:white;
+		 margin-top:5em;
+		 margin-bottom:5em;
+	 }
 	
 	.invest .footer {
     margin-top: 10em;
@@ -702,8 +954,9 @@ a.vert:before,a.vert:after{
 		  margin-top:3em;
 		  margin-bottom:1em;
 		  font-family:abel;
-		  font-weight:bold;
-		  font-size:1.1em;
+		  font-weight:normal;
+		  font-size:1.5em;
+		  text-align:center;
 	  }
 	  
 	  
@@ -711,7 +964,7 @@ a.vert:before,a.vert:after{
 	  .table1{
 		  width:100%;
 		  display:inline-block;
-		  margin-top:5em;
+		  margin-top:0em;
 	  }
 	  
 	  .table2{
@@ -763,11 +1016,12 @@ a.vert:before,a.vert:after{
 	}
 	
 	th#ether {
-    padding-right: 1.5em;
+    padding-right: 2.5em;
+	
 }
 	
 	th.space {
-		padding-right:0.5em;
+		padding-right:0;
 	}
 	
 	input.js-txtDeposit {
@@ -775,16 +1029,19 @@ a.vert:before,a.vert:after{
     font-family: abel;
     text-indent: 5px;
 	background:white;
+	width:50%;
 }
 
 	button.js-btnWithdraw {
     font-family: abel;
-    color: white;
+    color: black;
     background: #ff6939;
     border: none;
     font-size: 1em;
     letter-spacing: 1px;
     padding: 0.5em;
+	width:120px;
+	transition:background 500ms ease-in-out;
 	
 }
 
@@ -796,19 +1053,21 @@ a.vert:before,a.vert:after{
 
 	button.js-btnDeposit {
 	font-family: abel;
-    color: white;
+    color: black;
     background: #3fb17c;
     border: none;
     font-size: 1em;
     letter-spacing: 1px;
     padding: 0.5em;
+	width:40%;
+	transition:background 500ms ease-in-out;
 	
 }
 
 	button.js-btnDeposit:hover {
 		cursor:pointer;
 		background:#2e9a68;
-	}
+}
 	
 	i.fa.fa-arrow-circle-up {
     margin-right: 5px;
@@ -822,12 +1081,33 @@ a.vert:before,a.vert:after{
     align-self: center;
 }	
 
+    p.action {
+    text-align: initial;
+    font-size: 0.9em;
+    display: inline-block;
+	margin:0;
+}
+
+
+	.baseline {
+    display: inline-block;
+    width: 270px;
+	}
+
 	td#meta-deposit {
 		
+	}
+	
+	td#ICO-Date{
+		width:100%;
+		text-align:center;
 	}
 
 	td.js-etherDeposited {
     width: 20%;
+}
+	td.js-tokenBalance {
+    text-align: center;
 }
 
 /* Second Header */
@@ -1048,6 +1328,55 @@ input[type=radio]:checked + label::after {
     .thing1{display:inline-block;font-family: abel;letter-spacing: 2px;font-size: 15px;color:#333;}
 
     .thing1 img{width:20px; height:30px; vertical-align:-70%;}
+	
+	/* Footer Page */
+	.footer-page{
+		background:black;
+		width:100%;
+		height:400px;
+		display:flex;
+		justify-content:center;
+		text-align:center;
+		position:relative;
+		overflow:hidden;
+		margin-top:3em;
+	}
+	
+	h3.footertitle-page{
+		color:white;
+		font-family:abel;
+		margin-bottom:1.5em;
+	}
+	
+	.footer-page a.social{
+		background:transparent;
+		color:#fff;
+		overflow:visible;
+	}
+	
+	.powered-page{
+		width:100%;
+		text-align:center;
+		background:#000;
+		padding-bottom:0.5em;
+		}
+	
+	.thing1-page{
+		display:inline-block;
+		font-family: abel;
+		letter-spacing: 2px;
+		font-size: 12px;
+		color:#FFF;
+	}
+	
+	.footer-page button.subscribe-submit{
+		background:#2ad4dc;
+		color:black;
+	}
+	
+	.footer-page button.subscribe-submit:hover{
+		background:#FFF;
+	}
 	
 	
 	/*social icons*/
@@ -1353,6 +1682,16 @@ a#mail:before {
 }
 }
 
+@media screen and (max-width: 1370px) {
+	
+	table.meta td{
+		font-size:0.9em;
+	}
+	
+	
+}
+
+
 @media screen and (max-width: 1150px) {
 	
 	.logo-container img {
@@ -1398,6 +1737,15 @@ a#mail:before {
 	
 	header#main{
 		position:relative;
+	}
+	
+	#main-page .site-nav{
+		right:0;
+		top:0;
+	}
+	
+	.appear .site-nav{
+		top:0 !important;
 	}
 	
 .logo-container img {

@@ -1,10 +1,13 @@
 $(window).scroll(function() {
 	if ($(document).scrollTop() > 150) {
-	$('#main').addClass('appear');
-	$('.appear').fadeIn(1000);
+		$('#main-page').addClass('appear');
+		$('#logo1').fadeOut(0);
+		$('#logo2').show(0);
 	}
-	else{
-	$('.appear').fadeOut(0, function(){ $('#main').removeClass('appear'); });
+	else  {
+		$('#logo2').hide(0);
+        $('#logo1').fadeIn(0);
+		$('#main-page').removeClass('appear');
 	}
 	
 	});
