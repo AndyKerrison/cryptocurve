@@ -369,7 +369,7 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 		<th>Tokens</th>
 		<th>Deposit</th>
 		<th>Withdraw</th>
-		<th>RunContract</th>
+		<!--<th>RunContract</th>-->
 	</tr>
 </thead>
 <tbody>
@@ -394,9 +394,9 @@ foreach ($contracts as $contract)
 		<td id="meta-withdraw">
 			<button class="js-btnWithdraw"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i><p class="action">Withdraw all</p></button>
 		</td>
-		<td>
+		<!--<td>
 			<button class="js-btnRunContract"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Run Contract</button>
-		</td>
+		</td>-->
 	</tr>
 <?php
 }
