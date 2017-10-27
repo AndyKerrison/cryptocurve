@@ -4,6 +4,34 @@ var SmartContract = function(contractID, contractName, contractAddress, contract
 	var address = contractAddress;
 	var abi = contractAbi;	
 	var allowDeposits = allowDeposits;
+		
+	var tokenAbi = `[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "decimals",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "payable": false,
+    "type": "function"
+  }
+]`;
+
+	var decimals= -1;
+	var tokenBalance = -1;
+	
+	function balanceReturn(callback)
+	{
+		if (decimals > -1 && tokenBalance > -1)
+		{	
+			tokenBalance = +(tokenBalance/Math.pow(10, decimals)).toFixed(4);
+			callback(tokenBalance, id);
+		}
+	}
 	
 	this.canTakeDeposits = function() {
 		if (!allowDeposits) return false;
@@ -27,15 +55,11 @@ var SmartContract = function(contractID, contractName, contractAddress, contract
 			return;
 		}
 		
-		console.log("ABI "+this.abi);
-		console.log("address "+ address);
-		console.log("ethaddress " + ethAddress);
 		var contractInstance = web3.eth.contract(JSON.parse(abi)).at(address);
 		contractInstance._etherDeposits(ethAddress, function(error, result)
 		{
 			if (!error) {
-				console.log(result);
-				//alert("got some value " + result);
+				//wei to ether conversion
 				result = +(result/1000000000000000000).toFixed(4);
 				callback(result, id);
 			} else {
@@ -44,6 +68,7 @@ var SmartContract = function(contractID, contractName, contractAddress, contract
 		});
 	}
 	
+	
 	this.getTokenBalance = function(ethAddress, callback) {
 		if (address == null || address.length == 0 || typeof web3 == 'undefined')
 		{
@@ -51,16 +76,35 @@ var SmartContract = function(contractID, contractName, contractAddress, contract
 			return;
 		}
 		
-		console.log("ABI "+this.abi);
-		console.log("address "+ address);
-		console.log("ethaddress " + ethAddress);
+		//set the token balance
 		var contractInstance = web3.eth.contract(JSON.parse(abi)).at(address);
 		contractInstance.getUserTokenBalance(ethAddress, function(error, result)
 		{
 			if (!error) {
-				console.log(result);
-				result = +(result).toFixed(4);
-				callback(result, id);
+				tokenBalance = result;
+				balanceReturn(callback);				
+			} else {
+				console.error(error);
+			}
+		});
+
+		//get the token address from the smart contract, then get the number of decimals that erc20 uses
+		var contractInstance = web3.eth.contract(JSON.parse(abi)).at(address);
+		contractInstance._token(function(error, result)
+		{
+			if (!error) {	
+				
+				var tokenInstance = web3.eth.contract(JSON.parse(tokenAbi)).at(result);
+				tokenInstance.decimals(function(error, result)
+				{
+					if (!error) {
+						decimals = result;
+						balanceReturn(callback);
+					}
+					else{
+						console.error(error);
+					}
+				});
 			} else {
 				console.error(error);
 			}
@@ -74,7 +118,6 @@ var SmartContract = function(contractID, contractName, contractAddress, contract
 			value: 0
 		}, function(error, result){
 			if (!error) {
-				console.log(result);				
 				callback(result, id);			
 			} else {
 				console.error(error);
@@ -97,7 +140,6 @@ var SmartContract = function(contractID, contractName, contractAddress, contract
 			value: value*1000000000000000000 //must be a unit for this somewhere
 		}, function(error, result){
 			if (!error) {
-				console.log(result);
 				callback(result, id, value);				
 			} else {
 				console.error(error);
@@ -105,16 +147,16 @@ var SmartContract = function(contractID, contractName, contractAddress, contract
 		});
 	}
 	
-	/*
-	alert("now setting value");
+	this.buyTokens = function(ethAddress, callback) {
 	
-	contractInstance = web3.eth.contract(abi).at(address);
-	contractInstance.setSomeValue(100, {value: 0, gas: 30000}, function(error, result){ 
-		if (!error) {
-			console.log(result);
-		} else {
-			console.error(error);
-		}
-	});
-	*/
+		var contractInstance = web3.eth.contract(JSON.parse(abi)).at(address);
+		
+		contractInstance.buyTokens({value: 0, gas: 250000}, function(error, result){ 
+			if (!error) {
+				callback(result, id);				
+			} else {
+				console.error(error);
+			}
+		});
+	}
 }
