@@ -132,6 +132,7 @@
 
 				
 				<!-- Footer -->
+				
 				<?php include('footer.php'); ?>
 				<!-- Scroll Button -->
 						<div class="up-button">

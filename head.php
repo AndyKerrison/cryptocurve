@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 
-<title>Cryptocurve</title>
+<title>CryptoCurve (DEV)</title>
 <meta name="description" content="Securing your investment">
 <meta name="author" content="Cryptocurve">
   
@@ -31,13 +31,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script src="js/active.js"></script>
 <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+<script src="js/active.js"></script>
 
 <!--<script src="web3.min.js"></script>-->
 <script src="js/SmartContract.js"></script>
 <script src="js/Web3Manager.js"></script>
 <script src="js/ContractManager.js"></script>
+
 
 <?php
 if ($_SERVER['SERVER_PORT']!=443)

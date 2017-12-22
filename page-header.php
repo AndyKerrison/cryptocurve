@@ -8,7 +8,7 @@
 				<ul class="navi">
 					<li><a class="vert" href="/">Home</a></li>
 					<li><a class="vert" href="https://medium.com/@Cryptocurve">Blog</a></li>
-					<li class="log"><a class="login-nav" href="/login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Try Now</a></li>
+					<li class="log"><a class="login-nav" href="/login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login/Signup</a></li>
 				</ul>
 			</nav>
   

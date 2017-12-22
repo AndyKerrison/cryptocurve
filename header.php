@@ -6,7 +6,7 @@
   
 			<nav class="site-nav">
 				<ul class="navi">
-					<li><span class="liner"><a class="vert" href="#one">Invest in curve</a></span></li>
+					<li><span class="liner"><a class="vert" href="#one">Invest</a></span></li>
 					<li><span class="liner"><a class="vert" href="#two">Subscribe</a></span></li>
 					<li><span class="liner"><a class="vert" href="#why">Why Us</a></span></li>
 					<li><span class="liner"><a class="vert" href="#three">Faq</a></span></li>
