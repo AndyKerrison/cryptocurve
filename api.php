@@ -29,6 +29,38 @@ $method = $_GET["method"];
 
 switch($method)
 {	
+	case 'getBalance':
+	
+		$file = "phplog.txt";
+		file_put_contents($file, "getBalance", FILE_APPEND | LOCK_EX);
+		//file_put_contents($file, $decoded->owner;, FILE_APPEND | LOCK_EX);
+		
+		//next example will recieve all messages for specific conversation
+		$service_url = 'https://127.0.0.1:444/api/account/'.$decoded->address.'/balance';
+		file_put_contents($file, $service_url, FILE_APPEND | LOCK_EX);
+		$curl = curl_init($service_url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+		$curl_response = curl_exec($curl);
+		if ($curl_response === false) {
+			$info = curl_getinfo($curl);
+			curl_close($curl);
+			file_put_contents($file, $info, FILE_APPEND | LOCK_EX);
+			$message = 'error occured during curl exec. Additioanl info: ';// . var_export($info);
+			//$message = "ERROR EXEC";
+			break;
+		}
+		curl_close($curl);
+		$decoded = json_decode($curl_response);
+		if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
+			//die('error occured: ' . $decoded->response->errormessage);
+			$message = "ERROR RESPONSE";
+			break;
+		}
+		//echo 'response ok!';
+		$message = $curl_response;
+		//$message = "getBalance ok";	
+	break;
 	case 'getTransactions':
 		$db = new CCDatabase();
 		$message = $db->GetTransactions($decoded->owner);
@@ -43,16 +75,16 @@ switch($method)
 		
 		break;
 	case 'addTransaction':
+		$file = "phplog.txt";
+		file_put_contents($file, "addTransaction", FILE_APPEND | LOCK_EX);
+		
 		$transactionID = $decoded->transactionID;
 		$timestamp = $decoded->timestamp;
 		$owner = $decoded->owner;
 		$ico = $decoded->ico;
 		$type = $decoded->type;
 		$value = $decoded->value;
-		
-		$file = "phplog.txt";
-		file_put_contents($file, "test2", FILE_APPEND | LOCK_EX);
-		
+				
 		$db = new CCDatabase();
 		$db->AddTransaction($transactionID, $owner, $timestamp, $ico, $type, $value);
 		
