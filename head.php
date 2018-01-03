@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 
-<title>CryptoCurve (DEV)</title>
+<title>CryptoCurve</title>
 <meta name="description" content="Securing your investment">
 <meta name="author" content="Cryptocurve">
   
