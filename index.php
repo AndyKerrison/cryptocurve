@@ -245,7 +245,7 @@ $(window).load(function(){
 			  <section id="token-stats" class="index-section">
 						<div class="index-section-wrap">
 							
-								<h2>Token Distribution</h2>
+								<h2>ICO Token Distribution</h2>
 								<div class="token-dist-container">
 								<div id="doughnutChart" class="chart"></div>
 								
@@ -258,7 +258,7 @@ $(window).load(function(){
 								
 								<div class="token-section">
 								<div id="token2"></div>
-								<p class="token-text">CryptoCurve Foundation 100,000,000 CURV</p>
+								<p class="token-text">CryptoCurve Foundation 82,500,000 CURV</p>
 								</div>
 								
 								
@@ -269,11 +269,16 @@ $(window).load(function(){
 								
 								<div class="token-section">
 								<div id="token4"></div>
-								<p class="token-text">Marketing Allotment 12,500,000 CURV</p>
+								<p class="token-text">Partners Share 17,500,000 CURV</p>
 								</div>
 								
 								<div class="token-section">
 								<div id="token5"></div>
+								<p class="token-text">Marketing Allotment 12,500,000 CURV</p>
+								</div>
+								
+								<div class="token-section">
+								<div id="token6"></div>
 								<p class="token-text">Advisor Pool 12,500,000 CURV</p>
 								</div>
 								</div>
@@ -430,6 +435,7 @@ $(window).load(function(){
 								<p class="team-title">Chief Executive Officer</p>
 								</div>
 								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/josh-halferty-51110628/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
 								<div id="pic2" class="team-pic">
@@ -438,6 +444,7 @@ $(window).load(function(){
 								<p class="team-title">Chief Financial Officer</p>
 								</div>
 								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/john-x-yi-b2b62850/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
 								<div id="pic3" class="team-pic">
@@ -446,6 +453,7 @@ $(window).load(function(){
 								<p class="team-title">Chief Blockchain Engineer</p>
 								</div>
 								</div>
+								<div class="linked"><a href="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
 								<div id="pic4" class="team-pic">
@@ -454,6 +462,7 @@ $(window).load(function(){
 								<p class="team-title">Chief Marketing Officer</p>
 								</div>
 								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/alexander-lenart-40433a150/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
 								<div id="pic5" class="team-pic">
@@ -462,6 +471,7 @@ $(window).load(function(){
 								<p class="team-title">Sales Director</p>
 								</div>
 								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/paullandingin/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								</ul>
 								</div>
@@ -483,7 +493,6 @@ $(window).load(function(){
 						</div>
 <script src="/js/dougnut.js"></script>
 <script src="/js/tween.min.js"></script>
-<script src="/js/animations.js"></script>
 <script src="/js/ease.min.js"></script>						
 <script src="/js/node-effect.js"></script>	
 <script src="/js/reveal.js"></script>

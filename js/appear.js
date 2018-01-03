@@ -8,6 +8,8 @@ $(window).scroll(function() {
 		$('#logo2').hide(0);
         $('#logo1').fadeIn(0);
 		$('#main-page').removeClass('appear');
+
 	}
+	
 	
 	});
