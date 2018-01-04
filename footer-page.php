@@ -13,7 +13,7 @@
 									</ul>
 							</div>
 					<div class="footercolumn" id="col2"><h3 class="footertitle-page">Newsletter</h3>
-						<form action="index.html" method="post" class="subscribe-form">
+						<form action="//cryptocurve.us16.list-manage.com/subscribe/post?u=951c2df0cc4771475abbade47&amp;id=12cce91bf2" method="post" class="subscribe-form" target="_blank" novalidate>
 							<input type="email" name="email" class="subscribe-input" placeholder="Email address">
 								<button type="submit" class="subscribe-submit">Subscribe</button>
 									</form>

@@ -10,7 +10,7 @@
  */
 
 
-$(window).scroll(function() {
+$(window).on('scroll.chart', function() {
    var hT = $('#token-stats').offset().top,
        hH = $('#token-stats').outerHeight(),
        wH = $(window).height(),
@@ -19,8 +19,11 @@ $(window).scroll(function() {
    if (wS > (hT+hH-wH)){
 	  
     drawDoughnutChart();
-	 $(window).off('scroll')
+	 $(window).off('scroll.chart')
    }
+   
+   
+   
    
 });
 
@@ -31,10 +34,11 @@ function drawDoughnutChart() {
 
     $("#doughnutChart").drawDoughnutChart([
     { title: "Public Sale",         value : 150000000,  color: "#e65c53" },
-    { title: "CryptoCurve Foundation", value:  100000000,   color: "#26a3b1" },
+    { title: "CryptoCurve Foundation", value:  82500000,   color: "#26a3b1" },
     { title: "Pre-sale",      value:  75000000,   color: "#19818d" },
-    { title: "Marketing Allotment",        value : 12500000,   color: "#396b7e" },
-    { title: "Advisors Pool",        value : 12500000,   color: "#a5a5a5" }
+	{ title: "Partners Share",        value : 17500000,   color: "#396b7e" },
+    { title: "Marketing Allotment",        value : 12500000,   color: "#a5a5a5" },
+    { title: "Advisors Pool",        value : 12500000,   color: "#ced0d0" }
 	
   ]);
 }
