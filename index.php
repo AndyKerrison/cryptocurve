@@ -249,7 +249,7 @@ $(window).load(function(){
 								<div class="token-dist-container">
 								<div id="doughnutChart" class="chart"></div>
 								
-								
+								<div class="token-stats-temp">Coming Soon</div>
 								<div class="token-stats-container">
 								<div class="token-section">
 								<div id="token1"></div>
@@ -453,7 +453,7 @@ $(window).load(function(){
 								<p class="team-title">Chief Blockchain Engineer</p>
 								</div>
 								</div>
-								<div class="linked"><a href="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								<div class="linked"><a href="https://www.linkedin.com/in/andrew-kerrison-709467156/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
 								<div id="pic4" class="team-pic">
@@ -472,6 +472,22 @@ $(window).load(function(){
 								</div>
 								</div>
 								<div class="linked"><a href="https://www.linkedin.com/in/paullandingin/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								</li>
+								</ul>
+								</div>
+								
+								
+								<h2 class="advisors">Advisors</h2>
+								<div class="team-container">
+								<ul class="team-list">
+								<li>
+								<div id="pic6" class="team-pic">
+								<div class="pic-info">
+								<h2>Benn Godenzi</h2>
+								<p class="team-title">Advisor</p>
+								</div>
+								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/outlastnutrition/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								</ul>
 								</div>

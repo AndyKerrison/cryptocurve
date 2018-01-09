@@ -363,7 +363,6 @@ function drawPendingTransaction(transactionID, timestamp, contractName, type, va
 <thead>
 	<tr>
 		<th>ICO</th>
-		<th>Date</th>
 		<th>Smart Contract Address</th>
 		<th id="ether">Ether</th>
 		<th>Tokens</th>
@@ -395,7 +394,7 @@ foreach ($contracts as $contract)
 			<button class="js-btnWithdraw"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i><p class="action">Withdraw all</p></button>
 		</td>
 		<!--<td>
-			<button class="js-btnRunContract"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Run Contract</button>
+			<button class="js-btnRunContract"><i class="fa fa-bolt" aria-hidden="true"></i>Run Contract</button>
 		</td>-->
 	</tr>
 <?php
@@ -421,28 +420,7 @@ foreach ($contracts as $contract)
 </table>
 
 </div>
-<!-- todo - put some proper spacing here, or let alex do it -->
-<!--<p>&nbsp;</p>
 
-<p>&nbsp;</p>
-<p>Stuff done</p>
-<ul>
-	<li>Read address and balance from Metamask</li>
-	<li>Safe errors if metamask not installed, or not unlocked</li>
-	<li>Deposit to smart contract plus basic validation (numeric, min/max limits)</li>
-	<li>Allow withdraw from smart contract</li>
-	<li>get ICO list from database</li>
-	<li>Restrict the withdraw/deposit functions based on if ICO is enabled, active, etc</li>
-	<li>clean up javascript code, split into useful modules</li>
-</ul>
-
-<p>Still todo:</p>
-<ul>	
-	<li>Update ICOs in database, retest withdraw/deposit functions</li>
-	<li>Add user's pending transactions to database and display on this page</li>
-	<li>Auto-update at intervals (30s? 1m?)</li>
-	<li>Admin page for adding/updatingdeleting ICO's in the database</li>
-</ul>-->
 </div>
 				<?php include('footer-page.php'); ?>
 				

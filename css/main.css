@@ -1020,7 +1020,9 @@ a.vert:before,a.vert:after{
 
 	table.meta {
 		margin:auto;
-		border: 1px solid black;
+		border-right:1px solid black;
+		border-left:1px solid black;
+		border-collapse:separate;
 }
 	table.meta a{
 		color:#00bfff;
@@ -1067,6 +1069,7 @@ a.vert:before,a.vert:after{
     text-indent: 5px;
 	background:white;
 	width:50%;
+	height:auto;
 }
 
 	button.js-btnWithdraw {
@@ -1081,6 +1084,7 @@ a.vert:before,a.vert:after{
 	transition:background 500ms ease-in-out;
 	
 }
+
 
 	button.js-btnWithdraw:hover {
     cursor:pointer;
@@ -1105,6 +1109,21 @@ a.vert:before,a.vert:after{
 		cursor:pointer;
 		background:#2e9a68;
 }
+
+	button.js-btnRunContract {
+    font-family: abel;
+    background: #0fb9fd8a;
+    color: black;
+    border: none;
+    padding: 0.5em;
+    width: 120px;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+	button.js-btnRunContract:hover {
+		cursor:pointer;
+	}
 	
 	i.fa.fa-arrow-circle-up {
     margin-right: 5px;
@@ -1117,6 +1136,10 @@ a.vert:before,a.vert:after{
     font-size: 0.9em;
     align-self: center;
 }	
+
+	i.fa.fa-bolt {
+    margin-right: 5px;
+}
 
     p.action {
     text-align: initial;
@@ -1138,6 +1161,7 @@ a.vert:before,a.vert:after{
 	td#ICO-Date{
 		width:100%;
 		text-align:center;
+		display:none;
 	}
 
 	td.js-etherDeposited {
@@ -2289,14 +2313,22 @@ img.crypto-icons {
     height: 100%;
     position: relative;
 }
+
+
+.token-stats-temp {
+    font-family: abel;
+    font-size: 2em;
+    text-align: center;
+}
  
  .chart {
   position: relative;
     width: 45%;
     height: 350px;
     margin: auto;
-    display: inline-block;
+    /*display: inline-block;*/
     text-align: center;
+	display:none;
 	
 }
 
@@ -2387,6 +2419,7 @@ p.tokensTitle {
 
 .token-stats-container {
     width: 45%;
+	display:none;
 }
 
 .token-section {
@@ -2892,6 +2925,11 @@ p.token-text {
     background-repeat: no-repeat;
  }
  
+ #pic6 {
+	background-image:url("/img/benn-advisor.png");
+    background-repeat: no-repeat;
+ }
+ 
  .linked {
     position: absolute;
     top: 90%;
@@ -2905,6 +2943,10 @@ i.fa.fa-linkedin {
     margin-top: 5px;
     color: black;
 }
+
+h2.advisors {
+    margin-top: 2em;
+}
  
  
  /* contact form */
@@ -2917,8 +2959,7 @@ i.fa.fa-linkedin {
 
 form 
 {
-    margin:0 auto;
-    width:459px;
+   
 }
 
 .form-title {
