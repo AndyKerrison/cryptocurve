@@ -33,12 +33,11 @@ function drawDoughnutChart() {
     $("#doughnutChart").empty();
 
     $("#doughnutChart").drawDoughnutChart([
-    { title: "Public Sale",         value : 150000000,  color: "#e65c53" },
-    { title: "CryptoCurve Foundation", value:  82500000,   color: "#26a3b1" },
-    { title: "Pre-sale",      value:  75000000,   color: "#19818d" },
-	{ title: "Partners Share",        value : 17500000,   color: "#396b7e" },
-    { title: "Marketing Allotment",        value : 12500000,   color: "#a5a5a5" },
-    { title: "Advisors Pool",        value : 12500000,   color: "#ced0d0" }
+    { title: "Public Sale",         value : 250000000,  color: "#e65c53" },
+    { title: "CryptoCurve Foundation", value:  125000000,   color: "#26a3b1" },
+    { title: "Marketing & Bounties",      value:  50000000,   color: "#19818d" },
+	{ title: "Advisors Pool",        value : 50000000,   color: "#396b7e" },
+    { title: "Founders Share",        value : 25000000,   color: "#a5a5a5" }
 	
   ]);
 }

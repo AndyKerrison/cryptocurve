@@ -85,13 +85,13 @@ $(window).load(function(){
 								<div class="wallet-section-container">
 								
 								<div class="features1-container">
-								<div class="textline" id="textline1">use synced contacts instead of hex addresses</div>
-								<div class="textline" id="textline2">see the amount in fiat currency before you send</div>
+								<div class="textline" id="textline1">Use synced contacts instead of hex addresses</div>
+								<div class="textline" id="textline2">See the amount in fiat currency before you send</div>
 								</div>
 								<div class="wallet-image-container"><img class="wallet-image" src="/img/wallet-section.png"/></div>
 								<div class="features2-container">
 								<div class="textline" id="textline3">Receive any token you choose from senders</div>
-								<div class="textline" id="textline4">request payment via invoice from users</div>
+								<div class="textline" id="textline4">Request payment via invoice from users</div>
 								</div>
 								</div>
 								</div>
@@ -249,38 +249,35 @@ $(window).load(function(){
 								<div class="token-dist-container">
 								<div id="doughnutChart" class="chart"></div>
 								
-								<div class="token-stats-temp">Coming Soon</div>
+								
 								<div class="token-stats-container">
 								<div class="token-section">
 								<div id="token1"></div>
-								<p class="token-text">Public Sale 150,000,000 CURV</p>
+								<p class="token-text">Public Sale 250,000,000 CURV</p>
 								</div>
 								
 								<div class="token-section">
 								<div id="token2"></div>
-								<p class="token-text">CryptoCurve Foundation 82,500,000 CURV</p>
+								<p class="token-text">CryptoCurve Foundation 125,000,000 CURV</p>
 								</div>
 								
 								
 								<div class="token-section">
 								<div id="token3"></div>
-								<p class="token-text">Pre-sale 75,000,000 CURV</p>
+								<p class="token-text">Advisor Pool 50,000,000 CURV</p>
 								</div>
 								
 								<div class="token-section">
 								<div id="token4"></div>
-								<p class="token-text">Partners Share 17,500,000 CURV</p>
+								<p class="token-text">Marketing & Bounties 50,000,000 CURV</p>
 								</div>
 								
 								<div class="token-section">
 								<div id="token5"></div>
-								<p class="token-text">Marketing Allotment 12,500,000 CURV</p>
+								<p class="token-text">Founders Share 25,000,000 CURV</p>
 								</div>
 								
-								<div class="token-section">
-								<div id="token6"></div>
-								<p class="token-text">Advisor Pool 12,500,000 CURV</p>
-								</div>
+								
 								</div>
 								</div>
 						</div>		
