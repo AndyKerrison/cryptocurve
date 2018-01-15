@@ -447,7 +447,7 @@ $(window).load(function(){
 								<div id="pic3" class="team-pic">
 								<div class="pic-info">
 								<h2>Andrew Kerrison</h2>
-								<p class="team-title">Chief Blockchain Engineer</p>
+								<p class="team-title">Chief Technical Officer</p>
 								</div>
 								</div>
 								<div class="linked"><a href="https://www.linkedin.com/in/andrew-kerrison-709467156/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
