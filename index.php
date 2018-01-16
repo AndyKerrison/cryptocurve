@@ -456,7 +456,7 @@ $(window).load(function(){
 								<div id="pic4" class="team-pic">
 								<div class="pic-info">
 								<h2>Alex Lenart</h2>
-								<p class="team-title">Chief Marketing Officer</p>
+								<p class="team-title">Chief Design Officer</p>
 								</div>
 								</div>
 								<div class="linked"><a href="https://www.linkedin.com/in/alexander-lenart-40433a150/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
