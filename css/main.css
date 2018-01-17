@@ -2105,7 +2105,7 @@ img.crypto-icons {
 	flex-direction: row;
     text-align: center;
 	margin:auto;
-	margin-bottom:5%;
+	padding-bottom:5%;
 }
 
 
@@ -2196,7 +2196,7 @@ img.crypto-icons {
     justify-content: Center;
     align-items: center;
     position: relative;
-	margin-bottom:5%;
+	padding-bottom:5%;
 }
 
 
@@ -2326,9 +2326,8 @@ img.crypto-icons {
     width: 45%;
     height: 350px;
     margin: auto;
-    /*display: inline-block;*/
+    display: inline-block;
     text-align: center;
-	display:none;
 	
 }
 
@@ -2419,7 +2418,6 @@ p.tokensTitle {
 
 .token-stats-container {
     width: 45%;
-	display:none;
 }
 
 .token-section {
