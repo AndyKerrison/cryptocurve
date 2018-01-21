@@ -426,7 +426,7 @@ $(window).load(function(){
 								<div class="team-container">
 								<ul class="team-list">
 								<li>
-								<div id="pic1" class="team-pic">
+								<div id="pic1" class="team-pic" onclick="">
 								<div class="pic-info">
 								<h2>Joshua Halferty</h2>
 								<p class="team-title">Chief Executive Officer</p>
@@ -435,7 +435,7 @@ $(window).load(function(){
 								<div class="linked"><a href="https://www.linkedin.com/in/josh-halferty-51110628/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
-								<div id="pic2" class="team-pic">
+								<div id="pic2" class="team-pic" onclick="">
 								<div class="pic-info">
 								<h2>Xander Yi</h2>
 								<p class="team-title">Chief Financial Officer</p>
@@ -444,7 +444,7 @@ $(window).load(function(){
 								<div class="linked"><a href="https://www.linkedin.com/in/john-x-yi-b2b62850/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
-								<div id="pic3" class="team-pic">
+								<div id="pic3" class="team-pic" onclick="">
 								<div class="pic-info">
 								<h2>Andrew Kerrison</h2>
 								<p class="team-title">Chief Technical Officer</p>
@@ -453,7 +453,7 @@ $(window).load(function(){
 								<div class="linked"><a href="https://www.linkedin.com/in/andrew-kerrison-709467156/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
-								<div id="pic4" class="team-pic">
+								<div id="pic4" class="team-pic" onclick="">
 								<div class="pic-info">
 								<h2>Alex Lenart</h2>
 								<p class="team-title">Chief Design Officer</p>
@@ -462,26 +462,19 @@ $(window).load(function(){
 								<div class="linked"><a href="https://www.linkedin.com/in/alexander-lenart-40433a150/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
-								<div id="pic5" class="team-pic">
+								<div id="pic5" class="team-pic" onclick="">
 								<div class="pic-info">
 								<h2>Paul Landingin</h2>
-								<p class="team-title">Sales Director</p>
+								<p class="team-title">Sales</p>
 								</div>
 								</div>
 								<div class="linked"><a href="https://www.linkedin.com/in/paullandingin/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
-								</ul>
-								</div>
-								
-								
-								<h2 class="advisors">Advisors</h2>
-								<div class="team-container">
-								<ul class="team-list">
 								<li>
-								<div id="pic6" class="team-pic">
+								<div id="pic6" class="team-pic" onclick="">
 								<div class="pic-info">
 								<h2>Benn Godenzi</h2>
-								<p class="team-title">Advisor</p>
+								<p class="team-title">Marketing</p>
 								</div>
 								</div>
 								<div class="linked"><a href="https://www.linkedin.com/in/outlastnutrition/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>

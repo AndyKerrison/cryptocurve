@@ -2924,7 +2924,7 @@ p.token-text {
  }
  
  #pic6 {
-	background-image:url("/img/benn-advisor.png");
+	background-image:url("/img/benn-marketing.jpg");
     background-repeat: no-repeat;
  }
  
@@ -3087,6 +3087,28 @@ textarea
 	
 	table.meta td{
 		font-size:0.9em;
+	}
+	
+	
+}
+
+@media screen and (max-width: 1275px) {
+	
+	.team-list li {
+    width: 140px;
+    height: 140px;
+   }
+	
+	.pic-info {
+		top:40px;
+	}
+	
+	.pic-info h2 {
+		font-size:0.8em;
+	}
+	
+	p.team-title {
+		font-size:0.8em;
 	}
 	
 	
@@ -3346,6 +3368,14 @@ img.wallet-image {
 .nuke-info {
     width: 90%;
  
+}
+
+.team-list {
+	width:75%;
+}
+
+.team-list li {
+	margin:5%;
 }
 	
 
