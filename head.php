@@ -28,13 +28,13 @@
 <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
 
-
-<script src="js/active.js"></script>
 
 <!--<script src="web3.min.js"></script>-->
 <script src="js/SmartContract.js"></script>
@@ -64,6 +64,7 @@ header("Location: $url");
 
   gtag('config', 'UA-106832873-1');
 </script>
+
 
 </head>
 

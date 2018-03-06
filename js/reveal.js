@@ -48,6 +48,22 @@ sr.reveal('#pic5',{
   viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 
+sr.reveal('#pic6',{
+  duration: 900,
+  origin:'right',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
+sr.reveal('#pic7',{
+  duration: 900,
+  origin:'bottom',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
 sr.reveal('.phone-container',{
   origin: 'bottom',
   distance: '10rem',
@@ -252,3 +268,25 @@ sr.reveal('.nuke-info',{
   duration: 1500,
   viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
 });
+
+sr.reveal('.ico-mockups',{
+  origin: 'left',
+  distance: '10rem',
+  duration: 1500,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
+sr.reveal('.ico-info',{
+  origin: 'right',
+  distance: '10rem',
+  duration: 1500,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
+sr.reveal('.token-box',{
+  origin: 'bottom',
+  distance: '10rem',
+  duration: 1500,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
