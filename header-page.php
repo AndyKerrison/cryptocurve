@@ -7,10 +7,8 @@
 			<nav class="site-nav">
 				<ul class="navi">
 					<li><span class="liner"><a class="vert" href="/">Home</a></span></li>
-					<li><span class="liner"><a class="vert" href="/pooling.php">ICO Pooling</a></span></li>
-					<li><span class="liner"><a class="vert" href="https://medium.com/@Cryptocurve">Blog</a></span></li>
-					<li><span class="liner"><a class="vert" href="/contact.php">Contact</a></span></li>
-					<li class="log"><a class="login-nav" href="/login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login/Signup</a></li>
+					<li><span class="liner"><a class="vert" href="/pre-sale.php">Pre-Sale</a></span></li>
+					<li class="log"><a class="login-nav" href="http://18.221.173.171:81"><i class="fa fa-sign-in" aria-hidden="true"></i>Login/Signup</a></li>
 				</ul>
 			</nav>
   

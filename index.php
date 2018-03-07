@@ -6,10 +6,17 @@ $(window).load(function(){
 });
 </script>
 
+
 <body class="page">
 
 <div class="loading-icon"></div>					
-        
+     
+
+	<div id="message_box">
+    <p id="close_message"><i class="fa fa-times-circle"></i></p>
+    <p class="message-text">Whitepaper coming soon.<a href="https://t.me/cryptocurve" class="message-button" target="_blank">Join Our Telegram</a></p>
+</div> 
+
 <div class="page-top">
 <?php include('header-page.php'); ?>
 <canvas id="reactive"></canvas>
@@ -65,7 +72,7 @@ $(window).load(function(){
 								</div>
 								<div class="phone-icons">
 								<img class="crypto-icons" src="/img/mushroom.png"/>
-								<p>Liquidate Entire Portfolio To ETH "Nuke"</p>
+								<p>Liquidate Portfolio To ETH BTC or Tether</p>
 								</div>
 								</div>
 								
@@ -187,6 +194,20 @@ $(window).load(function(){
 						</div>		
 					</section>
 					
+					<!-- Invest -->
+			  <section id="Invest" class="index-section">
+						<div class="index-section-wrap">
+							
+								<h2>Invest In ICOs</h2>
+								<div class="ICO-container">
+								<img src="/img/ICO-mockups.png" class="ico-mockups"/>
+								<p class="ico-info">Research ICOs to invest in, and vote with other community members using CURV to vote for which ICOs will be eligible for buying with CURV discount.</p>
+								
+								</div>
+								
+                       </div>						
+					</section>
+					
 					
 					
 					<!-- Nuke Button -->
@@ -208,8 +229,26 @@ $(window).load(function(){
 									<img src="/img/nuke-mockup.png" class="nuke-image"/>
 									</div>
 								
-						</div>		
+						</div>
+					  </div>	
 					</section>
+					
+					
+					<!-- CURV Token -->
+			  <section id="curv-token" class="index-section">
+			                         <h2>CURV Token</h2>
+						<div id="main-token-container" class="index-section-wrap">
+							
+								
+								<div class="token-container">
+								<div class="token-box" id="voting-box"><div class="token-box-content"><img src="/img/voting-icon.png"/><h2 class="token">Voting</h2><p>All CURV holders have voting rights for which ICOs Curve should pursue to have listed on our platform. </p></div></div>
+								<div class="token-box"><div class="token-box-content"><img src="/img/wallet-icon.png"/><h2 class="token">Discounts</h2><p>Earn discounts on Curve supported ICOs when you pay with CURV tokens. </p></div></div>
+								<div class="token-box"><div class="token-box-content"><img src="/img/pooling-icon.png"/><h2 class="token">Pooling</h2><p>Create and run your own pooling smart contract when you hold enough CURV tokens.</p></div></div>
+								</div>
+								
+                       </div>						
+					</section>
+					
 					
 					
 					
@@ -253,29 +292,20 @@ $(window).load(function(){
 								<div class="token-stats-container">
 								<div class="token-section">
 								<div id="token1"></div>
-								<p class="token-text">Public Sale 250,000,000 CURV</p>
+								<p class="token-text">Public Sale 50%</p>
 								</div>
 								
 								<div class="token-section">
 								<div id="token2"></div>
-								<p class="token-text">CryptoCurve Foundation 125,000,000 CURV</p>
+								<p class="token-text">CryptoCurve Foundation 35%</p>
 								</div>
 								
 								
 								<div class="token-section">
 								<div id="token3"></div>
-								<p class="token-text">Advisor Pool 50,000,000 CURV</p>
+								<p class="token-text">Advisor Pool & Founders Share 15%</p>
 								</div>
 								
-								<div class="token-section">
-								<div id="token4"></div>
-								<p class="token-text">Marketing & Bounties 50,000,000 CURV</p>
-								</div>
-								
-								<div class="token-section">
-								<div id="token5"></div>
-								<p class="token-text">Founders Share 25,000,000 CURV</p>
-								</div>
 								
 								
 								</div>
@@ -313,28 +343,28 @@ $(window).load(function(){
 											  <div class="desc">Basic wallet functionality on Curve main site.</div>
 											</div>
 										  </li>
-
-										  <!-- Item 3 -->
+										  
+										  <!-- Item 3  -->
 										  <li>
 											<div class="direction-r" id="roadmap3">
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
-												<span class="flag">Token Sale</span>
+												<span class="flag">Smart Contract Pooling</span>
 												<span class="time-wrapper"><span class="time">Q1 2018</span></span>
 											  </div>
-											  <div class="desc">CURV Public Token Sale.</div>
+											  <div class="desc">Allow custom pooling on our desktop platform</div>
 											</div>
 										  </li>
-										  
+
 										  <!-- Item 4 -->
 										  <li>
 											<div class="direction-l" id="roadmap4">
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
-												<span class="flag">Buy Into ICOs From Wallet</span>
-												<span class="time-wrapper"><span class="time">Q1 2018</span></span>
+												<span class="flag">Token Sale</span>
+												<span class="time-wrapper"><span class="time">Q2 2018</span></span>
 											  </div>
-											  <div class="desc">Allow users to participate in ICOs directly from wallet.</div>
+											  <div class="desc">CURV Public Token Sale.</div>
 											</div>
 										  </li>
 										  
@@ -343,10 +373,10 @@ $(window).load(function(){
 											<div class="direction-r" id="roadmap5">
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
-												<span class="flag">Blockchain Interoperability</span>
-												<span class="time-wrapper"><span class="time">Q3 2018</span></span>
+												<span class="flag">Buy Into ICOs From Wallet</span>
+												<span class="time-wrapper"><span class="time">Q2 2018</span></span>
 											  </div>
-											  <div class="desc">Launch multi-chain functionality </div>
+											  <div class="desc">Allow users to participate in ICOs directly from wallet.</div>
 											</div>
 										  </li>
 										  
@@ -355,10 +385,10 @@ $(window).load(function(){
 											<div class="direction-l" id="roadmap6">
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
-												<span class="flag">Mobile Platform</span>
-												<span class="time-wrapper"><span class="time">Q4 2018</span></span>
+												<span class="flag">Blockchain Interoperability</span>
+												<span class="time-wrapper"><span class="time">Q2 2018</span></span>
 											  </div>
-											  <div class="desc">Curve mobile release.</div>
+											  <div class="desc">Launch multi-chain functionality </div>
 											</div>
 										  </li>
 										  
@@ -367,10 +397,10 @@ $(window).load(function(){
 											<div class="direction-r" id="roadmap7">
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
-												<span class="flag">Nuke Function</span>
-												<span class="time-wrapper"><span class="time">Q1 2019</span></span>
+												<span class="flag">OTC Functionality</span>
+												<span class="time-wrapper"><span class="time">Q3 2018</span></span>
 											  </div>
-											  <div class="desc">Allow users to liquidate percentages of their portfolio automatically into BTC or ETH.</div>
+											  <div class="desc">Over-the-Counter trading enabled on all platforms</div>
 											</div>
 										  </li>
 										  
@@ -379,20 +409,21 @@ $(window).load(function(){
 											<div class="direction-l" id="roadmap8">
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
-												<span class="flag">OTC Functionality</span>
-												<span class="time-wrapper"><span class="time">Q1 2019</span></span>
+												<span class="flag">Nuke Function</span>
+												<span class="time-wrapper"><span class="time">Q3 2018</span></span>
 											  </div>
-											  <div class="desc">Over-the-Counter trading enabled on all platforms</div>
+											  <div class="desc">Allow users to liquidate percentages of their portfolio automatically into BTC ETH or Tether.</div>
 											</div>
 										  </li>
+										  
 										  
 										  <!-- Item 9 -->
 										  <li>
 											<div class="direction-r" id="roadmap9">
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
-												<span class="flag">Trading Tools</span>
-												<span class="time-wrapper"><span class="time">Q1 2019</span></span>
+												<span class="flag">Advanced Monitoring Tools</span>
+												<span class="time-wrapper"><span class="time">Q4 2018</span></span>
 											  </div>
 											  <div class="desc">All trading tools unlocked on all platforms</div>
 											</div>
@@ -404,7 +435,7 @@ $(window).load(function(){
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
 												<span class="flag">Fiat Gateway</span>
-												<span class="time-wrapper"><span class="time">Q2 2019</span></span>
+												<span class="time-wrapper"><span class="time">Q1 2019</span></span>
 											  </div>
 											  <div class="desc">Allow users to purchase cryptocurrency directly through mobile application with bank account or credit card.</div>
 											</div>
@@ -481,6 +512,10 @@ $(window).load(function(){
 								</li>
 								</ul>
 								</div>
+								
+								
+								
+
 									
 									
 							
@@ -497,6 +532,7 @@ $(window).load(function(){
 						<div class="up-button">
 								<a href="#" class="scrollup" display="inline"><i class="fa fa-chevron-up"></i></a>
 						</div>
+<script src="/js/message-box.js"></script>						
 <script src="/js/dougnut.js"></script>
 <script src="/js/tween.min.js"></script>
 <script src="/js/ease.min.js"></script>						
