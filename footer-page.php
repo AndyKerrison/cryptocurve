@@ -2,7 +2,7 @@
 					<footer class="footer-page" id="footer_style">
 						<div class="footercolumns">
 							<div class="footercolumn" id="col1">
-								<h3 class="footertitle-page">Connect With Us</h3>
+								<!--<h3 class="footertitle-page">Connect With Us</h3>-->
 									<ul class="social-icons">
 										<li class="soc"><a class="social" id="face" href="https://www.facebook.com/CryptoCurve/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 										<li class="soc"><a class="social" id="twit" href="https://twitter.com/crypto_curve" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

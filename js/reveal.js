@@ -64,6 +64,46 @@ sr.reveal('#pic7',{
   viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 
+sr.reveal('#pic8',{
+  duration: 900,
+  origin:'left',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
+sr.reveal('#pic9',{
+  duration: 900,
+  origin:'right',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
+sr.reveal('#pic10',{
+  duration: 900,
+  origin:'right',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
+sr.reveal('#pic11',{
+  duration: 900,
+  origin:'top',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
+sr.reveal('#pic12',{
+  duration: 900,
+  origin:'left',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
 sr.reveal('.phone-container',{
   origin: 'bottom',
   distance: '10rem',
@@ -165,6 +205,18 @@ sr.reveal('#roadmap9',{
 });
 
 sr.reveal('#roadmap10',{
+  origin: 'right',
+  distance: '10rem',
+  duration: 1200,
+});
+
+sr.reveal('#roadmap11',{
+  origin: 'left',
+  distance: '10rem',
+  duration: 1200,
+});
+
+sr.reveal('#roadmap12',{
   origin: 'right',
   distance: '10rem',
   duration: 1200,

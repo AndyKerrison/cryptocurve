@@ -160,7 +160,6 @@ header::after {
   
   padding: 0;
   list-style: none;
-  display:none;
 }
 
 .site-nav li {
@@ -777,7 +776,25 @@ a.vert:before,a.vert:after{
 		    display: none;
 	}
 	
+	li.log {
+    display: none;
+}
+	
 	#main-page a.login-nav:hover{
+		background:#FFF !important;
+		color:black !important;
+	}
+	
+	#main-page a.whitepaper-nav{
+		background:#2ad4dc;
+		/*background:#4d28da;*/
+		padding: 1em !important;
+		font-size:0.8em;
+		color:black;
+		display:none;
+	}
+	
+	#main-page a.whitepaper-nav:hover{
 		background:#FFF !important;
 		color:black !important;
 	}
@@ -1459,10 +1476,10 @@ input[type=radio]:checked + label::after {
 
    /* Footer */
     .footer{background:white;width:100%;height:400px;display:flex;justify-content:center;text-align:center;}
-	.footercolumns{width:80%;display:inline-block;float:none;align-self:center;}
-	.footercolumn{width:40%;display:inline-block;}
-	div#col1 {float: left;}
-	div#col2 {float: right;}
+	.footercolumns{width:100%;display:inline-block;float:none;align-self:center;}
+	.footercolumn{width:100%;display:inline-block;}
+	div#col1 {/*float: left;*/}
+	div#col2 {float: right; display:none;}
 
 	h3.footertitle {font-family: abel;margin-bottom:1.5em;}
 	
@@ -1530,13 +1547,13 @@ input[type=radio]:checked + label::after {
 	
 	/*social icons*/
 
-ul.social-icons {height: 50px;}
-li.soc {display: inline-block;margin-left:2%;}
+ul.social-icons {height: 100px;}
+li.soc {display: inline-block;padding:2em;}
 
 
 a.social {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 4em;
     padding: 15px;
     border-radius: 100%;
 	vertical-align: middle;
@@ -1589,8 +1606,8 @@ a.social:hover{
 }
 
 a#face{
-  padding-left:19px;
-  padding-right:19px;
+  padding-left:30px;
+  padding-right:30px;
 }
 
 a#face:before {
@@ -1875,7 +1892,39 @@ p.top-wallet {
 span.curve-word {
     font-size: 1.5em;
 }
-	
+
+p.bottom-wallet {
+    font-family: abel;
+    color:white;
+    font-size: 1.3em;
+    letter-spacing: 5px;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    background: rgb(24, 129, 205);
+    z-index: 2;
+    position: relative;
+    width: 500px;
+    padding: 10px;
+    display: inline-block;
+	border-radius:4px;
+}
+
+	p.bottom-wallet2 {
+    font-family: abel;
+    color:white;
+    font-size: 1.3em;
+    letter-spacing: 5px;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    background: rgb(205, 24, 66);
+    z-index: 2;
+    position: relative;
+    width: 500px;
+    padding: 10px;
+    display: inline-block;
+	border-radius:4px;
+
+}
 
 .phone-container {
     width: 45%;
@@ -1903,13 +1952,37 @@ span.curve-word {
     
 }
 
+
+
+	/* Video */
+  /*.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }*/
   
+  .video-container {
+	position: relative;
+	padding-bottom: 40%;
+	padding-top: 0px;
+	height: 0;
+	overflow: hidden;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+}
   
   
   /* First Section */
   
   h2.one-header{
 	  margin-bottom:5em;
+	  margin-top:5em;
   }
   
   .phone-reveal-container {
@@ -1936,6 +2009,7 @@ img.first {
     display: flex;
 	flex-wrap:wrap;
     justify-content:center;
+	align-items:baseline;
 	width:40%;
 	height:100%;
 }
@@ -1949,8 +2023,8 @@ img.first {
 	-moz-transition:bottom 1s ease-in-out !important;
 	-webkit-transition:bottom 1s ease-in-out;
 }
-
 .phone-layer1:hover {
+
 	bottom:120px;
 }
 	
@@ -1970,8 +2044,6 @@ img.first {
 img.crypto-icons {
     width: 50px;
 	margin-bottom:2%;
-	box-shadow: 4px 15px 32px rgba(0, 0, 0, 0.28);
-	border-radius:50%;
 }
 
 
@@ -1983,6 +2055,7 @@ img.crypto-icons {
 	  height:100vh;
 	  margin-top:5%;
 	  margin-bottom:5%;
+	  display:none;
   }
   
   .wallet-section-container{
@@ -2190,6 +2263,7 @@ img.crypto-icons {
 		background-size: cover;
 		padding-top:2em;
 		
+		
 	}
 	
 	#nuke-button h2 {
@@ -2380,6 +2454,7 @@ img.crypto-icons {
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		display:none;
 		
 		
 	}
@@ -2862,7 +2937,7 @@ p.token-text {
   }
   
   .flag {
-    font-size: 18px;
+    font-size: 16px;
 	top:3px;
   }
 
@@ -2967,6 +3042,7 @@ p.token-text {
     height: 180px;
     display: inline-block;
     margin: 1%;
+	margin-bottom:50px;
 	position:relative;
 }
   
@@ -3016,6 +3092,12 @@ p.token-text {
   .pic-info h2{
     color:white;
 	font-size:1em;
+	margin-bottom: 2em;
+	margin-top: 1em; 
+    font-family: abel;
+    position: relative;
+    z-index: 2; 
+    text-align: Center;
   }
   
   p.team-title {
@@ -3036,14 +3118,13 @@ p.token-text {
 }
   
  #pic1 {
-	background-image:url("/img/josh.jpeg");
-	background-position: 25px -2px;
+	background-image:url("/img/josh-team.jpeg");
     background-repeat: no-repeat;
 	background-color: #f1ffff;
  }
 
  #pic2 {
-	background-image:url("/img/xander.jpeg");
+	background-image:url("/img/xander-team.jpeg");
 	background-position: -2px 10px;
     background-repeat: no-repeat;
  }
@@ -3054,7 +3135,7 @@ p.token-text {
  }
  
  #pic4 {
-	background-image:url("/img/alex.png");
+	background-image:url("/img/alex-team.jpeg");
  }
  
  #pic5 {
@@ -3071,6 +3152,36 @@ p.token-text {
  
  #pic7 {
 	background-image:url("/img/dustin.jpeg");
+    background-repeat: no-repeat;
+ }
+ 
+ #pic8 {
+	background-image:url("/img/anna-team.jpeg");
+    background-repeat: no-repeat;
+	background-position: -3px 5px;
+ }
+ 
+ #pic9 {
+	background-image:url("/img/sean-team.jpeg");
+    background-repeat: no-repeat;
+	background-position: 0px -70px;
+ }
+ 
+ #pic10 {
+	background-image:url("/img/ben-team.jpeg");
+    background-repeat: no-repeat;
+	background-position: -15px 7px;
+ }
+ 
+ #pic11 {
+	background-image:url("/img/mark-team.jpeg");
+    background-repeat: no-repeat;
+	background-position: 0px -63px;
+ }
+ 
+ 
+ #pic12 {
+	background-image:url("/img/rajesh-team.jpeg");
     background-repeat: no-repeat;
  }
  
@@ -3092,6 +3203,17 @@ h2.advisors {
     margin-top: 2em;
 }
  
+ 
+
+h2.team-intro-title {
+    margin-top: 5em;
+	margin-bottom: 2em;
+    text-align: Center;
+    font-size: 1.5em;
+    font-family: abel;
+    position: relative;
+    z-index: 2;
+}
  
  /* contact form */
  label 
@@ -3214,7 +3336,7 @@ textarea
    .phone-icons {
 	   margin-bottom:4%;
 	   margin-top:4%;
-	   width:30%;
+	   width:25%;
    }
 	
 	
@@ -3270,6 +3392,15 @@ textarea
 	}
 	
 	
+	#pic9 {
+	background-position: 0px -40px;
+ }
+ 
+	#pic11 {
+	background-position: 0px -50px;
+ }
+	
+	
 }
 
 
@@ -3298,18 +3429,11 @@ textarea
 	}
 	
 	.footercolumns {
-    width: 95%;
+    width: 100%;
 	}
 	
-	.footercolumn {
-    width: 45%;
-}
 
-	a.social {
-		font-size:1em;
-}
-
-.phone-icons {
+	.phone-icons {
 	   width:50%;
    }
    
@@ -3353,7 +3477,7 @@ textarea
 }
 	
 .menu-toggle {
-		display:none;
+		display:block;
 	}
 	
 	.menu-toggle.open {
@@ -3543,6 +3667,14 @@ img.wallet-image {
 .team-list li {
 	margin:5%;
 }
+
+a.social {
+    font-size: 2em;
+}
+
+li.soc {
+    padding: 1em;
+}
 	
 
 }
@@ -3566,7 +3698,7 @@ button.submit-section {
 }
 
 .footercolumn {
-    width: 80%; 
+    width: 100%; 
     display: block;
     margin-top: 4em;
 	margin:auto
@@ -3586,7 +3718,7 @@ div#col2 {
     height: 200px;
     display: block;
     margin: auto;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
 }
 
 .pic-info {
@@ -3599,6 +3731,14 @@ div#col2 {
 	
 	p.team-title {
 		font-size:1em;
+	}
+	
+	#pic11 {
+    background-position: 0px -63px;
+	}
+	
+	#pic9 {
+    background-position: 0px -70px;
 	}
 	
 	.page-top {
@@ -3791,6 +3931,27 @@ img.wallet-image {
     margin-left: 10px;
     font-size: 0.8em;
 }
+
+
+	a.social {
+    font-size: 1.2em;
+}
+
+	li.soc {
+    padding: 0.5em;
+}
+
+p.bottom-wallet {
+    font-size: 1em;
+    letter-spacing: 3px;
+    width: 300px;
+}
+
+p.bottom-wallet2 {
+    font-size: 1em;
+    letter-spacing: 3px;
+    width: 300px;
+}
 	
 }
 
@@ -3904,6 +4065,10 @@ a.social{
 
 img.wallet-image {
 	width:100%;
+}
+
+li.soc {
+    padding: 0.3em;
 }
 
 
