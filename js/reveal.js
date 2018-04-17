@@ -111,7 +111,7 @@ sr.reveal('.phone-container',{
 });
 
 
-sr.reveal('.phone-layer1',{
+sr.reveal('.phone-login-container',{
   origin: 'left',
   distance: '10rem',
   duration: 900,

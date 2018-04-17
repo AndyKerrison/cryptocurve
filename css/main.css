@@ -1942,7 +1942,6 @@ p.bottom-wallet {
 	
 	section#phone-reveal {
     width: 100%;
-    height: 800px;
 	position:relative;
 }
 
@@ -1981,64 +1980,40 @@ p.bottom-wallet {
   /* First Section */
   
   h2.one-header{
-	  margin-bottom:5em;
+	  /*margin-bottom:5em;*/
 	  margin-top:5em;
   }
   
   .phone-reveal-container {
     width: 100%;
-    height: 500px;
     text-align: center;
-    margin:0 auto;
-	display: flex;
+    display: flex;
     justify-content: center;
-    align-items: baseline;
-}
+    align-items: center;
+	}
 
-.phone-shells {
-	width:50%;
-	position:relative;
-	height: 50px;
-}
+	.phone-login-container {
+    width: 45%;
+	}
 
-img.first {
-    width: 100%;
-}
+	img.login-screen {
+    width: 50%;
+	}
 
 .phone-description {
     display: flex;
 	flex-wrap:wrap;
     justify-content:center;
 	align-items:baseline;
-	width:40%;
+	width:45%;
 	height:100%;
-}
-
-.phone-layer1 {
-    position: absolute;
-    z-index: 1;
-	bottom:30%;
-	height: 100%;
-	transition:bottom 1s ease-in-out;
-	-moz-transition:bottom 1s ease-in-out !important;
-	-webkit-transition:bottom 1s ease-in-out;
-}
-.phone-layer1:hover {
-
-	bottom:120px;
-}
-	
-
-.phone-layer2 {
-    position: absolute;
-	bottom:30%;
-	height: 100%;
 }
 
 
 .phone-icons {
     display: inline-block;
     width: 50%;
+	margin-bottom: 3%;
 }
 
 img.crypto-icons {
@@ -3278,70 +3253,6 @@ textarea
 	
 	/* ALL MEDIA QUERIES */
 	
-@media screen and (max-width: 1500px) {
-	
-	section#phone-reveal {
-    height: 100%;
-    
-   }
-	
-	.phone-reveal-container{
-		display:inline-block;
-		height:100%;
-		
-		
-	}
-	
-	.phone-shells {
-		width:100%;
-		height:500px;
-	}
-		
-
-	.phone-layer1 {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    bottom: 0;
-    height: 500px;
-    left: 0;
-    background-image: url(/img/shell-layer-new.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-	}
-	
-	.phone-layer2 {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 500px;
-    background-image: url(/img/phone-shell.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-	}
-	
-	img.first {
-    
-	display:none;
-}
-
-
-   .phone-description{
-	   width:100%;
-	   height:100%;
-   }
-
-   .phone-icons {
-	   margin-bottom:4%;
-	   margin-top:4%;
-	   width:25%;
-   }
-	
-	
-}	
-	
 	
 
 @media screen and (max-width: 1400px) {
@@ -3458,6 +3369,10 @@ textarea
 
 
 @media screen and (max-width: 1000px) {
+	
+	.video-container {
+    padding-bottom: 56%;
+	}
 	
 	header#main{
 		position:relative;
@@ -3675,6 +3590,23 @@ a.social {
 li.soc {
     padding: 1em;
 }
+
+.phone-reveal-container {
+	flex-direction:column;
+}
+
+.phone-login-container {
+    width: 100%;
+}
+
+img.login-screen {
+    width: 30%;
+}
+
+.phone-description {
+	width:100%;
+	margin-top:3em;
+}
 	
 
 }
@@ -3855,6 +3787,10 @@ img.wallet-image {
 
 @media screen and (max-width: 750px) {
 	
+	img.login-screen {
+    width: 50%;
+}
+	
 	.site-nav--open {
 	
     transform: translateX(50%);  
@@ -3867,10 +3803,6 @@ img.wallet-image {
 	.half{
 		padding:0;
 	}
-	
-	h2.one-header {
-    margin-bottom: 0;
-}
 	
 	.fiat-image-container {
 	width:90%;

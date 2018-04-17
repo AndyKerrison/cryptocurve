@@ -54,10 +54,7 @@ $(window).load(function(){
 							
 								<h2 class="one-header">All-In-One Wallet Solution</h2>
 								<div class="phone-reveal-container">
-								<div class="phone-shells">
-								<div class="phone-layer1"><img class="first" src="/img/shell-layer-new.png"/></div>
-								<div class="phone-layer2"><img class="first" src="/img/phone-shell.png"/></div>
-								</div>
+								<div class="phone-login-container"><img class="login-screen" src="/img/new-login.png"/></div>
 								<div class="phone-description">
 								<div class="phone-icons">
 								<img class="crypto-icons" src="/img/exchange.png"/>
@@ -287,7 +284,7 @@ $(window).load(function(){
 											<div class="direction-r" id="roadmap7">
 											  <div class="flag-wrapper">
 												<span class="hexa"></span>
-												<span class="flag">Wanchain Iteroperability</span>
+												<span class="flag">Wanchain Interoperability</span>
 												<span class="time-wrapper"><span class="time">Q4 2018</span></span>
 											  </div>
 											  <div class="desc">Cross-chain functionality. </div>
