@@ -785,16 +785,15 @@ a.vert:before,a.vert:after{
 		color:black !important;
 	}
 	
-	#main-page a.whitepaper-nav{
+	#main-page a.pitchdeck-nav{
 		background:#2ad4dc;
 		/*background:#4d28da;*/
 		padding: 1em !important;
 		font-size:0.8em;
 		color:black;
-		display:none;
 	}
 	
-	#main-page a.whitepaper-nav:hover{
+	#main-page a.pitchdeck-nav:hover{
 		background:#FFF !important;
 		color:black !important;
 	}
