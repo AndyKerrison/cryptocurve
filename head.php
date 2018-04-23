@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 
 <title>CryptoCurve</title>
-<meta name="description" content="Securing your investment">
-<meta name="author" content="Cryptocurve">
+<meta name="description" content="The Browser to Blockchain">
+<meta name="author" content="CryptoCurve">
   
 <!-- Mobile Specific Metas -->
 <meta name="HandheldFriendly" content="True">
@@ -34,12 +34,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
-
-
-<!--<script src="web3.min.js"></script>-->
-<script src="js/SmartContract.js"></script>
-<script src="js/Web3Manager.js"></script>
-<script src="js/ContractManager.js"></script>
 
 
 <?php

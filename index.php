@@ -24,7 +24,7 @@ $(window).load(function(){
 <br/>
 <br/>
 <p class="bottom-wallet">The Browser To Blockchain</p>
-<p class="bottom-wallet2">Official Wallet Of Wanchain</p>
+<p class="bottom-wallet2"></p>
 </div>
 <div class="phone-container">
 <img class="header-mockup" src="/img/header-image-mockup.png"/>
@@ -97,32 +97,7 @@ $(window).load(function(){
 						</div>
 					</section>
 					
-					<!-- Wallet -->
-			  <section id="wallet" class="index-section">
-						<div class="index-section-wrap">
-							
-								<h2>Introducing The Nuke Function</h2>
-								<div class="wallet-parallax">
-								<div class="wallet-section-container">
-								
-								<div class="features1-container">
-								<div class="textline" id="textline1">Effortlessly convert all coins into ETH, BTC, or a stable coin</div>
-								<div class="textline" id="textline2">Convert back and keep your profits</div>
-								</div>
-								<div class="wallet-image-container"><img class="wallet-image" src="/img/nuke-section.png"/></div>
-								<div class="features2-container">
-								<div class="textline" id="textline3">Never miss another BTC bullrun</div>
-								<div class="textline" id="textline4">Pick a percentage to convert</div>
-								</div>
-								</div>
-								</div>
-								
-						</div>		
-					</section>
 					
-					
-					
-					  
 					
 					
 					
@@ -168,35 +143,6 @@ $(window).load(function(){
 					</section>
 					
 					
-					
-					
-					<!-- Telegram -->
-			  <section id="telegram" class="index-section">
-						<div class="index-section-wrap">
-							
-								
-								<div class="telegram-container">
-								<img class="telegram-img" src="/img/telegram.png"/ width="100px">
-								<div class="telegram-child-container">
-								<p class="telegram-text">Join our Telegram group</p>
-								<a href="https://t.me/cryptocurve" class="telegram-button">Join Us</a>
-								</div>
-									
-									</div>
-								
-								
-								
-								</div>
-								
-								
-								
-								
-						</div>		
-					</section>
-					
-					
-					
-				
 					
 					<!-- Roadmap -->
 			  <section id="roadmap" class="index-section">
