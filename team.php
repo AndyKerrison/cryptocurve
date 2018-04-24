@@ -31,7 +31,7 @@
 								<p class="team-title">Chief Financial Officer</p>
 								</div>
 								</div>
-								<div class="linked"><a href="https://www.linkedin.com/in/john-x-yi-b2b62850/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								<div class="linked"><a href="https://www.linkedin.com/in/xander-yi-b2b62850/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
 								<div id="pic3" class="team-pic" onclick="">

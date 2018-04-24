@@ -41,7 +41,7 @@ $(window).load(function(){
 							
 								
 								<div class="video-container">
-								<iframe src="https://player.vimeo.com/video/264779015?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								<iframe src="https://player.vimeo.com/video/264779015" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe
 								</div>
 								
 						</div>		

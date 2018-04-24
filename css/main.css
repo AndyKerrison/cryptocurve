@@ -909,20 +909,6 @@ a#mail:before {
 	body.landing #wrapper {
 		padding-top: 0;
 		}
-	
-	
-	/*Login Page*/
-	.page header#main {
-    position: relative;
-}
-
-    .page h2{
-    margin-bottom: 2em;
-    font-size: 1.5em;
-    font-family: abel;
-	position: relative;
-    z-index: 2;
-}
 
 
 	
@@ -1036,6 +1022,18 @@ p.bottom-wallet {
 	.index-section-wrap {
 		height:100%;
     
+}
+
+.page header#main {
+    position: relative;
+}
+
+    .page h2{
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    font-family: abel;
+	position: relative;
+    z-index: 2;
 }
 
 
@@ -1496,85 +1494,7 @@ img.crypto-icons {
 	h2.token {
 		font-size:1.2em;
 	}
-	
-	
-	/* Telegram */
-	
-	section#telegram{
-		background-image: -moz-linear-gradient(top, rgba(1, 1, 1, 0.7), rgba(16, 16, 16, 0.9)), url("/img/telegram-background.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(1, 1, 1, 0.7), rgba(16, 16, 16, 0.9)), url("/img/telegram-background.jpg");
-		background-image: -ms-linear-gradient(top, rgba(1,1,1,0.7), rgba(16,16,16,0.9)), url("/img/telegram-background.jpg");
-		background-image: linear-gradient(top, rgba(1,1,1,0.7), rgba(16,16,16,0.9)), url("/img/telegram-background.jpg");
-		background-attachment: fixed;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		padding-top: 0;
-		cursor: default;
-		height: 50vh;
-		min-height: 35em;
-		overflow: hidden;
-		position: relative;
-		text-align: center;
-		display:none;
-		
-		
-	}
-	
-	
-	section#telegram h2 {
-		color:white;
-	}
-	
-	.telegram-container{
-		width:100%;
-		height:100%;
-		display:flex;
-		align-items:center;
-		justify-content:center;
-		flex-direction:column;
-	}
-	
-	.telegram-image{
-		text-align:Center;
-		margin-left:auto;
-		margin-right:auto;
-	}
-	
-	.telegram-child-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-	
-	p.telegram-text{
-		margin-top:4%;
-		margin-bottom:3em;
-		color:white;
-		font-size:1.3em;
-	}
-	
-	
-	a.telegram-button{
-    color: white;
-    font-family: abel;
-    letter-spacing: 3px;
-    padding: 12px 50px;
-    background: transparent;
-    border: 1px solid white;
-    -webkit-transition: all ease 1s ;
-    -moz-transition: all ease 1s;
-    -ms-transition: all ease 1s;
-    -o-transition: all ease 1s;
-    transition: all ease 1s;
-}
 
-   a.telegram-button:hover{
-	   color:black;
-	   background:white;
-   }
   
 
  /* Token Stats */
@@ -1697,56 +1617,6 @@ p.tokensTitle {
 }
    
  
-
-
-div#token1 {
-    width: 10px;
-    height: 10px;
-    background: #e65c53;
-    display: inline-block;
-}
-
-div#token2 {
-    width: 10px;
-    height: 10px;
-    background: #26a3b1;
-    display: inline-block;
-}
-
-div#token3 {
-    width: 10px;
-    height: 10px;
-    background: #396b7e;
-    display: inline-block;
-}
-
-div#token4 {
-    width: 10px;
-    height: 10px;
-    background: #396b7e;
-    display: inline-block;
-}
-
-div#token5 {
-    width: 10px;
-    height: 10px;
-    background: #a5a5a5;
-    display: inline-block;
-}
-
-
-div#token6 {
-    width: 10px;
-    height: 10px;
-    background: #ced0d0;
-    display: inline-block;
-}
-
-
-p.token-text {
-    font-family: abel;
-    display: inline-block;
-}
 
   /* Roadmap */
   section#roadmap{
@@ -2277,65 +2147,7 @@ h2.team-intro-title {
     z-index: 2;
 }
  
- /* contact form */
- label 
-{
-    display:block;
-    margin-top:20px;
-    letter-spacing:2px;
-}
 
-form 
-{
-   
-}
-
-.form-title {
-	text-align:center;
-	font-family:abel;
-}
-
-input, textarea, file {
-	width:439px;
-	height:27px;
-	background-color:#efefef;
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border:1px solid #dedede;
-	padding:10px;
-	margin-top:3px;
-	font-size:0.9em;
-	color:#3a3a3a;
-	font-family:abel;
-}
-
-	input:focus, textarea:focus {
-		border:1px solid #97d6eb;
-	}
-	
-textarea 
-{
-	height:213px;
-	background-color: #efefef;
-}
-
-
-#submit {
-	width:127px;
-	height:48px;
-	text-align: center;
-	border:none;
-	margin-top:20px;
-	cursor:pointer;
-}
-
-
-#submit:hover {
-	color:#fff;
-	background-color: #216182;
-	opacity:0.9;
-}
 	
 	
 	/* ALL MEDIA QUERIES */
@@ -2351,9 +2163,6 @@ textarea
 
 @media screen and (max-width: 1370px) {
 	
-	table.meta td{
-		font-size:0.9em;
-	}
 	
 	section#curv-token {
 		height:100%;
@@ -2422,9 +2231,6 @@ textarea
 		margin-left:1em;
 	}
 	
-	.why-box {
-	width:40%;
-	}
 	
 	.footercolumns {
     width: 100%;

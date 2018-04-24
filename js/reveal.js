@@ -118,38 +118,6 @@ sr.reveal('.phone-login-container',{
   delay:500,
 });
 
-sr.reveal('.phone-layer2',{
-  origin: 'left',
-  distance: '10rem',
-  duration: 900,
-});
-
-sr.reveal('.fiat-info',{
-  origin: 'top',
-  distance: '10rem',
-  duration: 1200,
-});
-
-sr.reveal('.fiat-image-container',{
-  origin: 'bottom',
-  distance: '10rem',
-  duration: 1200,
-});
-
-sr.reveal('.portfolio-info',{
-  origin: 'left',
-  distance: '10rem',
-  duration: 1200,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-sr.reveal('.portfolio-image-container',{
-  origin: 'right',
-  distance: '10rem',
-  duration: 1200,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
 sr.reveal('#roadmap1',{
   origin: 'left',
   distance: '10rem',
@@ -223,89 +191,6 @@ sr.reveal('#roadmap12',{
 });
 
 
-sr.reveal('.wallet-image-container',{
-  origin: 'left',
-  distance: '10rem',
-  duration: 900,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-
-sr.reveal('#textline1',{
-  origin: 'left',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-sr.reveal('#textline2',{
-  origin: 'bottom',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-sr.reveal('#textline3',{
-  origin: 'top',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-sr.reveal('#textline4',{
-  origin: 'right',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-
-sr.reveal('.telegram-img',{
-  origin: 'top',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-sr.reveal('.telegram-text',{
-  origin: 'left',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-sr.reveal('.telegram-button',{
-  origin: 'right',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-
-sr.reveal('.trading-image-first-container',{
-  origin: 'left',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-
-sr.reveal('.trading-info',{
-  origin: 'top',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-
-sr.reveal('.trading-image-second-container',{
-  origin: 'right',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-
 sr.reveal('.nuke-image-container',{
   origin: 'right',
   distance: '10rem',
@@ -321,19 +206,6 @@ sr.reveal('.nuke-info',{
   viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 
-sr.reveal('.ico-mockups',{
-  origin: 'left',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
-
-sr.reveal('.ico-info',{
-  origin: 'right',
-  distance: '10rem',
-  duration: 1500,
-  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-});
 
 sr.reveal('.token-box',{
   origin: 'bottom',
