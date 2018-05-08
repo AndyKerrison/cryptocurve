@@ -87,6 +87,24 @@
 								</div>
 								<div class="linked"><a href="https://www.linkedin.com/in/se%C3%A1n-mcgurk-91b4669/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
+								<li>
+								<div id="pic14" class="team-pic" onclick="">
+								<div class="pic-info">
+								<h2>Andre Cronje</h2>
+								<p class="team-title">Blockchain Infastructure Engineer</p>
+								</div>
+								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/andre-cronje/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								</li>
+								<li>
+								<div id="pic15" class="team-pic" onclick="">
+								<div class="pic-info">
+								<h2>Anton Nell</h2>
+								<p class="team-title">Web/Mobile Engineer</p>
+								</div>
+								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/anton-nell-2853746a/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								</li>
 								</ul>
 								</div>
 								
@@ -105,7 +123,7 @@
 								<li>
 								<div id="pic11" class="team-pic">
 								<div class="pic-info">
-								<h2>Mark Ashleford</h2>
+								<h2>Mark Ashelford</h2>
 								<p class="team-title">Advisor</p>
 								</div>
 								</div>
@@ -123,7 +141,7 @@
 								<li>
 								<div id="pic13" class="team-pic" onclick="">
 								<div class="pic-info">
-								<h2>Addison Huegle</h2>
+								<h2>Addison Huegel</h2>
 								<p class="team-title">Public Relations</p>
 								</div>
 								</div>

@@ -112,6 +112,22 @@ sr.reveal('#pic13',{
   viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 
+sr.reveal('#pic14',{
+  duration: 900,
+  origin:'top',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
+sr.reveal('#pic15',{
+  duration: 900,
+  origin:'bottom',
+  distance: '10rem',
+  delay:0,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+});
+
 sr.reveal('.phone-container',{
   origin: 'bottom',
   distance: '10rem',
