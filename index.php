@@ -133,7 +133,7 @@ $(window).load(function(){
 								
 								<div class="token-container">
 								<div class="token-box" id="voting-box"><div class="token-box-content"><img src="/img/voting.png"/><h2 class="token">Voting</h2><p>All CURV holders have voting rights for which ICOs Curve should pursue to have listed on our platform. </p></div></div>
-								<div class="token-box"><div class="token-box-content"><img src="/img/discounts.png"/><h2 class="token">Discounts</h2><p>Earn discounts on Curve supported ICOs when you pay with CURV tokens. </p></div></div>
+								<div class="token-box"><div class="token-box-content"><img src="/img/discounts.png"/><h2 class="token">Fee Discounts</h2><p>Earn discounts on Curve supported ICOs when you pay with CURV tokens. </p></div></div>
 								<div class="token-box"><div class="token-box-content"><img src="/img/pooling-tokens.png"/><h2 class="token">Pooling</h2><p>Create and run your own pooling smart contract when you hold enough CURV tokens.</p></div></div>
 								<div class="token-box"><div class="token-box-content"><img src="/img/token-burn.png"/><h2 class="token">Burning</h2><p>CryptoCurve buys back a percentage of tokens every quarter and burns them.</p></div></div>
 								<div class="token-box"><div class="token-box-content"><img src="/img/staking.png"/><h2 class="token">Staking</h2><p>Lock up your CURV tokens and receive free airdrops from ICOs.</p></div></div>

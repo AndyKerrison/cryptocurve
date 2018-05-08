@@ -2117,6 +2117,11 @@ p.tokensTitle {
     background-repeat: no-repeat;
  }
  
+ #pic13 {
+	background-image:url("/img/addison-huegle.jpeg");
+    background-repeat: no-repeat;
+ }
+ 
  .linked {
     position: absolute;
     top: 90%;

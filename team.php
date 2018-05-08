@@ -103,15 +103,6 @@
 								<div class="linked"><a href="https://www.linkedin.com/in/dbyington/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
-								<div id="pic10" class="team-pic">
-								<div class="pic-info">
-								<h2>Ben Murray</h2>
-								<p class="team-title">Advisor</p>
-								</div>
-								</div>
-								<div class="linked"><a href="https://www.linkedin.com/in/1benmurray/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
-								</li>
-								<li>
 								<div id="pic11" class="team-pic">
 								<div class="pic-info">
 								<h2>Mark Ashleford</h2>
@@ -128,6 +119,15 @@
 								</div>
 								</div>
 								<div class="linked"><a href="https://www.linkedin.com/in/rajeshgopi/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								</li>
+								<li>
+								<div id="pic13" class="team-pic" onclick="">
+								<div class="pic-info">
+								<h2>Addison Huegle</h2>
+								<p class="team-title">Public Relations</p>
+								</div>
+								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/addisonhuegel/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								</ul>
 								</div> 		
