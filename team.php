@@ -52,13 +52,31 @@
 								<div class="linked"><a href="https://www.linkedin.com/in/alexander-lenart-40433a150/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
-								<div id="pic5" class="team-pic" onclick="">
+								<div id="pic14" class="team-pic" onclick="">
 								<div class="pic-info">
-								<h2>Paul Landingin</h2>
-								<p class="team-title">Enterprise Development</p>
+								<h2>Andre Cronje</h2>
+								<p class="team-title">Blockchain Infastructure Engineer</p>
 								</div>
 								</div>
-								<div class="linked"><a href="https://www.linkedin.com/in/paullandingin/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								<div class="linked"><a href="https://www.linkedin.com/in/andre-cronje/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								</li>
+								<li>
+								<div id="pic15" class="team-pic" onclick="">
+								<div class="pic-info">
+								<h2>Anton Nell</h2>
+								<p class="team-title">Web/Mobile Engineer</p>
+								</div>
+								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/anton-nell-2853746a/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								</li>
+								<li>
+								<div id="pic9" class="team-pic" onclick="">
+								<div class="pic-info">
+								<h2>Sean Mcgurk</h2>
+								<p class="team-title">Security</p>
+								</div>
+								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/se%C3%A1n-mcgurk-91b4669/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
 								<div id="pic6" class="team-pic" onclick="">
@@ -79,31 +97,13 @@
 								<div class="linked"><a href="https://www.linkedin.com/in/anna-santayana-02551720/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								<li>
-								<div id="pic9" class="team-pic" onclick="">
+								<div id="pic5" class="team-pic" onclick="">
 								<div class="pic-info">
-								<h2>Sean Mcgurk</h2>
-								<p class="team-title">Security</p>
+								<h2>Paul Landingin</h2>
+								<p class="team-title">Enterprise Development</p>
 								</div>
 								</div>
-								<div class="linked"><a href="https://www.linkedin.com/in/se%C3%A1n-mcgurk-91b4669/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
-								</li>
-								<li>
-								<div id="pic14" class="team-pic" onclick="">
-								<div class="pic-info">
-								<h2>Andre Cronje</h2>
-								<p class="team-title">Blockchain Infastructure Engineer</p>
-								</div>
-								</div>
-								<div class="linked"><a href="https://www.linkedin.com/in/andre-cronje/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
-								</li>
-								<li>
-								<div id="pic15" class="team-pic" onclick="">
-								<div class="pic-info">
-								<h2>Anton Nell</h2>
-								<p class="team-title">Web/Mobile Engineer</p>
-								</div>
-								</div>
-								<div class="linked"><a href="https://www.linkedin.com/in/anton-nell-2853746a/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								<div class="linked"><a href="https://www.linkedin.com/in/paullandingin/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
 								</ul>
 								</div>
