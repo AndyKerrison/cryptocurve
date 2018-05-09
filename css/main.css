@@ -1472,6 +1472,7 @@ img.crypto-icons {
 		display:flex;
 		justify-content:center;
 		align-content:center;
+		height:auto;
 	}
 	
 	.token-container {
@@ -2074,6 +2075,7 @@ p.tokensTitle {
 	background-image:url("/img/paul.jpeg");
 	background-position: 5px 5px;
     background-repeat: no-repeat;
+	background-color: #f8fdff;
  }
  
  #pic6 {
@@ -2131,7 +2133,7 @@ p.tokensTitle {
  }
  
  #pic15 {
-	background-image:url("/img/anton.jpeg");
+	background-image:url("/img/anton.jpg");
     background-repeat: no-repeat;
 	background-position: 8px -15px;
 	background-color: #ecfafb;
