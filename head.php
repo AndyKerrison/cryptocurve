@@ -43,7 +43,6 @@ $url = "https://". $_SERVER['SERVER_NAME'] . ":443".$_SERVER['REQUEST_URI'];
 header("Location: $url");
 }
 ?>
- 
 
  <!--[if IE 9]>
 <link rel="stylesheet" href="css/IE9.css" type="text/css"><![endif]-->
