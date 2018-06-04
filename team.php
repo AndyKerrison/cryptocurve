@@ -147,6 +147,24 @@
 								</div>
 								<div class="linked"><a href="https://www.linkedin.com/in/addisonhuegel/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 								</li>
+								<li>
+								<div id="pic16" class="team-pic" onclick="">
+								<div class="pic-info">
+								<h2>Tim Bukher</h2>
+								<p class="team-title">Advisor</p>
+								</div>
+								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/timbukher/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								</li>
+								<li>
+								<div id="pic17" class="team-pic" onclick="">
+								<div class="pic-info">
+								<h2>Dr. Moe Levin</h2>
+								<p class="team-title">Advisor</p>
+								</div>
+								</div>
+								<div class="linked"><a href="https://www.linkedin.com/in/moelevin/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+								</li>
 								</ul>
 								</div> 		
 								

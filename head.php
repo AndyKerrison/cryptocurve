@@ -36,13 +36,7 @@
 <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
 
 
-<?php
-if ($_SERVER['SERVER_PORT']!=443)
-{
-$url = "https://". $_SERVER['SERVER_NAME'] . ":443".$_SERVER['REQUEST_URI'];
-header("Location: $url");
-}
-?>
+
 
  <!--[if IE 9]>
 <link rel="stylesheet" href="css/IE9.css" type="text/css"><![endif]-->
