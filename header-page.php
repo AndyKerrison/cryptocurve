@@ -7,8 +7,8 @@
 			<nav class="site-nav">
 				<ul class="navi">
 					<li><span class="liner"><a class="vert" href="/">Home</a></span></li>
-					<li><span class="liner"><a class="vert" href="/team.php">Team</a></span></li>
-					<li><span class="liner"><a class="vert" href="/pre-sale.php">Pre-Sale</a></span></li>
+					<li><span class="liner"><a class="vert" href="/team">Team</a></span></li>
+					<li><span class="liner"><a class="vert" href="/pre-sale">Pre-Sale</a></span></li>
 					<li class="sub-menu-parent"><a class="parent-link" href="#">Software</a>
 					<ul class="sub-nav">
 					<li class="sub-nav-item"><a href="http://wallet.cryptocurve.xyz">MyCryptoCurve Wallet</a></li>
