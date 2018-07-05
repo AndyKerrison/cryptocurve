@@ -1,13 +1,23 @@
 <?php include('head.php'); ?>
 
 <script>
-$(window).load(function(){
+$(window).on('load', function() { 
      $('.loading-icon').fadeOut();
 });
 </script>
 
 
+
 <body class="page">
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Whitepaper is now available! Join our whitelist!
+</div>
+
+<div id="popup">
+<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+<p class="popup-text">We have updated our <a href="https://cryptocurve.network/#cookiePolicy">cookie</a> and <a href="https://cryptocurve.network/#privacyPolicy">privacy policies. </a>We recommend that you review them carefully.</p>
+</div>
 
 <div class="loading-icon"></div>					
      
@@ -384,13 +394,8 @@ $(window).load(function(){
 						<div class="up-button">
 								<a href="#" class="scrollup" display="inline"><i class="fa fa-chevron-up"></i></a>
 						</div>						
-<script src="/js/tween.min.js"></script>
-<script src="/js/ease.min.js"></script>						
-<script src="/js/node-effect.js"></script>	
-<script src="/js/reveal.js"></script>
-<script src="/js/scrollup.js"></script>					
-<script src="/js/appear.js"></script>
-<script src="/js/menu.js"></script>
 
 </body>
+<script src="/js/node-effect.js"></script>	
+<script src="/js/reveal.js"></script>
 </html>

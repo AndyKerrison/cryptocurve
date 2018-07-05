@@ -23,5 +23,12 @@
 					
 				<!-- After Footer -->
                 <section class="powered-page">
-                   <div class="thing1-page">&copy; <?php echo date("Y"); ?> Cryptocurve All Rights Reserved</div>
+                    <div class="thing1-page">&copy; <?php echo date("Y"); ?> CryptoCurve All Rights Reserved | <a href="https://cryptocurve.network/#privacyPolicy">Privacy Policy</a> | <a href="https://cryptocurve.network/#cookiePolicy">Cookie Policy</a></div>
                 </section>
+				
+				<script src="/js/menu.js"></script>
+<script src="/js/tween.min.js"></script>
+<script src="/js/ease.min.js"></script>						
+<script src="/js/scrollup.js"></script>					
+<script src="/js/appear.js"></script>
+<script src="/js/popup.js"></script>

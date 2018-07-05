@@ -1,7 +1,18 @@
 <?php include('head.php'); ?>
 
 <body class="single-page">				
-        
+      
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Whitepaper is now available! Join our whitelist!
+</div>
+
+<div id="popup">
+<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+<p class="popup-text">We have updated our <a href="https://cryptocurve.network/#cookiePolicy">cookie</a> and <a href="https://cryptocurve.network/#privacyPolicy">privacy policies. </a>We recommend that you review them carefully.</p>
+</div>
+
+	  
 <div class="page-top">
 <?php include('header-page.php'); ?>
 
